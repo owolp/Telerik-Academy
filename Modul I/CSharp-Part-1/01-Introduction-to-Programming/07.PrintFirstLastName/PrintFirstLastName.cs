@@ -8,7 +8,7 @@ namespace PrintFirstLastName
 {
     class PrintFirstLastName
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var firstName = "John";
             var lastName = "Smith";
