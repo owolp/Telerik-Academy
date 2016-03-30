@@ -1,2 +1,1 @@
-# TelerikAcademy
-Telerik Academy 2016
+# Telerik Academy Repository
