@@ -13,10 +13,6 @@ using System;
 using System.Threading;
 using System.Globalization;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f04c3800f13a9f553c0cd7ca8847c166b4edb502
 namespace SquareRoot
 {
     class SquareRoot
