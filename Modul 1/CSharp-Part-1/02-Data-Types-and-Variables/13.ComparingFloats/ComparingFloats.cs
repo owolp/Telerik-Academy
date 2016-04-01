@@ -27,7 +27,12 @@ namespace ComparingFloats
             double sum = Math.Abs(a - b);
 
             double eps = 0.000001;
-            bool result = sum < eps;
+
+            var result = "false";
+            if (sum < eps)
+            {
+                result = "true";
+            }
 
             Console.WriteLine(result);
         }
