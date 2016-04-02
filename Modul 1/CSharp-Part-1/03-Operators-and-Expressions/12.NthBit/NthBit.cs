@@ -12,6 +12,7 @@
 //    Memory limit: 8MB
 
 using System;
+using System.Numerics;
 
 namespace NthBit
 {
@@ -22,9 +23,9 @@ namespace NthBit
             int n = int.Parse(Console.ReadLine());
             int p = int.Parse(Console.ReadLine());
 
-            int mask = 1 << p;
-            int nMask = n & mask;
-            int bit = nMask >> p;
+            BigInteger mask = 1 << p;
+            BigInteger nMask = n & mask;
+            BigInteger bit = nMask >> p;
             Console.WriteLine(bit);
         }
     }

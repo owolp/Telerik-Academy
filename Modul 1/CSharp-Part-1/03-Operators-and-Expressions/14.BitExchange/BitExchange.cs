@@ -27,6 +27,7 @@ namespace BitExchange
                 uint numberMask = number & mask;
                 uint bit = numberMask >> j;
                 array[i] = bit;
+
                 if (i == 2)
                 {
                     j = 23;
