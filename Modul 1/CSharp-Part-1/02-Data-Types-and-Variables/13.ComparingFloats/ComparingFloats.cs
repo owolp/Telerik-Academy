@@ -28,13 +28,9 @@ namespace ComparingFloats
 
             double eps = 0.000001;
 
-            var result = "false";
-            if (sum < eps)
-            {
-                result = "true";
-            }
+            bool result = sum < eps;
 
-            Console.WriteLine(result);
+            Console.WriteLine(result == true ? "true" : "false");
         }
     }
 }
