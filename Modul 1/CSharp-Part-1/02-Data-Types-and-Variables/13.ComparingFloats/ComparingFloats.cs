@@ -30,8 +30,8 @@ namespace ComparingFloats
 
             bool result = sum < eps;
 
-            //Console.WriteLine(result == true ? "true" : "false");
             Console.WriteLine(Convert.ToString(result).ToLower());
+            //Console.WriteLine(result == true ? "true" : "false");
         }
     }
 }
