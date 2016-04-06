@@ -23,20 +23,20 @@ namespace ModifyBit
     {
         static void Main()
         {
-            int number = int.Parse(Console.ReadLine());
+            ulong number = uint.Parse(Console.ReadLine());
             int position = int.Parse(Console.ReadLine());
             int value = int.Parse(Console.ReadLine());
 
-            int result;
+            ulong result;
 
             if (value == 0)
             {
-                int mask = ~(1 << position);
+                ulong mask = (ulong)~(1 << position);
                 result = number & mask;
             }
             else
             {
-                int mask = 1 << position;
+                ulong mask = (ulong)1 << position;
                 result = number | mask;
             }
 
