@@ -32,9 +32,9 @@ namespace NumberComparer
             line = line.Replace(',', '.');
             double b = double.Parse(line);
 
-            double greater = Math.Max(a, b);
-
-            Console.WriteLine(greater);
+            //double greater = Math.Max(a, b);
+            //Console.WriteLine(greater);
+            Console.WriteLine( (a > b) ? a : b);
         }
     }
 }

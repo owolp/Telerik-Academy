@@ -23,14 +23,7 @@ namespace ThirdDigit
             number /= 100;
             number %= 10;
 
-            if (number == 7)
-            {
-                Console.WriteLine("true");
-            }
-            else
-            {
-                Console.WriteLine("false {0}", number);
-            }
+            Console.WriteLine(number == 7 ? "true" : "false");
         }
     }
 }
