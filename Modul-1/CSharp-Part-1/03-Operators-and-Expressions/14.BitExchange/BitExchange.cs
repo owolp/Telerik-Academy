@@ -23,7 +23,7 @@ namespace BitExchange
             uint[] array = new uint[6];
             for (int i = 0, j = 3; i < array.Length; i++, j++)
             {
-                uint mask = (uint)(1 << j);
+                uint mask = 1U << j;
                 uint numberMask = number & mask;
                 uint bit = numberMask >> j;
                 array[i] = bit;
@@ -38,12 +38,12 @@ namespace BitExchange
             int position = 24;
             if (array[0] == 0)
             {
-                uint mask = (uint)(~(1 << position));
+                uint mask = ~(1U << position);
                 result = number & mask;
             }
             else
             {
-                uint mask = (uint)(1 << position);
+                uint mask = 1U << position;
                 result = number | mask;
             }
             
@@ -51,12 +51,12 @@ namespace BitExchange
             {
                 if (array[i] == 0)
                 {
-                    uint mask = (uint)(~(1 << p));
+                    uint mask = ~(1U << p);
                     result = result & mask;
                 }
                 else
                 {
-                    uint mask = (uint)(1 << p);
+                    uint mask = 1U << p;
                     result = result | mask;
                 }
 
