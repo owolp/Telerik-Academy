@@ -30,13 +30,9 @@ namespace PrimeCheck
                 }
             }
 
-            var answer = "false";
-            if (remainder == 2)
-            {
-                answer = "true";
-            }
+            bool answer = remainder == 2;
 
-            Console.WriteLine(answer);
+            Console.WriteLine(Convert.ToString(answer).ToLower());
         }
     }
 }
