@@ -19,11 +19,11 @@ namespace Sum
         static void Main()
         {
             byte totalNumbers = 5;
-            byte[] numbers = new byte[totalNumbers];
+            int[] numbers = new int[totalNumbers];
 
             for (int i = 0; i < numbers.Length; i++)
             {
-                numbers[i] = byte.Parse(Console.ReadLine());
+                numbers[i] = int.Parse(Console.ReadLine());
             }
 
             int sum = 0;

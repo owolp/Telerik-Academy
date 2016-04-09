@@ -28,7 +28,6 @@ namespace Interval
                 if (i % 5 == 0)
                 {
                     count++;
-                    Console.WriteLine(i);
                 }
             }
             Console.WriteLine(count);

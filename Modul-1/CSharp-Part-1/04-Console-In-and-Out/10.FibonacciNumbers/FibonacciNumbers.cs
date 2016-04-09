@@ -14,28 +14,40 @@
 
 using System;
 
-class Program
+namespace Interval
 {
-    static void Main()
+    class Interval
     {
-        int quantity = int.Parse(Console.ReadLine());
-        for (int i = 0; i < quantity; i++)
+        static void Main()
         {
-            Console.WriteLine(Fibonacci(i));
+            int quantity = int.Parse(Console.ReadLine());
+            for (int i = 0; i < quantity; i++)
+            {
+                long fibonacciNumber = Fibonacci(i);
+                if (i == quantity - 1)
+                {
+                    Console.Write("{0}", fibonacciNumber);
+                }
+                else
+                {
+                    Console.Write("{0}, ", fibonacciNumber);
+                }
+            }
+            Console.WriteLine();
         }
-    }
 
-    public static double Fibonacci(int n)
-    {
-        double a = 0;
-        double b = 1;
-
-        for (int i = 0; i < n; i++)
+        public static long Fibonacci(int n)
         {
-            double temp = a;
-            a = b;
-            b = temp + b;
+            long a = 0;
+            long b = 1;
+
+            for (int i = 0; i < n; i++)
+            {
+                long temp = a;
+                a = b;
+                b = temp + b;
+            }
+            return a;
         }
-        return a;
     }
 }
