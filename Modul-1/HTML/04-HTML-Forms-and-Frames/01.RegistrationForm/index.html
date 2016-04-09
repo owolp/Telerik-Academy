@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Registration Form for University" />
+    <meta name="keywords" content="Registration Form, University" />
+    <title>Registration Form</title>
+</head>
+<body>
+
+    <form content="Registration Form" action="http://example.org/">
+
+        <table border="1" cellspacing="0">
+
+            <tfoot>
+            <tr bgcolor="#add8e6">
+                <td align="center" colspan="2">
+                    <button type="submit" name="submit" value="">Submit</button>
+                    <button type="reset" name="reset" value="Reset">Clear This Form</button>
+                </td>
+            </tr>
+            </tfoot>
+
+            <tbody>
+                <tr>
+                    <td align="right">
+                        <label for="last_name">
+                            <strong>Last Name</strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" name="last_name" id="last_name" required="required" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="first_name">
+                            <strong>First Name</strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" name="first_name" id="first_name" required="required" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="address">
+                            <strong>Address</strong>
+                        </label>
+                    </td>
+                    <td>
+                        <textarea name="address" id="address" rows="4" cols="35" required="required"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <strong>City</strong>
+                    </td>
+                    <td>
+                        <input type="text" name="city" required="required" size="25" />
+                            <strong>State</strong>
+                        <input name="state" required="required" size="5" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="postal_code">
+                            <strong>Zip/Postal Code</strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" name="postal_code" id="postal_code" required="required" size="5"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <strong>Country</strong>
+                    </td>
+                    <td>
+                        <select name="country" required="required">
+                            <option label="Bulgaria" value="">Bulgaria</option>
+                            <option label="USA" value="1">USA</option>
+                            <option label="Italy" value="2">Italy</option>
+                            <option label="Germany" value="3">Germany</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <strong>Phone (country code,<br />
+                            area code, number)
+                        </strong>
+                    </td>
+                    <td>
+                        (+ <input type="text" name="country_code" size="3" required="required"/> )
+                        <input type="text" name="area_code" size="3" required="required" /> -
+                        <input type="text" name="number" size="8" required="required" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <strong>E-mail</strong>
+                    </td>
+                    <td>
+                        <input type="email" name="email" required="required" size="40"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <strong>Birth date</strong>
+                    </td>
+                    <td>
+                        <label for="month">Month</label>
+                        <input type="text" name="month" id=month required="required" size="1"/>
+                        <label for="day">Day</label>
+                        <input type="text" name="month" id="day" required="required" size="1"/>
+                        <label for="year">Year (4 digit)</label>
+                        <input type="text" name="month" id="year" required="required" size="3" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <strong>Gender</strong>
+                    </td>
+                    <td>
+                        <select name="gender" required="required">
+                            <option label="Male" value="">Male</option>
+                            <option label="Female" value="1">Female</option>
+                            <option label="Other" value="2">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <strong>Starting date</strong>
+                    </td>
+                    <td>
+                        <input type="radio" value="1" id="radio-1" name="radios[]" required="required" />
+                        <label for="radio-1">Spring 2016</label>
+                        <input type="radio" value="2" id="radio-2" name="radios[]" required="required" />
+                        <label for="radio-2">Summer 2016</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <strong>Comments/Questions</strong>
+                    </td>
+                    <td>
+                        <textarea name="comments" rows="5" cols="35"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </form>
+
+</body>
+</html>
