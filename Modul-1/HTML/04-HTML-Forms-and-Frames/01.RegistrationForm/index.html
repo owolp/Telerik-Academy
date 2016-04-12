@@ -78,10 +78,11 @@
                     </td>
                     <td>
                         <select name="country" required="required">
-                            <option label="Bulgaria" value="">Bulgaria</option>
-                            <option label="USA" value="1">USA</option>
-                            <option label="Italy" value="2">Italy</option>
-                            <option label="Germany" value="3">Germany</option>
+                            <option selected="selected" disabled value="">Choose</option>
+                            <option label="Bulgaria" value="1">Bulgaria</option>
+                            <option label="USA" value="2">USA</option>
+                            <option label="Italy" value="3">Italy</option>
+                            <option label="Germany" value="4">Germany</option>
                         </select>
                     </td>
                 </tr>
@@ -114,9 +115,9 @@
                         <label for="month">Month</label>
                         <input type="text" name="month" id=month required="required" size="1"/>
                         <label for="day">Day</label>
-                        <input type="text" name="month" id="day" required="required" size="1"/>
+                        <input type="text" name="day" id="day" required="required" size="1"/>
                         <label for="year">Year (4 digit)</label>
-                        <input type="text" name="month" id="year" required="required" size="3" />
+                        <input type="text" name="year" id="year" required="required" size="3" pattern="\d{4}"/>
                     </td>
                 </tr>
                 <tr>
@@ -125,9 +126,10 @@
                     </td>
                     <td>
                         <select name="gender" required="required">
-                            <option label="Male" value="">Male</option>
-                            <option label="Female" value="1">Female</option>
-                            <option label="Other" value="2">Other</option>
+                            <option selected="selected" disabled value="">Choose</option>
+                            <option label="Male" value="1">Male</option>
+                            <option label="Female" value="2">Female</option>
+                            <option label="Other" value="3">Other</option>
                         </select>
                     </td>
                 </tr>
