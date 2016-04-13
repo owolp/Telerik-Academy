@@ -44,19 +44,19 @@ namespace BiggestOfFive
 
             double biggestNumber;
 
-            if ((a > b) & (a > c) & (a > d) & (a > e))
+            if ((a > b) && (a > c) && (a > d) && (a > e))
             {
                 biggestNumber = a;
             }
-            else if ((b > a) & (b > c) & (b > d) & (b > e))
+            else if ((b > a) && (b > c) && (b > d) && (b > e))
             {
                 biggestNumber = b;
             }
-            else if ((c > a) & (c > b) & (c > d) & (c > e))
+            else if ((c > a) && (c > b) && (c > d) && (c > e))
             {
                 biggestNumber = c;
             }
-            else if ((d > a) & (d > b) & (d > c) & (d > e))
+            else if ((d > a) && (d > b) && (d > c) && (d > e))
             {
                 biggestNumber = d;
             }

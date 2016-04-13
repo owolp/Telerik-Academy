@@ -36,23 +36,23 @@ namespace MultiplicationSign
             double c = double.Parse(line);
 
             string result;
-            if ((a == 0) | (b == 0) | (c == 0))
+            if ((a == 0) || (b == 0) || (c == 0))
             {
                 result = "0";
             }
-            else if ((a < 0) & (b > 0) & (c > 0))
+            else if ((a < 0) && (b > 0) && (c > 0))
             {
                 result = "-";
             }
-            else if ((a > 0) & (b < 0) & (c > 0))
+            else if ((a > 0) && (b < 0) && (c > 0))
             {
                 result = "-";
             }
-            else if ((a > 0) & (b > 0) & (c < 0))
+            else if ((a > 0) && (b > 0) && (c < 0))
             {
                 result = "-";
             }
-            else if ((a < 0) & (b < 0) & (c < 0))
+            else if ((a < 0) && (b < 0) && (c < 0))
             {
                 result = "-";
             }
