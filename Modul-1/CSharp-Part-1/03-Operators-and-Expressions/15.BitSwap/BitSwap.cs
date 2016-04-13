@@ -14,10 +14,6 @@
 //Memory limit: 8MB
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BitSwap
 {
@@ -25,12 +21,60 @@ namespace BitSwap
     {
         static void Main()
         {
-            int n = int.Parse(Console.ReadLine());
+            uint n = uint.Parse(Console.ReadLine());
             int p = int.Parse(Console.ReadLine());
             int q = int.Parse(Console.ReadLine());
             int k = int.Parse(Console.ReadLine());
 
-            byte[] array = new byte[32];
+            uint[] pArray = new uint[k];
+            uint[] qArray = new uint[k];
+
+            for (int i = p, j = 0; j < k; i++, j++)
+            {
+                pArray[j] = GetBit(n, i);
+            }
+
+            for (int i = q, j = 0; j < k; i++, j++)
+            {
+                qArray[j] = GetBit(n, i);
+            }
+
+            for (int i = p, j = 0; j < k; j++, i++)
+            {
+                n = SetBit(n, i, (int)qArray[j]);
+            }
+
+            for (int i = q, j = 0; j < k; j++, i++)
+            {
+                n = SetBit(n, i, (int)pArray[j]);
+            }
+
+            Console.WriteLine(n);
+        }
+
+        public static uint GetBit(uint number, int position)
+        {
+            uint mask = 1U << position;
+            uint bit = number & mask;
+            bit = bit >> position;
+
+            return bit;
+        }
+
+        public static uint SetBit(uint number, int position, int bit)
+        {
+            if (bit == 0)
+            {
+                uint mask = ~(1U << position);
+                number = number & mask;
+                return number;
+            }
+            else // bit == 1
+            {
+                uint mask = 1U << position;
+                number = number | mask;
+                return number;
+            }
         }
     }
 }
