@@ -63,9 +63,9 @@ namespace MMSA
                 sum += number;
             }
             average = sum / sequence;
-            Console.WriteLine("min={0}\n" +
-                              "max={1}\n" +
-                              "sum={2}\n" +
+            Console.WriteLine("min={0:F2}\n" +
+                              "max={1:F2}\n" +
+                              "sum={2:F2}\n" +
                               "avg={3:F2}\n", minValue, maxValue, sum, average);
         }
     }

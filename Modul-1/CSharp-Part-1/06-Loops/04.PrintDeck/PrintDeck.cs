@@ -23,26 +23,25 @@ namespace PrintDeck
     {
         static void Main()
         {
-            char cardSign = char.Parse(Console.ReadLine());
+            string cardSign = Console.ReadLine().ToUpper();
             int length;
 
             switch (cardSign)
             {
-                case 'J':
+                case "J":
                     length = 11;
                     break;
-                case 'D':
+                case "Q":
                     length = 12;
                     break;
-                case 'K':
+                case "K":
                     length = 13;
                     break;
-                case 'A':
+                case "A":
                     length = 14;
                     break;
                 default:
-                    string number = Convert.ToString(cardSign);
-                    length = int.Parse(number);
+                    length = int.Parse(cardSign);
                     break;
             }
 
@@ -67,7 +66,7 @@ namespace PrintDeck
                         Console.WriteLine(answer, "J");
                         break;
                     case 12:
-                        Console.WriteLine(answer, "D");
+                        Console.WriteLine(answer, "Q");
                         break;
                     case 13:
                         Console.WriteLine(answer, "K");

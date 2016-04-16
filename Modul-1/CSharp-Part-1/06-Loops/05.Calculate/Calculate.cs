@@ -9,7 +9,7 @@
 //    Output only one number - the sum of the sequence for the given N and x.
 //Constraints
 //    N will always be a valid integer between 2 and 20, inclusive.
-//    X will always be a valid floating-point number between 0 and 100
+//    X will always be a valid floating-point number between -100 and 100
 //    X* N will always be less than 50
 //    Time limit: 0.1s
 //    Memory limit: 16MB
@@ -27,16 +27,17 @@ namespace Calculate
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
             int n = int.Parse(Console.ReadLine());
-            int x = int.Parse(Console.ReadLine());
+            double x = double.Parse(Console.ReadLine());
 
             double sum = 1;
-            long factorial = 1; 
+            double xPower = 1;
+            int factorial = 1; 
 
             for (int i = 1; i <= n; i++)
             {
                 factorial *= i;
-                long xPower = (long)Math.Pow(x, i);
-                sum += ((double)factorial / xPower);
+                xPower *= x;
+                sum += (factorial / xPower);
             }
 
             Console.WriteLine("{0:F5}",sum);
