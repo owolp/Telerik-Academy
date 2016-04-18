@@ -1,4 +1,4 @@
-    <table border="1" cellspacing="0">
+    <table>
 
         <thead>
             <tr>
