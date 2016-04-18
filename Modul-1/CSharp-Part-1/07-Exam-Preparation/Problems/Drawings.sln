@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fire", "Fire\Fire.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cube", "Cube\Cube.csproj", "{9351D34F-3757-4689-B99A-E803AAD838CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cube3D", "Cube3D\Cube3D.csproj", "{B7744FF0-554C-493A-BB65-A655C859A423}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{9351D34F-3757-4689-B99A-E803AAD838CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9351D34F-3757-4689-B99A-E803AAD838CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9351D34F-3757-4689-B99A-E803AAD838CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7744FF0-554C-493A-BB65-A655C859A423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7744FF0-554C-493A-BB65-A655C859A423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7744FF0-554C-493A-BB65-A655C859A423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7744FF0-554C-493A-BB65-A655C859A423}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
