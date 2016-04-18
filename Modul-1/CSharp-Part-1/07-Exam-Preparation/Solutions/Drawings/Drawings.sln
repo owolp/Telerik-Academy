@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikLogo", "..\..\Proble
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UKFlag", "..\..\Problems\UKFlag\UKFlag.csproj", "{DC1CE77E-FF7C-41CA-BAD8-D495788888D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fire", "..\..\Problems\Fire\Fire.csproj", "{5B2CC3EA-594E-4B66-8FCF-5E14597DD018}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{DC1CE77E-FF7C-41CA-BAD8-D495788888D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC1CE77E-FF7C-41CA-BAD8-D495788888D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC1CE77E-FF7C-41CA-BAD8-D495788888D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B2CC3EA-594E-4B66-8FCF-5E14597DD018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B2CC3EA-594E-4B66-8FCF-5E14597DD018}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B2CC3EA-594E-4B66-8FCF-5E14597DD018}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B2CC3EA-594E-4B66-8FCF-5E14597DD018}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
