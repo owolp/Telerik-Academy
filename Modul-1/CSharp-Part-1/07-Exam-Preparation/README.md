@@ -8,7 +8,7 @@
 | [28 December 2012](http://bgcoder.com/Contests/42/Telerik-Academy-Exam-1-28-Dec-2012) | Sevenland Numbers | A-nacci | Excel Columns | Telerik Logo | Bit Ball |
 | [29 December 2012](http://bgcoder.com/Contests/43/Telerik-Academy-Exam-1-29-Dec-2012) | Triple Rotation of Digits | Quadronacci Rectangle | Poker | [UK Flag - Drawing](https://github.com/owolp/Telerik-Academy/tree/master/Modul-1/CSharp-Part-1/07-Exam-Preparation/Problems/UKFlag) | Angry Bits |
 | [23 June 2013](http://bgcoder.com/Contests/91/Telerik-Academy-Exam-1-23-June-2013) | Coffee Machine | Drunken Numbers | Bulls and Cows | [Fire - Drawing](https://github.com/owolp/Telerik-Academy/tree/master/Modul-1/CSharp-Part-1/07-Exam-Preparation/Problems/Fire) | Neurons |
-| [24 June 2013 Evening](http://bgcoder.com/Contests/93/Telerik-Academy-Exam-1-24-June-2013-Evening) | Garden | Secrets | Card Wars | Bat'Goiko Tower | Bittris |
+| [24 June 2013 Evening](http://bgcoder.com/Contests/93/Telerik-Academy-Exam-1-24-June-2013-Evening) | Garden | Secrets | Card Wars | [Bat'Goiko Tower - Drawing](https://github.com/owolp/Telerik-Academy/tree/master/Modul-1/CSharp-Part-1/07-Exam-Preparation/Problems/BatGoikoTower) | Bittris |
 | [5 December 2013 Evening](http://bgcoder.com/Contests/105/Telerik-Academy-Exam-1-5-December-2013-Evening) | Peace of Cake | Angry Female GPS | Ones and Zeros | Eggcelent | Na Baba mi Smetalnika |
 | [6 December 2013 Morning](http://bgcoder.com/Contests/106/Telerik-Academy-Exam-1-6-December-2013-Morning) | 3-6-9 | The Horror | X Expression | Diamond Trolls | Warhead |
 | [6 December 2013 Evening](http://bgcoder.com/Contests/107/Telerik-Academy-Exam-1-6-December-2013-Evening) | 2-4-8 | Nightmare on Code Street | Enigmanation | Kaspichania Boats | Game of Page |
