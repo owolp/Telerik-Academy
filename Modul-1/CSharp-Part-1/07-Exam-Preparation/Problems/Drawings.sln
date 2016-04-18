@@ -3,23 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestRoad", "..\..\Problems\ForestRoad\ForestRoad.csproj", "{A02C7686-E09B-416B-AD39-F97D22CF0CA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestRoad", "ForestRoad\ForestRoad.csproj", "{A02C7686-E09B-416B-AD39-F97D22CF0CA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trapezoid", "..\..\Problems\Trapezoid\Trapezoid.csproj", "{BB5CF164-437E-4DDA-AE6C-585CAE6098E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trapezoid", "Trapezoid\Trapezoid.csproj", "{BB5CF164-437E-4DDA-AE6C-585CAE6098E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirTree", "..\..\Problems\FirTree\FirTree.csproj", "{59ED30E6-9D0B-47E8-88CD-DC632322CE44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirTree", "FirTree\FirTree.csproj", "{59ED30E6-9D0B-47E8-88CD-DC632322CE44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandGlass", "..\..\Problems\SandGlass\SandGlass.csproj", "{BF317C57-F1DF-499D-87A0-335049C3A7AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandGlass", "SandGlass\SandGlass.csproj", "{BF317C57-F1DF-499D-87A0-335049C3A7AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carpets", "..\..\Problems\Carpets\Carpets.csproj", "{78BC03EB-5305-444B-84C1-110926047B5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carpets", "Carpets\Carpets.csproj", "{78BC03EB-5305-444B-84C1-110926047B5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikLogo", "..\..\Problems\TelerikLogo\TelerikLogo.csproj", "{C9173AB5-1F5D-474D-BFD4-832EC5897458}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UKFlag", "UKFlag\UKFlag.csproj", "{DC1CE77E-FF7C-41CA-BAD8-D495788888D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UKFlag", "..\..\Problems\UKFlag\UKFlag.csproj", "{DC1CE77E-FF7C-41CA-BAD8-D495788888D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fire", "Fire\Fire.csproj", "{5B2CC3EA-594E-4B66-8FCF-5E14597DD018}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fire", "..\..\Problems\Fire\Fire.csproj", "{5B2CC3EA-594E-4B66-8FCF-5E14597DD018}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cube", "..\..\Problems\Cube\Cube.csproj", "{9351D34F-3757-4689-B99A-E803AAD838CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cube", "Cube\Cube.csproj", "{9351D34F-3757-4689-B99A-E803AAD838CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +45,6 @@ Global
 		{78BC03EB-5305-444B-84C1-110926047B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78BC03EB-5305-444B-84C1-110926047B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78BC03EB-5305-444B-84C1-110926047B5D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C9173AB5-1F5D-474D-BFD4-832EC5897458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9173AB5-1F5D-474D-BFD4-832EC5897458}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9173AB5-1F5D-474D-BFD4-832EC5897458}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C9173AB5-1F5D-474D-BFD4-832EC5897458}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DC1CE77E-FF7C-41CA-BAD8-D495788888D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DC1CE77E-FF7C-41CA-BAD8-D495788888D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC1CE77E-FF7C-41CA-BAD8-D495788888D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
