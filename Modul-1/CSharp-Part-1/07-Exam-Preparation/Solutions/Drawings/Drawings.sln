@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandGlass", "..\..\Problems
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carpets", "..\..\Problems\Carpets\Carpets.csproj", "{78BC03EB-5305-444B-84C1-110926047B5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikLogo", "..\..\Problems\TelerikLogo\TelerikLogo.csproj", "{C9173AB5-1F5D-474D-BFD4-832EC5897458}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UKFlag", "..\..\Problems\UKFlag\UKFlag.csproj", "{DC1CE77E-FF7C-41CA-BAD8-D495788888D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{78BC03EB-5305-444B-84C1-110926047B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78BC03EB-5305-444B-84C1-110926047B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78BC03EB-5305-444B-84C1-110926047B5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9173AB5-1F5D-474D-BFD4-832EC5897458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9173AB5-1F5D-474D-BFD4-832EC5897458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9173AB5-1F5D-474D-BFD4-832EC5897458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9173AB5-1F5D-474D-BFD4-832EC5897458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC1CE77E-FF7C-41CA-BAD8-D495788888D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC1CE77E-FF7C-41CA-BAD8-D495788888D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC1CE77E-FF7C-41CA-BAD8-D495788888D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC1CE77E-FF7C-41CA-BAD8-D495788888D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
