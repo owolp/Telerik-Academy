@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestRoad", "..\..\Problem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trapezoid", "..\..\Problems\Trapezoid\Trapezoid.csproj", "{BB5CF164-437E-4DDA-AE6C-585CAE6098E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirTree", "..\..\Problems\FirTree\FirTree.csproj", "{59ED30E6-9D0B-47E8-88CD-DC632322CE44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BB5CF164-437E-4DDA-AE6C-585CAE6098E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB5CF164-437E-4DDA-AE6C-585CAE6098E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB5CF164-437E-4DDA-AE6C-585CAE6098E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59ED30E6-9D0B-47E8-88CD-DC632322CE44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59ED30E6-9D0B-47E8-88CD-DC632322CE44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59ED30E6-9D0B-47E8-88CD-DC632322CE44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59ED30E6-9D0B-47E8-88CD-DC632322CE44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
