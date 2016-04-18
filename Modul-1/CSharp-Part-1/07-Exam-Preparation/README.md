@@ -1,7 +1,7 @@
     <table>
 
-        <thead>
-            <tr>
+        <tbody>
+			<tr>
                 <th align="center">
                     Exam
                 </th>
@@ -21,9 +21,7 @@
                     Problem 5
                 </th>
             </tr>
-        </thead>
-
-        <tbody>
+			
             <tr>
                 <td align="center">
                     <a href="http://bgcoder.com/Contests/1/CSharp-Fundamentals-2011-2012-Part-1-Sample-Exam">2011/2012 Sample Exam</a>
