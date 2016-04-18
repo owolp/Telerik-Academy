@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirTree", "..\..\Problems\F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandGlass", "..\..\Problems\SandGlass\SandGlass.csproj", "{BF317C57-F1DF-499D-87A0-335049C3A7AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carpets", "..\..\Problems\Carpets\Carpets.csproj", "{78BC03EB-5305-444B-84C1-110926047B5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{BF317C57-F1DF-499D-87A0-335049C3A7AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF317C57-F1DF-499D-87A0-335049C3A7AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF317C57-F1DF-499D-87A0-335049C3A7AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78BC03EB-5305-444B-84C1-110926047B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78BC03EB-5305-444B-84C1-110926047B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78BC03EB-5305-444B-84C1-110926047B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78BC03EB-5305-444B-84C1-110926047B5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
