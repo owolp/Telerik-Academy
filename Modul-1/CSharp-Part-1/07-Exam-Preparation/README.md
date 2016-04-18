@@ -6,7 +6,7 @@
 | [7 December 2011 Morning](http://bgcoder.com/Contests/5/Telerik-Academy-Exam-1-7-Dec-2011-Morning) | Fighter Attack | Astrological Digits | [Sand-glass](https://github.com/owolp/Telerik-Academy/tree/master/Modul-1/CSharp-Part-1/07-Exam-Preparation/Problems/SandGlass) | Dancing Bits | Lines |
 | [27 December 2012](http://bgcoder.com/Contests/41/Telerik-Academy-Exam-1-27-Dec-2012) | Next Date | Tribonacci Triangle | Sheets | [Carpets - Drawing](https://github.com/owolp/Telerik-Academy/tree/master/Modul-1/CSharp-Part-1/07-Exam-Preparation/Problems/Carpets) | Formula Bit 1 |
 | [28 December 2012](http://bgcoder.com/Contests/42/Telerik-Academy-Exam-1-28-Dec-2012) | Sevenland Numbers | A-nacci | Excel Columns | Telerik Logo | Bit Ball |
-| [29 December 2012](http://bgcoder.com/Contests/43/Telerik-Academy-Exam-1-29-Dec-2012) | Triple Rotation of Digits | Quadronacci Rectangle | Poker | UK Flag | Angry Bits |
+| [29 December 2012](http://bgcoder.com/Contests/43/Telerik-Academy-Exam-1-29-Dec-2012) | Triple Rotation of Digits | Quadronacci Rectangle | Poker | [UK Flag - Drawing](https://github.com/owolp/Telerik-Academy/tree/master/Modul-1/CSharp-Part-1/07-Exam-Preparation/Problems/UKFlag) | Angry Bits |
 | [23 June 2013](http://bgcoder.com/Contests/91/Telerik-Academy-Exam-1-23-June-2013) | Coffee Machine | Drunken Numbers | Bulls and Cows | Fire | Neurons |
 | [24 June 2013 Evening](http://bgcoder.com/Contests/93/Telerik-Academy-Exam-1-24-June-2013-Evening) | Garden | Secrets | Card Wars | Bat'Goiko Tower | Bittris |
 | [5 December 2013 Evening](http://bgcoder.com/Contests/105/Telerik-Academy-Exam-1-5-December-2013-Evening) | Peace of Cake | Angry Female GPS | Ones and Zeros | Eggcelent | Na Baba mi Smetalnika |
