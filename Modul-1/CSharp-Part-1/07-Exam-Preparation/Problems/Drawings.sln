@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cube3D", "Cube3D\Cube3D.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatGoikoTower", "BatGoikoTower\BatGoikoTower.csproj", "{8A7404CF-493D-44AA-891C-DD76AE587C79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eggcelent", "Eggcelent\Eggcelent.csproj", "{1D12BB83-0991-431D-B0F4-79E60A2C22C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{8A7404CF-493D-44AA-891C-DD76AE587C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A7404CF-493D-44AA-891C-DD76AE587C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A7404CF-493D-44AA-891C-DD76AE587C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D12BB83-0991-431D-B0F4-79E60A2C22C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D12BB83-0991-431D-B0F4-79E60A2C22C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D12BB83-0991-431D-B0F4-79E60A2C22C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D12BB83-0991-431D-B0F4-79E60A2C22C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
