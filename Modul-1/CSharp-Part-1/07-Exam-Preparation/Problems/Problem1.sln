@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathExpression", "MathExpre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenlandNumbers", "SevenlandNumbers\SevenlandNumbers.csproj", "{1F426F05-7FD6-404B-82FF-4191C7CF4AD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMachine", "CoffeeMachine\CoffeeMachine.csproj", "{21538690-CCFD-48B1-B67B-67C967190113}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{1F426F05-7FD6-404B-82FF-4191C7CF4AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F426F05-7FD6-404B-82FF-4191C7CF4AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F426F05-7FD6-404B-82FF-4191C7CF4AD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21538690-CCFD-48B1-B67B-67C967190113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21538690-CCFD-48B1-B67B-67C967190113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21538690-CCFD-48B1-B67B-67C967190113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21538690-CCFD-48B1-B67B-67C967190113}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
