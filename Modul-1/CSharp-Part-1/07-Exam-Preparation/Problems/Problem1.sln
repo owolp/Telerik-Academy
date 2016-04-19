@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeNumbers", "ThreeNumber
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Money", "Money\Money.csproj", "{D630DAB1-DF7B-4BF4-A336-EB2D2FB2CFC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Printing", "Printing\Printing.csproj", "{2563E83C-EA87-4E22-BEFC-7A1B88D371C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D630DAB1-DF7B-4BF4-A336-EB2D2FB2CFC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D630DAB1-DF7B-4BF4-A336-EB2D2FB2CFC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D630DAB1-DF7B-4BF4-A336-EB2D2FB2CFC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2563E83C-EA87-4E22-BEFC-7A1B88D371C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2563E83C-EA87-4E22-BEFC-7A1B88D371C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2563E83C-EA87-4E22-BEFC-7A1B88D371C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2563E83C-EA87-4E22-BEFC-7A1B88D371C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
