@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripleRotationOfDigits", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathExpression", "MathExpression\MathExpression.csproj", "{8BAC82E1-0AD9-4FA1-B2DF-623AA3C5C807}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenlandNumbers", "SevenlandNumbers\SevenlandNumbers.csproj", "{1F426F05-7FD6-404B-82FF-4191C7CF4AD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{8BAC82E1-0AD9-4FA1-B2DF-623AA3C5C807}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BAC82E1-0AD9-4FA1-B2DF-623AA3C5C807}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BAC82E1-0AD9-4FA1-B2DF-623AA3C5C807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F426F05-7FD6-404B-82FF-4191C7CF4AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F426F05-7FD6-404B-82FF-4191C7CF4AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F426F05-7FD6-404B-82FF-4191C7CF4AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F426F05-7FD6-404B-82FF-4191C7CF4AD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
