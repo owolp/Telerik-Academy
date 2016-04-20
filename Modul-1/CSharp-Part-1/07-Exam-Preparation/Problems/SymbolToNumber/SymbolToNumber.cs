@@ -48,7 +48,6 @@ namespace SymbolToNumber
                 position++;
                 ch = text[position];
             }
-
         }
     }
 }
