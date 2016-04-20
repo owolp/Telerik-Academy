@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheHorror", "TheHorror\TheH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Secrets", "Secrets\Secrets.csproj", "{5E081CCD-B5D3-46C7-91FD-8B85AFA2F46C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuadronacciRectangle", "QuadronacciRectangle\QuadronacciRectangle.csproj", "{829A640E-FAD5-4714-ACF2-F6B97CF093D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{5E081CCD-B5D3-46C7-91FD-8B85AFA2F46C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E081CCD-B5D3-46C7-91FD-8B85AFA2F46C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E081CCD-B5D3-46C7-91FD-8B85AFA2F46C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{829A640E-FAD5-4714-ACF2-F6B97CF093D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{829A640E-FAD5-4714-ACF2-F6B97CF093D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{829A640E-FAD5-4714-ACF2-F6B97CF093D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{829A640E-FAD5-4714-ACF2-F6B97CF093D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
