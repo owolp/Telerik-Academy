@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolToNumber", "SymbolToN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decoding", "Decoding\Decoding.csproj", "{D29D9BC4-5141-443D-BDDC-AF9BAF161D15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncodingSum", "EncodingSum\EncodingSum.csproj", "{40AB7652-4F5A-4DC1-9731-F0D46D44EDDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D29D9BC4-5141-443D-BDDC-AF9BAF161D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D29D9BC4-5141-443D-BDDC-AF9BAF161D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D29D9BC4-5141-443D-BDDC-AF9BAF161D15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40AB7652-4F5A-4DC1-9731-F0D46D44EDDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40AB7652-4F5A-4DC1-9731-F0D46D44EDDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40AB7652-4F5A-4DC1-9731-F0D46D44EDDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40AB7652-4F5A-4DC1-9731-F0D46D44EDDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
