@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenlandNumbers", "Sevenla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMachine", "CoffeeMachine\CoffeeMachine.csproj", "{21538690-CCFD-48B1-B67B-67C967190113}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrunkenNumbers", "DrunkenNumbers\DrunkenNumbers.csproj", "{5E175B88-CF40-4740-ADFF-05DA101C62D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{21538690-CCFD-48B1-B67B-67C967190113}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21538690-CCFD-48B1-B67B-67C967190113}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21538690-CCFD-48B1-B67B-67C967190113}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E175B88-CF40-4740-ADFF-05DA101C62D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E175B88-CF40-4740-ADFF-05DA101C62D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E175B88-CF40-4740-ADFF-05DA101C62D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E175B88-CF40-4740-ADFF-05DA101C62D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
