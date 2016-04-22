@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuronMapping", "NeuronMapp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitsToBits", "BitsToBits\BitsToBits.csproj", "{590C9F55-EA07-4CA8-BDA2-5CAB1FAD1E9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchInBits", "SearchInBits\SearchInBits.csproj", "{D9281998-1905-4CEA-8382-CAE0DE9C7D50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{590C9F55-EA07-4CA8-BDA2-5CAB1FAD1E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{590C9F55-EA07-4CA8-BDA2-5CAB1FAD1E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{590C9F55-EA07-4CA8-BDA2-5CAB1FAD1E9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9281998-1905-4CEA-8382-CAE0DE9C7D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9281998-1905-4CEA-8382-CAE0DE9C7D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9281998-1905-4CEA-8382-CAE0DE9C7D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9281998-1905-4CEA-8382-CAE0DE9C7D50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
