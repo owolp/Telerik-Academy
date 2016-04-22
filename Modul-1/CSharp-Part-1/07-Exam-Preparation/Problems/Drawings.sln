@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaspichaniaBoats", "Kaspich
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondTrolls", "DiamondTrolls\DiamondTrolls.csproj", "{8370EDFA-8991-48A6-B09F-3EA322322451}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersianRugs", "PersianRugs\PersianRugs.csproj", "{20C2EAEE-B9E3-49FA-B06F-18BE4C4B57B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{8370EDFA-8991-48A6-B09F-3EA322322451}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8370EDFA-8991-48A6-B09F-3EA322322451}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8370EDFA-8991-48A6-B09F-3EA322322451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20C2EAEE-B9E3-49FA-B06F-18BE4C4B57B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20C2EAEE-B9E3-49FA-B06F-18BE4C4B57B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20C2EAEE-B9E3-49FA-B06F-18BE4C4B57B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20C2EAEE-B9E3-49FA-B06F-18BE4C4B57B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
