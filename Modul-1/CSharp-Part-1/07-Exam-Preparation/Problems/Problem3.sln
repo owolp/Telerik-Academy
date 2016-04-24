@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaddyKopper", "SaddyKopper\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigmanation", "Enigmanation\Enigmanation.csproj", "{2C70EB8E-8FB2-4025-809F-AA73C2351D7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA1", "CA1\CA1.csproj", "{8421DB0E-C844-4F8A-A70D-F1F2D1B65B7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2C70EB8E-8FB2-4025-809F-AA73C2351D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C70EB8E-8FB2-4025-809F-AA73C2351D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C70EB8E-8FB2-4025-809F-AA73C2351D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8421DB0E-C844-4F8A-A70D-F1F2D1B65B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8421DB0E-C844-4F8A-A70D-F1F2D1B65B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8421DB0E-C844-4F8A-A70D-F1F2D1B65B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8421DB0E-C844-4F8A-A70D-F1F2D1B65B7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
