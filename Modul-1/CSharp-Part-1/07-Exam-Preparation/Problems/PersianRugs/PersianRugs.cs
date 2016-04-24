@@ -9,7 +9,6 @@ namespace PersianRugs
             int n = int.Parse(Console.ReadLine());
             int d = int.Parse(Console.ReadLine());
             int width = 2 * n + 1;
-            int height = 2 * n + 1;
 
             //\  \.../  /
             //#\  \./  /#
