@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AllocateArray
 {
@@ -10,6 +6,14 @@ namespace AllocateArray
     {
         static void Main()
         {
+            int n = int.Parse(Console.ReadLine());
+
+            int[] numbers = new int[n];
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine(i * 5);
+            }
         }
     }
 }
