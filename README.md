@@ -10,4 +10,4 @@
 | May | 1 | [CSS Styling](https://telerikacademy.com/Courses/Courses/Details/332) | [GitHub](https://github.com/TelerikAcademy/CSS) \ [About](http://academy.telerik.com/student-courses/web-design-and-ui/css-styling/about)| GitHub | GitHub |
 ---
 
-![Telerik Academy Curriculum](Sources\telerik-academy-curriculum.png)
+![Telerik Academy Curriculum](https://github.com/owolp/Telerik-Academy/blob/master/Sources/telerik-academy-curriculum.png)
