@@ -1,0 +1,45 @@
+.page-background {
+    background-color: #595959;
+}
+
+dl dt {
+    color: white;
+    font-style: italic;
+    float: left;
+}
+
+dl dd {
+    margin-left: 120px;
+    margin-bottom: 10px;
+}
+
+dd:first-of-type::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: seagreen;
+}
+
+.lemonchiffon-font {
+    color: lemonchiffon
+}
+
+#support {
+    color: red;
+    font-weight: bold;
+}
+
+p,
+.greyed-text {
+    color: lightgrey;
+}
+
+#darkorange-font {
+    color: darkorange
+}
+
+p {
+    font-size: 20px;
+}

@@ -1,0 +1,43 @@
+body {
+    background-color: #A9A9A9;
+}
+
+.align-center {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    color: #F5F8D2;
+    font-size: 35px;
+}
+
+/*li:nth-last-child(2),
+li:nth-last-child(3),
+li:nth-last-child(4) {
+    pointer-events: none;
+    cursor: default;
+}*/
+
+li > a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p > a {
+    text-decoration: none;
+    color: black;    
+}
+
+.add-underline {
+    text-decoration: underline;
+}
+
+a:hover {
+    background: lightgrey;
+}
