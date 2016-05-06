@@ -14,38 +14,54 @@ namespace CompareCharArrays
 
             char symbol = 'a';
 
+            if (firstArray.Length > secondArray.Length)
+            {
+                symbol = '>';
+                Console.WriteLine(symbol);
+                return;
+            }
+            else if (firstArray.Length < secondArray.Length)
+            {
+                symbol = '<';
+                Console.WriteLine(symbol);
+                return;
+            }
+
             int length = Math.Min(firstArray.Length, secondArray.Length);
+
+            bool equal = true;
 
             for (int i = 0; i < length; i++)
             {
-                if (firstArray.Length > secondArray.Length)
+                var firstArraySymbol = firstArray[i];
+                var secondArraySymbol = secondArray[i];
+
+                if (firstArraySymbol - 'a' < 0 && 0 <= secondArraySymbol - 'a')
                 {
                     symbol = '>';
-                    break;
+                    equal = false;
                 }
-                else if (firstArray.Length < secondArray.Length)
+                else if (secondArraySymbol - 'a' < 0 && 0 <= firstArraySymbol - 'a')
                 {
                     symbol = '<';
-                    break;
+                    equal = false;
                 }
                 else
                 {
-                    if (firstArray[i] < secondArray[i])
+                    if (firstArraySymbol < secondArraySymbol)
                     {
                         symbol = '<';
+                        equal = false;
                     }
-                    else if (firstArray[i] > secondArray[i])
+                    else if (firstArraySymbol > secondArraySymbol)
                     {
                         symbol = '>';
-                    }
-                    else
-                    {
-                        symbol = '=';
+                        equal = false;
                     }
                 }
             }
 
-            Console.WriteLine(symbol);
+            Console.WriteLine(equal == true ? "=" : "{0}", symbol);
         }
     }
 }
