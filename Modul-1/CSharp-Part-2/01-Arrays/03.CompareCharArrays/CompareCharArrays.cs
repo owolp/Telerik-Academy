@@ -1,4 +1,5 @@
 ﻿using System;
+// 80/100 BGCODER
 
 namespace CompareCharArrays
 {
@@ -6,62 +7,35 @@ namespace CompareCharArrays
     {
         static void Main()
         {
-            var input = Console.ReadLine();
-            char[] firstArray = input.ToCharArray();
+            string firstString = Console.ReadLine();
+            string secondString = Console.ReadLine();
 
-            input = Console.ReadLine();
-            char[] secondArray = input.ToCharArray();
 
-            char symbol = 'a';
-
-            if (firstArray.Length > secondArray.Length)
+            if (firstString.Length > secondString.Length)
             {
-                symbol = '>';
-                Console.WriteLine(symbol);
-                return;
+                Console.WriteLine(">");
             }
-            else if (firstArray.Length < secondArray.Length)
+            else if (firstString.Length < secondString.Length)
             {
-                symbol = '<';
-                Console.WriteLine(symbol);
-                return;
+                Console.WriteLine("<");
             }
-
-            int length = Math.Min(firstArray.Length, secondArray.Length);
-
-            bool equal = true;
-
-            for (int i = 0; i < length; i++)
+            else
             {
-                var firstArraySymbol = firstArray[i];
-                var secondArraySymbol = secondArray[i];
+                int compare = firstString.CompareTo(secondString);
 
-                if (firstArraySymbol - 'a' < 0 && 0 <= secondArraySymbol - 'a')
+                if (compare == -1)
                 {
-                    symbol = '>';
-                    equal = false;
+                    Console.WriteLine("<");
                 }
-                else if (secondArraySymbol - 'a' < 0 && 0 <= firstArraySymbol - 'a')
+                else if (compare == 1)
                 {
-                    symbol = '<';
-                    equal = false;
+                    Console.WriteLine(">");
                 }
                 else
                 {
-                    if (firstArraySymbol < secondArraySymbol)
-                    {
-                        symbol = '<';
-                        equal = false;
-                    }
-                    else if (firstArraySymbol > secondArraySymbol)
-                    {
-                        symbol = '>';
-                        equal = false;
-                    }
+                    Console.WriteLine("=");
                 }
             }
-
-            Console.WriteLine(equal == true ? "=" : "{0}", symbol);
         }
     }
 }
