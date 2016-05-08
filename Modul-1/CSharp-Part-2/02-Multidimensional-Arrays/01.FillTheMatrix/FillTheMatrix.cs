@@ -10,121 +10,57 @@ namespace FillTheMatrix
             int n = int.Parse(Console.ReadLine());
             var symbol = Console.ReadLine();
 
+            int[,] matrix = new int[n, n];
+            int index = 1;
+
             switch (symbol)
             {
                 #region caseA
                 case "a":
-                    int[,] matrixA = new int[n, n];
-                    int indexA = 1;
-
-                    for (int col = 0; col < matrixA.GetLength(1); col++)
+                    for (int col = 0; col < matrix.GetLength(1); col++)
                     {
-                        for (int row = 0; row < matrixA.GetLength(0); row++)
+                        for (int row = 0; row < matrix.GetLength(0); row++)
                         {
-                            matrixA[row, col] = indexA;
-                            indexA++;
+                            matrix[row, col] = index;
+                            index++;
                         }
-                    }
-
-                    for (int row = 0; row < n; row++)
-                    {
-                        for (int col = 0; col < n; col++)
-                        {
-                            if (col == n - 1)
-                            {
-                                Console.Write("{0}", matrixA[row, col]);
-                            }
-                            else
-                            {
-                                Console.Write("{0} ", matrixA[row, col]);
-                            }
-
-                        }
-                        Console.WriteLine();
                     }
                     break;
                 #endregion
 
                 #region caseB
                 case "b":
-                    int[,] matrixB = new int[n, n];
-                    int indexB = 0;
-                    #region Solution1B
-                    //for (int col = 0; col < matrixB.GetLength(1); col++)
-                    //{
-                    //    if (col % 2 == 0)
-                    //    {
-                    //        for (int row = 0; row < matrixB.GetLength(0); row++)
-                    //        {
-                    //            indexB++;
-                    //            matrixB[row, col] = indexB;
-                    //        }
-
-                    //        indexB += n;
-                    //    }
-                    //    else
-                    //    {
-                    //        for (int row = 0; row < matrixB.GetLength(0); row++)
-                    //        {
-                    //            matrixB[row, col] = indexB;
-                    //            indexB--;
-                    //        }
-
-                    //        indexB += n;
-                    //    }
-                    //}
-                    #endregion
-
-                    for (int col = 0; col < matrixB.GetLength(1); col++)
+                    for (int col = 0; col < matrix.GetLength(1); col++)
                     {
                         if (col % 2 == 0)
                         {
-                            for (int row = 0; row < matrixB.GetLength(0); row++)
+                            for (int row = 0; row < matrix.GetLength(0); row++)
                             {
-                                indexB++;
-                                matrixB[row, col] = indexB;
+                                matrix[row, col] = index;
+                                index++;
                             }
                         }
                         else
                         {
-                            for (int row = matrixB.GetLength(0) - 1; row >= 0; row--)
+                            for (int row = matrix.GetLength(0) - 1; row >= 0; row--)
                             {
-                                indexB++;
-                                matrixB[row, col] = indexB;
+                                matrix[row, col] = index;
+                                index++;
                             }
                         }
-                    }
-
-                    for (int row = 0; row < n; row++)
-                    {
-                        for (int col = 0; col < n; col++)
-                        {
-                            if (col == n - 1)
-                            {
-                                Console.Write("{0}", matrixB[row, col]);
-                            }
-                            else
-                            {
-                                Console.Write("{0} ", matrixB[row, col]);
-                            }
-                        }
-                        Console.WriteLine();
                     }
                     break;
                 #endregion
 
                 #region caseC
                 case "c":
-                    int[,] matrixC = new int[n, n];
-                    int indexC = 1;
-
                     // left side
                     for (int row = n - 1; row >= 0; row--)
                     {
                         for (int col = 0; col < n - row; col++)
                         {
-                            matrixC[row + col, col] = indexC;
-                            indexC++;
+                            matrix[row + col, col] = index;
+                            index++;
                         }
                     }
 
@@ -133,32 +69,63 @@ namespace FillTheMatrix
                     {
                         for (int row = 0; row < n - col; row++)
                         {
-                            matrixC[row, row + col] = indexC;
-                            indexC++;
+                            matrix[row, row + col] = index;
+                            index++;
                         }
-                    }
-
-                    // print matrix
-                    for (int row = 0; row < n; row++)
-                    {
-                        for (int col = 0; col < n; col++)
-                        {
-                            if (col == n - 1)
-                            {
-                                Console.Write("{0}", matrixC[row, col]);
-                            }
-                            else
-                            {
-                                Console.Write("{0} ", matrixC[row, col]);
-                            }
-                        }
-                        Console.WriteLine();
                     }
                     break;
                 #endregion
 
-                default:
+                #region caseD
+                case "d":
+                    int start = 0;
+                    int stop = n;
+
+                    while (stop - start >= 1)
+                    {
+                        for (int i = start; i < stop; i++)
+                        {
+                            matrix[i, start] = index;
+                            index++;
+                        }
+                        for (int j = start + 1; j < stop; j++)
+                        {
+                            matrix[stop - 1, j] = index;
+                            index++;
+                        }
+                        for (int k = stop - 2; k >= start; k--)
+                        {
+                            matrix[k, stop - 1] = index;
+                            index++;
+                        }
+                        for (int l = stop - 2; l >= start + 1; l--)
+                        {
+                            matrix[start, l] = index;
+                            index++;
+                        }
+
+                        start++;
+                        stop--;
+                    }
                     break;
+                #endregion
+            }
+
+            // print matrix
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLength(1); col++)
+                {
+                    if (col == n - 1)
+                    {
+                        Console.Write("{0}", matrix[row, col]);
+                    }
+                    else
+                    {
+                        Console.Write("{0} ", matrix[row, col]);
+                    }
+                }
+                Console.WriteLine();
             }
         }
     }
