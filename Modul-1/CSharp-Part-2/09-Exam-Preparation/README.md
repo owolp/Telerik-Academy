@@ -7,8 +7,8 @@
 | [4 February 2013](http://bgcoder.com/Contests/52/CSharp-Part-2-2012-2013-4-Feb-2013-Morning) | Kaspichan Numbers | Greedy Dwarf | Slides |
 | [5 February 2013](http://bgcoder.com/Contests/54/CSharp-Part-2-2012-2013-5-Feb-2013) | Durankulak Numbers | Joro the Rabbit | Laser |
 | [11 February 2013](http://bgcoder.com/Contests/55/CSharp-Part-2-2012-2013-11-Feb-2013) | 9Gag Numbers | Special Value | Kukata is Dancing |
-| [14 September 2013 Morning](http://bgcoder.com/Contests/94/CSharp-Part-2-2013-2014-14-Sept-2013-Morning) | Multiverse Communication | Magic Words | Tron 3D |
-| [14 September 2013 Evening](http://bgcoder.com/Contests/95/CSharp-Part-2-2013-2014-14-Sept-2013-Evening) | Zerg!!! | Moving Letters | Trails 3D |
+| [14 September 2013](http://bgcoder.com/Contests/94/CSharp-Part-2-2013-2014-14-Sept-2013-Morning) | Multiverse Communication | Magic Words | Tron 3D |
+| [14 September 2013](http://bgcoder.com/Contests/95/CSharp-Part-2-2013-2014-14-Sept-2013-Evening) | Zerg!!! | Moving Letters | Trails 3D |
 | [22 January 2014](http://bgcoder.com/Contests/142/CSharp-Part-2-2013-2014-22-Jan-2014-Evening) | TRES4 Numbers | Bunny Factory | Patterns |
 | [24 January 2014](http://bgcoder.com/Contests/143/CSharp-Part-2-2013-2014-24-Jan-2014-Evening) | StrangeLand Numbers | Two Girls, One Path | Digits |
 | [5 March 2015](http://bgcoder.com/Contests/221/CSharp-Part-2-2015-2016-5-March-2015-Evening) | Calculation Problem | Even Differences | Lover of 3 |
