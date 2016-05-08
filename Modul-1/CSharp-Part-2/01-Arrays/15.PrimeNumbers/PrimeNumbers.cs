@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+// 90/100 BGCODER
 
 namespace PrimeNumbers
 {
