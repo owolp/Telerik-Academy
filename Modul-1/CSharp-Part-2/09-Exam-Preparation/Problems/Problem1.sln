@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeCatCoding", "DeCatCoding\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrangeLandNumbers", "StrangeLandNumbers\StrangeLandNumbers.csproj", "{97483A84-6DBF-4CEB-B57E-E75D2069F87B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zerg", "Zerg\Zerg.csproj", "{2D14F9D4-54BD-432C-80BA-16BA843133C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{97483A84-6DBF-4CEB-B57E-E75D2069F87B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97483A84-6DBF-4CEB-B57E-E75D2069F87B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97483A84-6DBF-4CEB-B57E-E75D2069F87B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D14F9D4-54BD-432C-80BA-16BA843133C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D14F9D4-54BD-432C-80BA-16BA843133C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D14F9D4-54BD-432C-80BA-16BA843133C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D14F9D4-54BD-432C-80BA-16BA843133C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
