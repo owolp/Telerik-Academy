@@ -8,19 +8,19 @@ dl dt {
     float: left;
 }
 
-dl dd {
-    margin-left: 120px;
-    margin-bottom: 10px;
-}
+    dl dd {
+        margin-left: 120px;
+        margin-bottom: 10px;
+    }
 
-dd:first-of-type::before {
-    content: '';
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    background-color: seagreen;
-}
+        dd:first-of-type::before {
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            background-color: seagreen;
+        }
 
 .lemonchiffon-font {
     color: lemonchiffon
