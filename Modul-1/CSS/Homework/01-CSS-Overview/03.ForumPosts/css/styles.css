@@ -2,7 +2,7 @@ body {
     background-color: #A9A9A9;
 }
 
-.align-center {
+footer:nth-last-child(2) {
     text-align: center;
 }
 
@@ -15,12 +15,13 @@ h1 {
     font-size: 35px;
 }
 
-/*li:nth-last-child(2),
-li:nth-last-child(3),
-li:nth-last-child(4) {
-    pointer-events: none;
-    cursor: default;
-}*/
+h1:first-of-type {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
 
 li > a {
     color: white;
@@ -29,15 +30,16 @@ li > a {
     text-decoration: none;
 }
 
+li:nth-of-type(4) {
+        text-decoration: underline white;
+        
+}
+
+.current {
+    background-color: lightgrey;
+}
+
 p > a {
     text-decoration: none;
     color: black;    
-}
-
-.add-underline {
-    text-decoration: underline;
-}
-
-a:hover {
-    background: lightgrey;
 }
