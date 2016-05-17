@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineGagNumbers", "NineGagNu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculationProblem", "CalculationProblem\CalculationProblem.csproj", "{33312B12-EB92-4642-B426-CC38C72D1A54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tres4Numbers", "Tres4Numbers\Tres4Numbers.csproj", "{EC4B17FE-1654-4986-8931-133F61392A07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{33312B12-EB92-4642-B426-CC38C72D1A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33312B12-EB92-4642-B426-CC38C72D1A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33312B12-EB92-4642-B426-CC38C72D1A54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC4B17FE-1654-4986-8931-133F61392A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4B17FE-1654-4986-8931-133F61392A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4B17FE-1654-4986-8931-133F61392A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4B17FE-1654-4986-8931-133F61392A07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
+using System.Collections.Generic;
 
 namespace StrangeLandNumbers
 {
@@ -8,91 +7,73 @@ namespace StrangeLandNumbers
     {
         static void Main()
         {
-            var inputString = Console.ReadLine();
+            ulong inBase = 7;
 
-            string[] words = ConvertToStringArr(inputString);
-
-            ulong sum = 0;
-            int baseSystem = 7;
-
-            int index = words.Length - 1;
-            for (int i = 0; i < words.Length; i++)
-            {
-                ulong word = (ulong)(GetValue(words[index]) * Math.Pow(baseSystem, i));
-                sum += word;
-                index--;
-            }
-            Console.WriteLine(sum);
+            Console.WriteLine(BaseToDec(inBase, SpecialToBase(Console.ReadLine())));
         }
 
-        static string[] ConvertToStringArr(string inputString)
+        static Dictionary<string, int> Dictionary = new Dictionary<string, int>
         {
-            var word = "";
-            StringBuilder sb = new StringBuilder();
+            { "f" , 0 },
+            { "bIN" , 1 },
+            { "oBJEC" , 2 },
+            { "mNTRAVL" , 3 },
+            { "lPVKNQ" , 4 },
+            { "pNWE" , 5 },
+            { "hT" , 6 }
+        };
 
-            for (int i = 0; i < inputString.Length; i++)
+        static string SpecialToBase(string word)
+        {
+            string result = string.Empty;
+
+            string partialInput = string.Empty;
+
+            for (int i = 0; i < word.Length; i++)
             {
-                char letter = inputString[i];
+                partialInput += word[i];
 
-                if (letter == 'f')
+                if (Dictionary.ContainsKey(partialInput))
                 {
-                    sb.AppendFormat("{0} ", word);
-                    word = "f";
-                }
-                else if ((letter == 'b' || letter == 'o' || letter == 'm' || letter == 'l' || letter == 'p' || letter == 'h') && word != string.Empty)
-                {
-                    sb.AppendFormat("{0} ", word);
-                    word = Convert.ToString(letter);
-                }
-                else if (i == inputString.Length - 1)
-                {
-                    word += letter;
-                    sb.AppendFormat("{0}", word);
-                }
-                else
-                {
-                    word += letter;
+                    result += Dictionary[partialInput];
+                    partialInput = string.Empty;
                 }
             }
 
-            string outputString = Convert.ToString(sb);
-            string[] words = outputString.Split(' ').ToArray();
-
-            return words;
+            return result;
         }
 
-        static ulong GetValue(string word)
+        static ulong BaseToDec(ulong @base, string specialNumber)
         {
-            ulong value = 0;
+            ulong decimalNumber = 0;
 
-            switch (word)
+            for (int i = 0; i < specialNumber.Length; i++)
             {
-                case "f":
-                    value = 0;
-                    break;
-                case "bIN":
-                    value = 1;
-                    break;
-                case "oBJEC":
-                    value = 2;
-                    break;
-                case "mNTRAVL":
-                    value = 3;
-                    break;
-                case "lPVKNQ":
-                    value = 4;
-                    break;
-                case "pNWE":
-                    value = 5;
-                    break;
-                case "hT":
-                    value = 6;
-                    break;
-                default:
-                    break;
+                ulong digit = 0;
+
+                if ('0' <= specialNumber[i] && specialNumber[i] <= '6')
+                {
+                    digit = (ulong)(specialNumber[i] - '0');
+                }
+
+                int position = specialNumber.Length - i - 1;
+
+                decimalNumber += digit * GetPower(@base, position);
             }
 
-            return value;
+            return decimalNumber;
+        }
+
+        static ulong GetPower(ulong @base, int position)
+        {
+            ulong result = 1;
+
+            for (int i = 0; i < position; i++)
+            {
+                result *= @base;
+            }
+
+            return result;
         }
     }
 }
