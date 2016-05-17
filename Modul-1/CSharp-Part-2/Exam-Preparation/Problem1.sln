@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeCatCoding", "DeCatCoding\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineGagNumbers", "NineGagNumbers\NineGagNumbers.csproj", "{2433D98A-75B9-4BA1-A405-A37BF38E22FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculationProblem", "CalculationProblem\CalculationProblem.csproj", "{33312B12-EB92-4642-B426-CC38C72D1A54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2433D98A-75B9-4BA1-A405-A37BF38E22FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2433D98A-75B9-4BA1-A405-A37BF38E22FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2433D98A-75B9-4BA1-A405-A37BF38E22FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33312B12-EB92-4642-B426-CC38C72D1A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33312B12-EB92-4642-B426-CC38C72D1A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33312B12-EB92-4642-B426-CC38C72D1A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33312B12-EB92-4642-B426-CC38C72D1A54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
