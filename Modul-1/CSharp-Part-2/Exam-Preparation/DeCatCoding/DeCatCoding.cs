@@ -8,52 +8,88 @@ namespace DeCatCoding
     {
         static void Main()
         {
-            var inputString = Console.ReadLine();
+            ulong inBase = 21;
+            ulong outBase = 26;
 
-            int inBase = 21;
-            int outBase = 26;
+            string[] words = ReadStringArray();
 
-            string[] words = inputString.Split(' ').ToArray();
+            PrintResult(words, inBase, outBase);
+        }
 
-            StringBuilder newWords = new StringBuilder();
-            //string[] newWords = new string[words.Length];
+        static string[] ReadStringArray()
+        {
+            return Console.ReadLine().Split(' ').ToArray();
+        }
 
-            for (int i = 0; i < words.Length; i++)
+        static ulong BaseToDec(ulong @base, string baseNumber)
+        {
+            ulong decimalNumber = 0;
+
+            for (int i = 0; i < baseNumber.Length; i++)
             {
-                var word = words[i];
-                var index = word.Length - 1;
-                long sum21Base = 0;
+                ulong digit = 0;
 
-                for (int j = 0; j < word.Length; j++)
+                if ('a' <= baseNumber[i] && baseNumber[i] <= 'u')
                 {
-                    long symbol21Base = word[j] - 'a';
-                    symbol21Base *= (long)Math.Pow(inBase, index);
-                    sum21Base += symbol21Base;
-
-                    index--;
+                    digit = (ulong)baseNumber[i] - 'a';
                 }
 
-                var resultString = "";
-
-                while (sum21Base > 0)
-                {
-                    long symbol26Base = sum21Base % outBase;
-                    sum21Base /= outBase;
-                    symbol26Base += 'a';
-
-                    char symbol = (char)symbol26Base;
-
-                    resultString = symbol + resultString;
-
-                }
-
-                newWords.AppendFormat("{0} ", resultString);
-                //newWords[i] = resultString;
-
+                int position = baseNumber.Length - i - 1;
+                decimalNumber += digit * GetPower(@base, position);
             }
 
-            Console.WriteLine(newWords);
-            //Console.WriteLine(string.Join(" ", newWords));
+            return decimalNumber;
+        }
+
+        static string DecToBase(ulong @base, ulong decimalNumber)
+        {
+            string baseNumber = string.Empty;
+
+            while (decimalNumber > 0)
+            {
+                ulong digit = decimalNumber % @base;
+
+                if (0 <= digit && digit <= @base)
+                {
+                    baseNumber = (char)(digit + 'a') + baseNumber;
+                }
+
+                decimalNumber /= @base;
+            }
+
+            return baseNumber;
+        }
+
+        static ulong GetPower(ulong @base, int position)
+        {
+            ulong result = 1;
+
+            for (int i = 0; i < position; i++)
+            {
+                result *= @base;
+            }
+
+            return result;
+        }
+
+        static ulong GetDecSum(ulong @base, string word)
+        {
+            return BaseToDec(@base, word);
+        }
+
+        static void PrintResult(string[] words, ulong inBase, ulong outBase)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (string word in words)
+            {
+                ulong decimalNumber = GetDecSum(inBase, word);
+                string baseWord = DecToBase(outBase, decimalNumber);
+
+                sb.Append(baseWord);
+                sb.Append(" ");
+            }
+          
+            Console.WriteLine(sb);
         }
     }
 }
