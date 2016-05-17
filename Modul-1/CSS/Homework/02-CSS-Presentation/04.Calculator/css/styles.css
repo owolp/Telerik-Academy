@@ -1,0 +1,289 @@
+html, body, img,ul, div,table, td, tr, span, input[type="button"],input[type="text"],input[type="radio"] {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	margin-top: 10px;
+	font-size: 10px;
+	font-family: Arial, sans-serif;
+}
+
+/** Outer Part**/
+#wrapper {
+	margin: 0 auto;
+	width: 420px;
+	height: 385px;
+	border: 1px solid black;
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: rgba(199, 224, 255, 0.8);
+	box-shadow: 3px 3px 20px #666, -2px -2px 20px #666;
+}
+
+#wrapper:after{
+	content: ""; 
+	display: block; 
+	clear: both; 
+	height: 0;
+}
+
+/**Logo Navi**/
+	
+#logo-navi{
+	float: left; 
+	display: block;
+	margin: 5px;
+	margin-bottom: 3px;
+}
+
+#logo-navi span{	
+	display: block;
+	margin-top: 5px;
+	vertical-align: top;
+	display: inline-block;
+	line-height: 10px;
+	text-shadow: 2px 2px 5px #fff,-2px -2px 5px #fff;
+}
+	
+/**Windows Navi**/
+	
+#win-navi li{
+	float: left;
+	width: 30px;
+	height: 18px;
+	text-align: center;
+	display: block;
+	background: url("images/win-navi-tile.png") repeat-x;
+	border-left: 1px ridge #1d3c58;
+	border-bottom: 1px ridge #1d3c58;
+}
+
+#win-navi li:last-child{
+	width: 50px;
+	margin-right: 5px;
+	border-right: 1px ridge #1d3c58;
+	border-radius: 0 0 2px 0;
+	background: url("images/close-background.png");
+	}
+	
+#win-navi li:last-child:hover{
+	background: url("images/close-background-hover.png");
+	box-shadow: 3px 3px 10px #bc4331, -2px -2px 10px #bc4331;
+}
+
+#win-navi li:first-child{
+	border-radius: 0 2px;
+}
+
+#win-navi li:first-child:hover{
+	background: -webkit-linear-gradient(top, rgba(179,216,242,1) 0%,rgba(84,163,238,1) 50%,rgba(48,131,184,1) 52%,rgba(63,145,200,1) 100%);
+	background: -moz-linear-gradient(top, rgba(179,216,242,1) 0%,rgba(84,163,238,1) 50%,rgba(48,131,184,1) 52%,rgba(63,145,200,1) 100%);
+	box-shadow: 3px 3px 10px #3F91C8, -2px -2px 10px #3F91C8;
+}
+
+#win-navi{
+	float: right;
+}
+
+#win-navi a{
+	margin: 0;
+	text-decoration: none;
+	color: #fff;
+	font-size: 15px;
+}
+#win-navi a img{
+	margin-top: 1px;
+	margin-left: 1px;
+}
+
+/**File Navi**/
+
+#UI{
+	width: 407px;
+	height: 350px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border: 1px solid black;
+	background: #d9e4f1 url("images/background-tile.png") repeat-x;
+	overflow: hidden;
+}
+
+#navi { 
+	display: block;
+	background: url("images/nav-tile.png") repeat-x;
+	line-height: 20px;
+	overflow: hidden;
+	border-bottom: 1px solid #b6bccc;
+}
+
+#navi:after{
+	content: ""; 
+	display: block; 
+	clear: both; 
+	height: 0;
+}
+
+	#navi li{ 
+		float: left;
+		display: block;
+		padding-left: 5px;
+		padding-right: 5px;
+		color: #6d6d6d;
+		font-size: 10px;
+		display: block;
+		width: 30px;
+		text-align: center;
+	}
+	
+	#navi li:hover{
+		height: 18px;
+		width: 28px;
+		border: 1px solid #000;
+	}
+	
+/**GUI elements - display**/
+
+#display{
+	border-radius: 2px;
+}
+
+	#display input[type="text"]{
+		width:383px;
+		border: 1px solid #8e9cad;
+		margin-top: 10px;
+		margin-left:10px;
+		margin-right:5px;
+		height:48px;
+		border-radius: 2px;
+		text-align: right;
+		font-size: 19px;
+		background: -webkit-linear-gradient(top, #eaf1fc, #fff);
+		background: -moz-linear-gradient(top, #eaf1fc, #fff);
+	}
+
+/**GUI elements - binary**/
+
+#binary{
+	width:383px;
+	border: 1px solid #8e9cad;
+	margin-top: 5px;
+	margin-left:10px;
+	margin-right:10px;
+	height:59px;
+	border-radius: 2px;
+	color: #1E59A9;
+	
+}
+	#binary table tr{
+		padding: 0;
+}
+	
+	#binary table td{
+		padding-top:0;
+		padding-left: 18px;
+		padding-right: 5px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	#binary table td:first-child{
+		width: 17px;
+		padding-left: 6px;
+	}
+
+.first-value{
+	text-align: right;
+}
+
+.binary-possition{
+	color: #666;
+}
+
+/**GUI elements - keyboard**/
+
+#keyboard {
+	margin: 8px;
+}
+
+	#keyboard input[type="button"] {
+		width: 34px;
+		height: 27px;
+		font-size: 10px;
+		margin:1px;
+		margin-left: 3px;
+		border-radius: 1px;
+	}
+
+	#keyboard .buttons:not(.disabled ) {
+		background: url("images/button-background.png") repeat-x;
+		border: 1px solid #8797aa;
+	}
+	
+	#keyboard .buttons:not(.disabled ):hover{
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,227,197,1) 52%,rgba(255,207,106,1) 52%,rgba(255,255,236,1) 100%);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,227,197,1) 52%,rgba(255,207,106,1) 52%,rgba(255,255,236,1) 100%);
+	}
+
+	#keyboard tr td{
+		height: 27px;
+		width:34px;
+	}
+
+	#keyboard .radio-field {
+		width: 71px;
+		border: 1px solid #8696aa;
+		border-radius: 1px;
+		margin-bottom: 5px;
+	}
+
+.radio-field  input[type="radio"]{
+	margin-left: 5px;
+	margin-top: 3px;
+}
+
+.disabled{
+	background-color: #d9e4f1;
+	border: 1px solid #b4c2d1;
+}
+
+#zero {
+	width: 73px;
+}
+
+	#zero-td #zero{
+		background: url("images/button-background.png") repeat-x;
+		border: 1px solid #b4c2d1;
+		width: 73px;
+	}
+	
+	#zero-td #zero:hover{
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,227,197,1) 52%,rgba(255,207,106,1) 52%,rgba(255,255,236,1) 100%);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,227,197,1) 52%,rgba(255,207,106,1) 52%,rgba(255,255,236,1) 100%);
+	}
+	
+#equal-sign-td{
+	height: 60px;
+}
+
+	#equal-sign-td #equal-sign {
+		height: 60px;
+		background: url("images/equal-sign-background.png") repeat-x;
+		border: 1px solid #b4c2d1;
+	}
+	
+	#equal-sign-td #equal-sign:hover{
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,227,197,1) 52%,rgba(255,207,106,1) 52%,rgba(255,255,236,1) 100%);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,227,197,1) 52%,rgba(255,207,106,1) 52%,rgba(255,255,236,1) 100%);
+	}
+
+.optional-td .optional{
+	border: 1px solid #b4c2d1;
+	background: url("images/optional-background.png") repeat-x;
+}
+
+.optional-td .optional:hover{
+	background: -webkit-linear-gradient(top, rgba(255,206,104,1) 0%,rgba(255,243,147,1) 77%,rgba(253,255,255,1) 94%);
+	background: -moz-linear-gradient(top, rgba(255,206,104,1) 0%,rgba(255,243,147,1) 77%,rgba(253,255,255,1) 94%);
+}

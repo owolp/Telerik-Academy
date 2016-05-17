@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>	
+	<meta charset="utf-8" />
+    <title>Calculator</title>
+    <link href="./css/styles.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="wrapper">
+		<div id="logo-navi">
+			<img src="images/calc.jpg" height="16" width = "12" alt="calc" />
+			<span id="calc">Calculator</span>
+		</div>
+			<div id="win-navi">
+				<ul>
+					<li><a href="#"><img src="images/minimize.png" height="10" width="10" /></a></li>
+					<li><a href="#"><img src="images/maximize.png" height="10" width="10" /></a></li>
+					<li><a href="#"><img src="images/close.png" height="10" width="10" /></a></li>
+				</ul>
+			</div>
+		<div id = "UI">
+			<div id="navi">
+				<ul>
+					<li>View</li>
+					<li>Edit</li>
+					<li>Help</li>
+				</ul>
+			</div>
+			<div id="display">
+			<input type = "text" id="display" value="0  "/>
+			</div>
+			<div id="binary">
+				<table>
+					<tr>
+						<td>0000</td>
+						<td>0000</td>
+						<td>0000</td>
+						<td>0000</td>
+						<td>0000</td>
+						<td>0000</td>
+						<td>0000</td>
+						<td>0000</td>
+					</tr>
+					<tr class = "binary-possition">
+						<td>63</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>47</td>
+						<td></td>
+						<td></td>
+						<td class="first-value">32</td>
+					</tr>
+					<tr>
+						<td>0000</td>
+						<td>0000</td>
+						<td>0000</td>
+						<td>0000</td>
+						<td>0000</td>
+						<td>0000</td>
+						<td>0000</td>
+						<td>0000</td>
+					</tr>
+					<tr class = "binary-possition">
+						<td>31</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>15</td>
+						<td></td>
+						<td></td>
+						<td class="first-value">0</td>
+					</tr>
+				</table>
+			</div>
+			<form action ="#">
+				<table id="keyboard">
+					<tr>
+						<td class="radio-field" rowspan = "3">
+							<input type="radio" name="numsystem" value="Hex"> Hex <br/>
+							<input type="radio" name="numsystem" value="Dec"> Dec <br/>
+							<input type="radio" name="numsystem" value="Oct"> Oct <br/>
+							<input type="radio" name="numsystem" value="Bin"> Bin <br/>
+						</td>
+						<td><input type="button" class= "disabled" value=" " disabled="disabled" /></td>
+						<td><input type="button" class= "buttons" value="Mod"/></td>
+						<td class="optional-td"><input type="button" class= "disabled" value="A" disabled="disabled"/></td>
+						<td class="optional-td"><input type="button" class= "optional" value ="MC"/></td>
+						<td class="optional-td"><input type="button" class= "optional" value ="MR"/></td>
+						<td class="optional-td"><input type="button" class= "optional" value ="MS"/></td>
+						<td class="optional-td"><input type="button" class= "optional" value ="M+"/></td>
+						<td class="optional-td"><input type="button" class= "optional" value ="M-"/></td>
+					</tr>
+					<tr>
+						<td><input type="button" class= "buttons" value="("/></td>
+						<td><input type="button" class= "buttons" value=")"/></td>
+						<td><input type="button" class= "disabled" value="B" disabled="disabled"/></td>
+						<td><input type="button" class= "buttons" value="←"/></td>
+						<td><input type="button" class= "buttons" value ="CE"/></td>
+						<td><input type="button" class= "buttons" value ="C"/></td>
+						<td><input type="button" class= "buttons" value ="±"/></td>
+						<td><input type="button" class= "disabled" value ="√" disabled="disabled"/></td>
+					</tr>
+					<tr>
+						<td><input type="button" class= "buttons" value="RoL"/></td>
+						<td><input type="button" class= "buttons" value="RoR"/></td>
+						<td><input type="button" class= "disabled" value="C" disabled="disabled"/></td>
+						<td><input type="button" class= "buttons" value="7"/></td>
+						<td><input type="button" class= "buttons" value ="8"/></td>
+						<td><input type="button" class= "buttons" value ="9"/></td>
+						<td><input type="button" class= "buttons" value ="/"/></td>
+						<td><input type="button" class= "disabled" value ="%" disabled="disabled"/></td>
+					</tr>
+					<tr>
+						<td class="radio-field" rowspan = "3">
+							<input type="radio" name="type" value="Qword"> Qword <br/>
+							<input type="radio" name="type" value="Dword"> Dword <br/>
+							<input type="radio" name="type" value="Word"> Word <br/>
+							<input type="radio" name="type" value="Byte"> Byte <br/>
+						</td>
+						<td><input type="button" class= "buttons" value="Or"/></td>
+						<td><input type="button" class= "buttons" value="XoR"/></td>
+						<td><input type="button" class= "disabled" value="D" disabled="disabled" /></td>
+						<td><input type="button" class= "buttons" value="4"/></td>
+						<td><input type="button" class= "buttons" value ="5"/></td>
+						<td><input type="button" class= "buttons" value ="6"/></td>
+						<td><input type="button" class= "buttons" value ="*"/></td>
+						<td><input type="button" class= "disabled" value ="1/x" disabled="disabled"/></td>
+					</tr>
+					<tr>
+						<td><input type="button" class= "buttons" value="Lsh"/></td>
+						<td><input type="button" class= "buttons" value="Rsh"/></td>
+						<td><input type="button" class= "disabled" value="E"disabled="disabled" /></td>
+						<td><input type="button" class= "buttons" value="1"/></td>
+						<td><input type="button" class= "buttons" value ="2"/></td>
+						<td><input type="button" class= "buttons" value ="3"/></td>
+						<td><input type="button" class= "buttons" value ="-"/></td>
+						<td rowspan="2" id = "equal-sign-td"><input type="button" id="equal-sign" value ="="/></td>
+					</tr>
+					<tr>
+						<td><input type="button" class= "buttons" value="Not"/></td>
+						<td><input type="button" class= "buttons" value="And"/></td>
+						<td><input type="button" class= "disabled" value="F" disabled="disabled"/></td>
+						<td colspan = "2" id="zero-td"><input type="button" value="0" id="zero"/></td>
+						<td><input type="button" class= "disabled" value ="."/></td>
+						<td><input type="button" class= "buttons" value ="+"/></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
