@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
+using System.Collections.Generic;
 
 namespace Zerg
 {
@@ -8,94 +7,93 @@ namespace Zerg
     {
         static void Main()
         {
-            var inputString = Console.ReadLine();
+            string input = Console.ReadLine();
+            int @base = 15;
 
-            ulong baseIn = 15;
-
-            string[] words = ConvertToStringArr(inputString);
-
-            Console.WriteLine(GetSum(words, baseIn));
+            Console.WriteLine(BaseToDec(@base, SpecialToBase(input)));
         }
 
-        static string[] ConvertToStringArr(string inputString)
+        static Dictionary<string, int> Dictionary = new Dictionary<string, int>()
         {
-            var word = "";
-            StringBuilder sb = new StringBuilder();
+            { "Rawr" , 0 },
+            { "Rrrr" , 1 },
+            { "Hsst" , 2 },
+            { "Ssst" , 3 },
+            { "Grrr" , 4 },
+            { "Rarr" , 5 },
+            { "Mrrr" , 6 },
+            { "Psst" , 7 },
+            { "Uaah" , 8 },
+            { "Uaha" , 9 },
+            { "Zzzz" , 10 },
+            { "Bauu" , 11 },
+            { "Djav" , 12 },
+            { "Myau" , 13 },
+            { "Gruh" , 14 },
+        };
 
-            for (int i = 0; i < inputString.Length; i++)
+        static ulong BaseToDec(int @base, string baseNumber)
+        {
+            ulong decimalNumber = 0;
+
+            for (int i = 0; i < baseNumber.Length; i++)
             {
-                char letter = inputString[i];
+                ulong digit = 0;
 
-                if (char.IsUpper(letter) && word != string.Empty)
+                if ('0' <= baseNumber[i] && baseNumber[i] <= '9')
                 {
-                    sb.AppendFormat("{0} ", word);
-                    word = Convert.ToString(letter);
+                    digit = (ulong)baseNumber[i] - '0';
                 }
-                else if (i == inputString.Length - 1)
+                else if ('A' <= baseNumber[i] && baseNumber[i] <= 'Z')
                 {
-                    word += letter;
-                    sb.AppendFormat("{0}", word);
+                    digit = (ulong)baseNumber[i] - 'A' + 10;
                 }
-                else
-                {
-                    word += letter;
-                }
+
+                int position = baseNumber.Length - i - 1;
+
+                decimalNumber += digit * GetPower(@base, position);
             }
 
-            string outputString = Convert.ToString(sb);
-            string[] words = outputString.Split(' ').ToArray();
-
-            return words;
+            return decimalNumber;
         }
 
-        static ulong GetValue(string word)
+        static string SpecialToBase(string baseNumber)
         {
-            switch (word)
-            {
-                case "Rawr": return 0;
-                case "Rrrr": return 1;
-                case "Hsst": return 2;
-                case "Ssst": return 3;
-                case "Grrr": return 4;
-                case "Rarr": return 5;
-                case "Mrrr": return 6;
-                case "Psst": return 7;
-                case "Uaah": return 8;
-                case "Uaha": return 9;             
-                case "Zzzz": return 10;
-                case "Bauu": return 11;
-                case "Djav": return 12;
-                case "Myau": return 13;
-                case "Gruh": return 14;
-                default: throw new ArgumentException();
-            }
-        }
+            string partialInput = string.Empty;
+            string result = string.Empty;
 
-        static ulong GetPower(ulong baseIn, int power)
-        {
-            ulong result = 1;
-
-            for (int i = 0; i < power; i++)
+            for (int i = 0; i < baseNumber.Length; i++)
             {
-                result *= baseIn;
+                partialInput += baseNumber[i];
+
+                if (Dictionary.ContainsKey(partialInput))
+                {
+                    if (0 <= Dictionary[partialInput] && Dictionary[partialInput] <= 9)
+                    {
+                        result += Dictionary[partialInput];
+                    }
+                    else if (10 <= Dictionary[partialInput] && Dictionary[partialInput] <= 14)
+                    {
+                        result += (char)(Dictionary[partialInput] - 10 + 'A');
+                    }
+
+                    partialInput = string.Empty;
+                }
             }
 
             return result;
         }
 
-        static ulong GetSum(string[] words, ulong baseIn)
+        static ulong GetPower(int @base, int position)
         {
-            ulong sum = 0;
-            int power = 0;
+            ulong result = 1;
 
-            for (int i = words.Length - 1; i >= 0; i--)
+            for (int i = 0; i < position; i++)
             {
-                ulong wordValue = GetValue(words[i]);
-                sum += (wordValue * GetPower(baseIn, power));
-                power++;
+                result *= (ulong)@base;
             }
 
-            return sum;
+            return result;
         }
     }
 }
