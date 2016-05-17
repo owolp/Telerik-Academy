@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiverseCommunication", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DurankulakNumbers", "DurankulakNumbers\DurankulakNumbers.csproj", "{AC76AE53-CD58-4BE2-9265-834BD143834B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaspichanNumbers", "KaspichanNumbers\KaspichanNumbers.csproj", "{BD2C2C84-4ADA-46EC-9CB0-230B583EBF17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{AC76AE53-CD58-4BE2-9265-834BD143834B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC76AE53-CD58-4BE2-9265-834BD143834B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC76AE53-CD58-4BE2-9265-834BD143834B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD2C2C84-4ADA-46EC-9CB0-230B583EBF17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD2C2C84-4ADA-46EC-9CB0-230B583EBF17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD2C2C84-4ADA-46EC-9CB0-230B583EBF17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD2C2C84-4ADA-46EC-9CB0-230B583EBF17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
