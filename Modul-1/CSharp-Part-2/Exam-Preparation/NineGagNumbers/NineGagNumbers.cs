@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace NineGagNumbers
 {
@@ -6,84 +7,75 @@ namespace NineGagNumbers
     {
         static void Main()
         {
-            var input = Console.ReadLine();
+            ulong @base = 9;
 
-            ulong baseIn = 9;
-
-            string numberAsString = ConvertToString(input);
-
-            ulong result = GetSum(numberAsString, baseIn);
-
-            Console.WriteLine(result);
+            Console.WriteLine(BaseToDec(@base, SpecialToBase(Console.ReadLine())));
         }
 
-        static string ConvertToString(string input)
+        static Dictionary<string, int> Dictionary = new Dictionary<string, int>()
         {
+            { "-!" , 0 },
+            { "**" , 1 },
+            { "!!!" , 2 },
+            { "&&" , 3 },
+            { "&-" , 4 },
+            { "!-" , 5 },
+            { "*!!!" , 6 },
+            { "&*!" , 7 },
+            { "!!**!-" , 8 }
+        };
+
+        static string SpecialToBase(string word)
+        {
+            string result = string.Empty;
+
             string partialInput = string.Empty;
-            string nineSystemNumber = string.Empty;
 
-            for (int i = 0; i < input.Length; i++)
+            for (int i = 0; i < word.Length; i++)
             {
-                partialInput += input[i];
+                partialInput += word[i];
 
-                string currentDigit = GetValue(partialInput);
-
-                if (currentDigit != "no")
+                if (Dictionary.ContainsKey(partialInput))
                 {
-                    nineSystemNumber += currentDigit;
+                    result += Dictionary[partialInput];
                     partialInput = string.Empty;
                 }
             }
 
-            return nineSystemNumber;
-        }
-
-        static string GetValue(string word)
-        {
-            string result = "no";
-            switch (word)
-            {
-                case "-!": result = "0"; break;
-                case "**": result = "1"; break;
-                case "!!!": result = "2"; break;
-                case "&&": result = "3"; break;
-                case "&-": result = "4"; break;
-                case "!-": result = "5"; break;
-                case "*!!!": result = "6"; break;
-                case "&*!": result = "7"; break;
-                case "!!**!-": result = "8"; break;
-                default:
-                    break;
-            }
-
             return result;
         }
 
-        static ulong GetPower(ulong baseIn, int power)
+        static ulong BaseToDec(ulong @base, string specialNumber)
+        {
+            ulong decimalNumber = 0;
+
+            for (int i = 0; i < specialNumber.Length; i++)
+            {
+                ulong digit = 0;
+
+                if ('0' <= specialNumber[i] && specialNumber[i] <= '8')
+                {
+                    digit = (ulong)(specialNumber[i] - '0');
+                }
+
+                int position = specialNumber.Length - i - 1;
+
+                decimalNumber += digit * GetPower(@base, position);
+            }
+
+            return decimalNumber;
+        }
+
+        static ulong GetPower(ulong @base, int position)
         {
             ulong result = 1;
 
-            for (int i = 0; i < power; i++)
+            for (int i = 0; i < position; i++)
             {
-                result *= baseIn;
+                result *= @base;
             }
 
             return result;
-        }
-
-        static ulong GetSum(string words, ulong baseIn)
-        {
-            ulong sum = 0;
-            int power = 0;
-
-            for (int i = words.Length - 1; i >= 0; i--)
-            {
-                ulong digit = ulong.Parse(words[i].ToString());
-                sum += (digit * GetPower(baseIn, power));
-                power++;
-            }
-
-            return sum;
         }
     }
 }
