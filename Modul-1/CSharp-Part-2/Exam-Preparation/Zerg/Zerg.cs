@@ -10,7 +10,7 @@ namespace Zerg
             string input = Console.ReadLine();
             int @base = 15;
 
-            Console.WriteLine(BaseToDec(@base, SpecialToBase(input)));
+            Console.WriteLine(ConvertToDec(@base, ConvertToBase(input)));
         }
 
         static Dictionary<string, int> Dictionary = new Dictionary<string, int>()
@@ -32,7 +32,7 @@ namespace Zerg
             { "Gruh" , 14 },
         };
 
-        static ulong BaseToDec(int @base, string baseNumber)
+        static ulong ConvertToDec(int @base, string baseNumber)
         {
             ulong decimalNumber = 0;
 
@@ -57,7 +57,7 @@ namespace Zerg
             return decimalNumber;
         }
 
-        static string SpecialToBase(string baseNumber)
+        static string ConvertToBase(string baseNumber)
         {
             string partialInput = string.Empty;
             string result = string.Empty;
