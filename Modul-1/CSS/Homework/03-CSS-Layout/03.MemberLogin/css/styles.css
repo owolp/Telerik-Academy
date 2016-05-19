@@ -1,0 +1,96 @@
+body, fieldset, p
+{
+    margin: 0;
+}
+
+fieldset
+{
+    border: none;
+}
+
+body
+{
+    width: 680px;
+    background: #3B3B3B;
+    color: #A9A9A9;
+    font: 14px/1.2 Verdana, sans-serif;
+}
+
+.member-login
+{
+    padding: 20px 10px 20px 55px;
+    background: url(../images/monitor.png) no-repeat 16px 9px, -webkit-radial-gradient(ellipse farthest-corner, transparent 0%, #343434 60% ) no-repeat 55% 155%;
+    background: url(../images/monitor.png) no-repeat 16px 9px, -moz-radial-gradient(ellipse farthest-corner, transparent 0%, #343434 60% ) no-repeat 55% 155%;
+    background: url(../images/monitor.png) no-repeat 16px 9px, -o-radial-gradient(ellipse farthest-corner, transparent 0%, #343434 60% ) no-repeat 55% 155%;
+    background: url(../images/monitor.png) no-repeat 16px 9px, radial-gradient(ellipse farthest-corner, transparent 0%, #343434 60% ) no-repeat 55% 155%;
+    -webkit-background-size: auto, 180% 45%;
+    -moz-background-size: auto, 180% 45%;
+    -o-background-size: auto, 180% 45%;
+    background-size: auto, 180% 45%;
+    background-color: #343434;
+    color: #fff;
+}
+
+.member-login legend, .member-login input, .member-login button
+{
+    float: left;
+    margin-left: 15px;
+}
+
+.member-login legend
+{
+    text-transform: lowercase;
+    font-size: 18px;
+}
+
+.member-login input
+{
+    padding-left: 10px;
+}
+
+.member-login ::-webkit-input-placeholder
+{
+    color: #000;
+}
+
+.member-login :-ms-input-placeholder
+{
+    color: #000;
+}
+
+.member-login :-moz-placeholder
+{
+    color: #000;
+}
+
+.btn-alert
+{
+    padding: 3px 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background: rgba(229, 110, 110, 0.9);
+    box-shadow: inset 0px -15px 5px #EC0B0F;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    left: 550px;
+    top: -20px;
+}
+
+.article
+{
+    padding: 0 20px;
+}
+
+.article h1
+{
+    color: #F8D612;
+    text-transform: lowercase;
+    font-weight: normal;
+}
+
+.article strong
+{
+    color: #F8F8F8;
+    font-weight: normal;
+}

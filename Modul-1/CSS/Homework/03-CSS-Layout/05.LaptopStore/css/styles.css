@@ -1,0 +1,104 @@
+/**CSS File**/
+
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+/**Wrapper**/
+
+.wrapper{
+	width: 880px;
+	margin: 0 auto;
+	font-size: 18px;
+	font-family: Arial, Verdana, sans-serif;
+}
+
+/**Header**/
+.header {
+	height: 55px;
+	line-height: 55px;
+	margin: 0 auto;
+}
+	.header ul {
+		width: 500px;
+		margin: 0 auto;
+	}
+	.header li{
+		display: block;
+		float: left;
+		text-align: center;
+		margin-right: 5px;
+	}
+
+	.header li:after{
+		content: "";
+		display:block;
+		clear: both;
+		height: 0;
+	}
+	
+	.header a{
+		font-size: 22px;
+		color: #00a8ef;
+	}
+
+	hr{
+		width: 96%;
+	}
+/**PC-Menu**/
+
+	fieldset{
+		width: 275px;
+		height: 165px;
+		border: 2px solid #3d3d3d;
+		margin: 5px;
+	}
+	
+	fieldset img{
+		float: left;
+		margin-bottom: 20px;
+		margin-right: 10px;
+	}
+	
+	fieldset legend{
+		text-align: center;
+	}
+	
+	fieldset p{
+		margin-top:15px;
+		display: inline-block;
+	}
+	
+		fieldset p:last-child{
+			margin-left: 60px;
+	}
+	
+.first-col{
+	float: left;
+}
+
+.second-col{
+	float: left;
+}
+
+.pc-menu{
+	float: left;
+	border: 2px solid #3d3d3d;
+	padding: 10px;
+}
+.pc-menu:after{
+		content: "";
+		display:block;
+		clear: both;
+		height: 0;
+		}
+
+/**Sliders**/
+
+.sliders{
+	font-size: 22px;
+	float: left;
+	margin-left: 15px;
+	padding-top: 60px;
+}

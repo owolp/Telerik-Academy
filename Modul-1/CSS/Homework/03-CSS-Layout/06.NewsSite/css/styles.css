@@ -1,0 +1,116 @@
+/** CSS File**/
+
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+div, img, a,p, ul, li{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #00343F;
+}
+
+/**Wrapper**/
+.wrapper{
+	width:650px;
+	margin: 10px auto;
+	height: 350px;
+	border: 2px solid #26535d;
+	border-radius: 5px;
+	color: #8fa9b5;
+	font-family: Tahoma, sans-serif;
+	overflow: hidden;
+}
+
+/**Top Navigation**/
+
+.top-navi{
+	height: 40px;
+}
+
+.top-navi li{
+	float: left;
+	display: block;
+	line-height: 32px;
+	height: 32px;
+	margin-right: 2px;
+	margin-top: 8px;
+	margin-bottom: 13px;
+	background-color: #4b5f67;
+	padding-left: 10px;
+	padding-right: 10px;
+	overflow: hidden;
+}
+
+.top-navi li:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+.top-navi li:hover{
+	text-decoration: underline;
+}
+
+.top-navi a{
+	text-decoration: none;
+	font-size: 15px;
+	color: #8fa9b5;
+}
+
+.news{
+	height: 32px;
+}
+
+.top-navi .selected-navi{
+	background-color: transparent;
+}
+
+.top-navi .selected-navi a{
+	color: #fefef0;
+}
+
+/** News Content**/
+
+.news-menu{
+	float: left;
+	width: 270px;
+}
+
+.news-menu:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+.news-menu .news{
+	border-top: 1px solid #374c55;
+	height: 65px;
+}
+
+.news-menu .news p{
+	line-height: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: 10px;
+}
+
+.selected-news{
+	background-color: #00968c;
+	color: #fdfcf9;
+	height: 22px;
+	padding-left: 10px;
+	padding-top: 8px;
+	line-height: 16px;
+}
+
+img{
+	border: 1px solid #4c5a6b;
+}
