@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveMultiverseCommunication
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveKaspichanNumbers", "LiveKaspichanNumbers\LiveKaspichanNumbers.csproj", "{FC35B338-0BE2-4F75-8088-9AD0E1FD1B9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveCalculationProblem", "LiveCalculationProblem\LiveCalculationProblem.csproj", "{D8E5820B-1871-499F-BDBE-8D639B8B7BE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{FC35B338-0BE2-4F75-8088-9AD0E1FD1B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC35B338-0BE2-4F75-8088-9AD0E1FD1B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC35B338-0BE2-4F75-8088-9AD0E1FD1B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8E5820B-1871-499F-BDBE-8D639B8B7BE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8E5820B-1871-499F-BDBE-8D639B8B7BE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8E5820B-1871-499F-BDBE-8D639B8B7BE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8E5820B-1871-499F-BDBE-8D639B8B7BE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
