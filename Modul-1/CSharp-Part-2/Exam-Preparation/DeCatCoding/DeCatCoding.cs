@@ -72,21 +72,20 @@ namespace DeCatCoding
             return result;
         }
 
-        static ulong GetDecSum(ulong @base, string word)
-        {
-            return BaseToDec(@base, word);
-        }
+        //static ulong GetDecSum(ulong @base, string word)
+        //{
+        //    return BaseToDec(@base, word);
+        //}
 
         static void PrintResult(string[] words, ulong inBase, ulong outBase)
         {
             StringBuilder sb = new StringBuilder();
             foreach (string word in words)
             {
-                ulong decimalNumber = GetDecSum(inBase, word);
+                ulong decimalNumber = BaseToDec(inBase, word);
                 string baseWord = DecToBase(outBase, decimalNumber);
 
-                sb.Append(baseWord);
-                sb.Append(" ");
+                sb.Append(baseWord).Append(" ");
             }
           
             Console.WriteLine(sb);
