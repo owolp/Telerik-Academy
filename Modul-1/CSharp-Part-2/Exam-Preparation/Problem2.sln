@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveBunnyFactory", "LiveBun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoroTheRabbit", "JoroTheRabbit\JoroTheRabbit.csproj", "{479F0894-2BED-4A01-A865-BE44DBB0532E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicWords", "MagicWords\MagicWords.csproj", "{67826845-50DD-4198-9E48-04CEF961EE03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{479F0894-2BED-4A01-A865-BE44DBB0532E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{479F0894-2BED-4A01-A865-BE44DBB0532E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{479F0894-2BED-4A01-A865-BE44DBB0532E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67826845-50DD-4198-9E48-04CEF961EE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67826845-50DD-4198-9E48-04CEF961EE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67826845-50DD-4198-9E48-04CEF961EE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67826845-50DD-4198-9E48-04CEF961EE03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
