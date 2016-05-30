@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariableLength", "VariableL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncodeAndEncrypt", "EncodeAndEncrypt\EncodeAndEncrypt.csproj", "{C72838D3-B994-4D7B-8DA4-55E1773B9A28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecodeAndDecrypt", "DecodeAndDecrypt\DecodeAndDecrypt.csproj", "{1FED3576-8603-4FA8-8E07-BF6868C26DC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C72838D3-B994-4D7B-8DA4-55E1773B9A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C72838D3-B994-4D7B-8DA4-55E1773B9A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C72838D3-B994-4D7B-8DA4-55E1773B9A28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FED3576-8603-4FA8-8E07-BF6868C26DC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FED3576-8603-4FA8-8E07-BF6868C26DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FED3576-8603-4FA8-8E07-BF6868C26DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FED3576-8603-4FA8-8E07-BF6868C26DC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
