@@ -1,0 +1,80 @@
+h1, ul, header {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font-family: Tahoma, sans-serif;
+	font-size: 14px;
+}
+
+article p {
+	color: #333333;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+header {
+	background-image: url(./images/topnav_divider.png);
+	height: 65px;
+	background-repeat: none;
+}
+
+ul {
+	padding-left: 50px;
+}
+
+ul li {
+	display: inline;
+	font-size: 18px;
+}
+
+a {
+	text-decoration: none;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+}
+
+#archive {
+	float: right;
+	position: relative;
+	
+}
+
+#archive ul {
+	padding-right: 5px;
+}
+
+#archive ul li {
+	padding-left: 15px;
+}
+
+#archive ul li a {
+	font-size: 10px;
+	color: #333333;
+}
+
+#header > h1 {
+	float: right;
+	font-size: 28px;
+	color: #FFFFFF;
+	padding-right: 15px;
+}
+
+#content h1 {
+	font-size: 24px;
+	padding-top: 20px;
+}
+
+#nav ul li a {
+	color: #FFFFFF;
+	text-transform: capitalize;
+	padding-right: 25px;
+}

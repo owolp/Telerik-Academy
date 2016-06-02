@@ -1,0 +1,66 @@
+body {
+  font-size: 14px;
+  font-family: Arial;
+  padding: 0;
+  margin: 0;
+}
+body #root {
+  padding: 0;
+  margin: 0;
+  background-color: #205D99;
+}
+body #root .avengers {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  float: left;
+  background-color: #205D99;
+  width: 500px;
+}
+body #root .avengers li {
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
+  border-bottom: 3px solid #AECFEE;
+}
+body #root .avengers li input {
+  visibility: hidden;
+}
+body #root .avengers li input:checked + label + .preview {
+  display: block;
+}
+body #root .avengers li input:checked + label + .preview:checked + label {
+  color: #AECFEE;
+  font-weight: bold;
+  font-size: 1.7em;
+}
+body #root .avengers li label {
+  color: #DDEAF9;
+  font-size: 1.5em;
+}
+body #root .avengers li .preview {
+  padding: 0;
+  margin: 0;
+  margin-top: 35px;
+  padding-left: 15px;
+  display: none;
+}
+body #root .avengers li .preview img {
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 15px solid #AECFEE;
+  border-radius: 15px;
+  width: 200px;
+  float: left;
+}
+body #root .avengers li .preview p {
+  padding: 0;
+  margin: 0;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  color: #E4EFF9;
+  text-align: justify;
+}

@@ -1,0 +1,129 @@
+html, body, {
+    font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0 auto;
+    width: 1000px;
+    font-weight: 400;
+    -webkit-text-stroke-width: 0;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+@headerFont: 13px;
+@mainH1Font: 53px;
+@mainFont: 16px;
+@footFont: 11px;
+
+@color1: #077CC6;
+@color2: #DC143C;
+@color3: #E0E0E0;
+@color4: #A9A9A9;
+
+body {
+
+    #header {
+        font-size: @headerFont;
+        background-color: @color1;
+        height: 35px;
+        
+        #logo {
+            background-image: url(./images/logo.png);
+            background-repeat: no-repeat;
+            float: left;
+            height: 35px;
+            width: 195px;          
+        }
+        
+        #search {
+            float: right;
+            margin-top: 5px;
+            
+            .searchText {
+                width: 200px;
+                height: 25px;
+                margin-right: 5px;
+                border: 1px solid @color4;
+            }
+        }
+        
+        #menu {
+            list-style-type: none;
+            float: right;
+            padding: 0;
+            margin: 0;
+            margin-top: 10px;
+            
+            li {
+                float: left;
+                padding: 0;
+                margin: 0;
+                padding-right: 15px;
+                
+                a {
+                    text-decoration: none;
+                    color: @color3;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+    
+    #main {
+        font-size: @mainFont;
+        text-align: justify;
+        padding: 15px;
+
+        .mainImage {
+            float: right;
+            border: none;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        h1 {
+            font-size: @mainH1Font;
+            font-weight: normal;
+            float: left;
+            padding: 0;
+            margin: 0;          
+        }
+        
+        a {
+            text-decoration: none;
+            color: @color2;
+        }
+        
+        p {
+            code {
+                font-weight: bold;
+                border: 1px solid black;
+            }
+        }
+    }
+    
+    #footer {
+        font-size: @footFont;
+        background-color: @color1;
+        color: @color3;
+        text-align: center;
+        font-weight: bold;
+        height: 60px;
+        margin-top: 30px;
+        padding: 0;
+        margin: 0;     
+        
+        .copyright {
+            text-transform: capitalize;
+            text-decoration: underline;
+            padding-top: 20px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: @color3;
+        }
+    }
+}

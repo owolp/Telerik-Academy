@@ -1,0 +1,91 @@
+@fontSize: 14px;
+@fontFamily: "Arial";
+
+
+@color1: #205D99;
+@color2: #AECFEE;
+@color3: #E4EFF9;
+@color4: #DDEAF9;
+
+body {
+    font-size: @fontSize;
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
+    
+    #root {
+        padding: 0;
+        margin: 0;
+        background-color: @color1;
+
+        
+        .avengers {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            float:left;
+            background-color: @color1;
+            width: 500px;
+            
+            li {
+                padding: 0;
+                margin: 0;
+                padding-top: 20px;
+                text-align: center;
+                border-bottom: 3px solid @color2;
+                                        
+                input {
+                    visibility: hidden;
+                    
+                    &:checked + label + .preview {
+                    display: block;
+                    }
+                    
+                    &:checked + label {
+                        color: @color2;
+                        font-weight: bold;
+                        font-size: 1.7em;
+                    }
+                }
+                    
+                    
+                }
+                
+                label {
+                    color: @color4;
+                    font-size: 1.5em;
+                }
+                
+                .preview {
+                    padding: 0;
+                    margin: 0;
+                    margin-top: 35px;
+                    padding-left: 15px;
+                    display: none;
+                
+                    img {
+                        padding: 0;
+                        margin: 0;
+                        margin-right: 10px;
+                        margin-bottom: 10px;
+                        border: 15px solid @color2;
+                        border-radius: 15px;
+                        width: 200px;
+                        float: left;
+                    }
+                    
+                    p {
+                        padding: 0;
+                        margin: 0;
+                        padding-right: 15px;
+                        padding-bottom: 15px;
+                        color: @color3;
+                        text-align: justify;                   
+                    }
+                }
+                
+            }
+        }        
+    }
+
+}

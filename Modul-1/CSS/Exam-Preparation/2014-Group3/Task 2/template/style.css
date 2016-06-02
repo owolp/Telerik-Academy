@@ -1,0 +1,71 @@
+body ul {
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    font-size: 16px;
+    font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+}
+
+.menu .sub-menu {
+    list-style-type: none;
+}
+
+ul li {
+    list-style: none;
+    text-align: center;
+    margin-right: 30px;
+    width: 170px;
+    line-height: 40px;
+    padding-bottom: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+    background-color: #B6FF00;
+    display: block;
+    border-radius: 15px;
+}
+
+.menu a:hover{
+    text-decoration: underline;
+}
+
+.menu a:hover + .content, .content:hover{
+    display: block;
+}
+
+.sub-menu li:hover img {
+    display: block;
+}
+
+.sub-menu li {
+    padding-bottom: 10px;
+    position: relative;
+    text-align: left;
+    border-radius: 10px;
+}
+.sub-menu a{
+    width: 540px;
+    height: 60px;
+    background-color: #008000;
+    color: #FFFFFF;
+    padding-top: 25px;
+    position: relative;
+}
+
+.content {
+    display: none;
+    position: absolute;
+    left: 170px;
+    top: 0;
+}
+
+.sub-menu li img {
+    display: none;
+    width: 500px;
+    border-radius: 10px;
+}
+

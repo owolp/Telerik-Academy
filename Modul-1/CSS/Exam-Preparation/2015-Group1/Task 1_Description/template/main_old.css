@@ -1,0 +1,74 @@
+html, ul {
+    padding: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Times New Roman";
+    color: #000000;
+}
+
+.avenger {
+    list-style-type: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.avenger:hover .preview {
+  display: block;
+}
+
+.name {
+    border: solid #000000 3px;
+    border-top-left-radius: 15px;
+    border-right: none;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.preview {
+    display: none;
+    position: absolute;
+    left: 50px;
+    top: 60px;
+    width: 595px;
+    border: 3px solid #000;
+    border-top: none;
+    padding: 15px;
+    background: #ccc;
+}
+
+li:hover {
+    background-color: #CCCCCC;
+}
+
+.name:hover {
+    border-bottom: 3px solid #FFFFFF;
+}
+
+/*.name:hover + .preview {
+    display: inline-block;
+    position: relative;
+}*/
+
+.skills {
+    list-style-type: none;
+}
+
+.skills li::first-letter {
+    text-transform: capitalize;
+}
+
+img {
+    border: 5px solid white;
+    border-radius: 5px;
+    widows: 400px;
+}
+
+.preview li {
+    display: inline-block;
+}

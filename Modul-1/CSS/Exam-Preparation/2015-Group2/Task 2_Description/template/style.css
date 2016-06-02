@@ -1,0 +1,99 @@
+html,
+body {
+  font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;
+  background-color: #FFFFFF;
+  padding: 0;
+  margin: 0 auto;
+  width: 1000px;
+  font-weight: 400;
+  -webkit-text-stroke-width: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+body #header {
+  font-size: 13px;
+  background-color: #077CC6;
+  height: 35px;
+}
+body #header #logo {
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+  float: left;
+  height: 35px;
+  width: 195px;
+}
+body #header #search {
+  float: right;
+  margin-top: 5px;
+}
+body #header #search .searchText {
+  width: 200px;
+  height: 25px;
+  margin-right: 5px;
+  border: 1px solid #A9A9A9;
+}
+body #header #menu {
+  list-style-type: none;
+  float: right;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+}
+body #header #menu li {
+  float: left;
+  padding: 0;
+  margin: 0;
+  padding-right: 15px;
+}
+body #header #menu li a {
+  text-decoration: none;
+  color: #E0E0E0;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+body #main {
+  font-size: 16px;
+  text-align: justify;
+  padding: 15px;
+}
+body #main .mainImage {
+  float: right;
+  border: none;
+}
+body #main .clear {
+  clear: both;
+}
+body #main h1 {
+  font-size: 53px;
+  font-weight: normal;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+body #main a {
+  text-decoration: none;
+  color: #DC143C;
+}
+body #main p code {
+  font-weight: bold;
+  border: 1px solid black;
+}
+body #footer {
+  font-size: 11px;
+  background-color: #077CC6;
+  color: #E0E0E0;
+  text-align: center;
+  font-weight: bold;
+  height: 60px;
+  margin-top: 30px;
+  padding: 0;
+  margin: 0;
+}
+body #footer .copyright {
+  text-transform: capitalize;
+  text-decoration: underline;
+  padding-top: 20px;
+}
+body #footer a {
+  text-decoration: none;
+  color: #E0E0E0;
+}

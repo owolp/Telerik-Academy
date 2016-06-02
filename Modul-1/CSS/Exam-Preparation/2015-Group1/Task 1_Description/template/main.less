@@ -1,0 +1,91 @@
+@dFontSize: 16px;
+
+@dColor: #000000;
+@greyColor: #CCCCCC;
+@whiteColor: #FFFFFF;
+
+@dFont: "Times New Roman";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: @dFontSize;
+    font-family: 'Times New Roman', Times, serif;
+    
+    #root {
+        margin: 0;
+        padding: 0;
+        width: 960px;
+        
+        .avengers {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            
+            .avenger {
+                margin: 0;
+                padding: 0;
+                display: inline;
+                border-top-left-radius: 5px;
+                border: 3px solid black;
+                border-right: none;
+                
+                .name {
+                    margin: 0;
+                    padding: 0;
+                    font-weight: bold;
+
+                    
+                    &:hover {
+                        text-decoration: underline;
+                        border-bottom: solid 3px #FFFFFF;
+                       
+                    }
+                    
+                    &:hover + .preview {
+                        position: absolute;
+                        display: block;
+                   }
+                }
+                
+                
+                
+                .preview {
+                    display: none;
+                    border: solid 3px #000000;
+                    background-color: @greyColor;
+                    
+                    img {
+                        padding: 0;
+                        margin: 0;
+                        margin-left: 15px;
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+                        width: 400px;
+                        height: 220px;
+                        border-radius: 5px;
+                        border: 5px solid @whiteColor;
+                    }
+                    
+                    .skills {
+                        margin: 0;
+                        padding: 0;
+                        text-transform: capitalize;
+
+                        
+                        li {
+                            padding-bottom: 50px;
+                        }
+                    }
+                    
+
+                }
+            }
+            
+            .skills {
+                list-style-type: none;
+            }
+        }
+    }
+
+}
