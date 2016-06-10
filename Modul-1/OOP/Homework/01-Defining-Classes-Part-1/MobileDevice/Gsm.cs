@@ -61,7 +61,7 @@
                 return this.model;
             }
 
-            set
+            private set
             {
                 if (value.Length < 2)
                 {
@@ -81,7 +81,7 @@
                 return this.manufacturer;
             }
 
-            set
+            private set
             {
                 if (value.Length < 2)
                 {
@@ -101,7 +101,7 @@
                 return this.price;
             }
 
-            set
+            private set
             {
                 if (value < 0)
                 {
@@ -127,9 +127,9 @@
             }
         }
 
-        public Display Display { get; set; }
+        public Display Display { get; private set; }
 
-        public Battery Battery { get; set; }
+        public Battery Battery { get; private set; }
 
         public List<Call> CallHistory
         {
