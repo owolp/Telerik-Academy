@@ -7,11 +7,9 @@
     public class Gsm
     {
         // static field for iPhone4S
-        public static readonly Gsm IPhone4S = new Gsm("iPhone 4S", "Apple", 650, "John", new Display(4.5, 1000000), new Battery(BatteryType.LiIon, 100, 50));
+        private static Gsm iPhone4S = new Gsm("iPhone 4S", "Apple", 650, "John", new Display(4.5, 1000000), new Battery(BatteryType.LiIon, 100, 50));
 
         // fields
-        private const double CallPrice = 0.37;
-
         private string model;
         private string manufacturer;
         private double? price;
@@ -137,6 +135,25 @@
             {
                 return this.callHistory;
             }
+
+            private set
+            {
+                if (this.callHistory == null)
+                {
+                    this.callHistory = new List<Call>();
+                }
+
+                this.callHistory.Clear();
+                this.callHistory = value;
+            }
+        }
+
+        public Gsm IPhone4S
+        {
+            get
+            {
+                return iPhone4S;
+            }
         }
 
         // methods
@@ -144,38 +161,31 @@
         {
             StringBuilder stringBuilder = new StringBuilder();
 
-            stringBuilder.Append("-=Smartphone details=-")
-                .AppendLine()
-                .AppendFormat("Model: {0}", this.Model)
-                .AppendLine()
-                .AppendFormat("Manufacturer: {0}", this.Manufacturer);
+            stringBuilder.AppendLine("-=Smartphone details=-")
+                .AppendLine(string.Format("Model: {0}", this.Model))
+                .AppendLine(string.Format("Manufacturer: {0}", this.Manufacturer));
 
             if (this.Price != null)
             {
-                stringBuilder.AppendLine()
-                    .AppendFormat("Price: {0}", this.Price);
+                stringBuilder.AppendLine(string.Format("Price: {0}", this.Price));
             }
 
             if (this.Owner != null)
             {
-                stringBuilder.AppendLine()
-                    .AppendFormat("Owner: {0}", this.Owner);
+                stringBuilder.AppendLine(string.Format("Owner: {0}", this.Owner));
             }
 
             if (this.Display != null)
             {
-                stringBuilder.AppendLine()
-                    .Append(this.Display.ToString());
+                stringBuilder.Append(this.Display.ToString());
             }
 
             if (this.Battery != null)
             {
-                stringBuilder.AppendLine()
-                    .Append(this.Battery.ToString());
+                stringBuilder.Append(this.Battery.ToString());
             }
 
-            stringBuilder.AppendLine()
-                .Append(new string('-', 100));
+            stringBuilder.AppendLine(string.Format(new string('-', 100)));
 
             return stringBuilder.ToString();
         }
@@ -195,13 +205,13 @@
             this.callHistory.Clear();
         }
 
-        public double TotalCallPrice()
+        public double TotalCallPrice(double fixedPrice)
         {
             double totalPrice = 0;
 
             foreach (var call in this.callHistory)
             {
-                totalPrice += call.Duration * CallPrice;
+                totalPrice += call.Duration * fixedPrice;
             }
 
             return totalPrice;

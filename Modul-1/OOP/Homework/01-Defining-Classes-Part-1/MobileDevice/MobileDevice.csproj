@@ -47,7 +47,9 @@
     <Compile Include="BatteryType.cs" />
     <Compile Include="Call.cs" />
     <Compile Include="Display.cs" />
-    <Compile Include="Gsm.cs" />
+    <Compile Include="Gsm.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="GSMCallHistoryTest.cs" />
     <Compile Include="GsmTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

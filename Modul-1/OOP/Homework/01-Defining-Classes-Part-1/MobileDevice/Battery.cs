@@ -51,10 +51,8 @@
                 {
                     throw new ArgumentOutOfRangeException("The idle time can not be a negative number.");
                 }
-                else
-                {
-                    this.hoursIdle = value;
-                }
+
+                this.hoursIdle = value;
             }
         }
 
@@ -71,10 +69,8 @@
                 {
                     throw new ArgumentOutOfRangeException("The talk time can not be a negative number.");
                 }
-                else
-                {
-                    this.hoursTalk = value;
-                }
+
+                this.hoursTalk = value;
             }
         }
 
@@ -83,20 +79,17 @@
         {
             StringBuilder stringBuilder = new StringBuilder();
 
-            stringBuilder.Append("-=Battery Details=-")
-                .AppendLine()
-                .AppendFormat("Model: {0}", this.model);
+            stringBuilder.AppendLine("-=Battery Details=-")
+                .AppendLine(string.Format("Model: {0}", this.Model));
 
             if (this.HoursIdle != null)
             {
-                stringBuilder.AppendLine()
-                    .AppendFormat("Hours Idle: {0}", this.hoursIdle);
+                stringBuilder.AppendLine(string.Format("Hours Idle: {0}", this.HoursIdle));
             }
 
             if (this.HoursTalk != null)
             {
-                stringBuilder.AppendLine()
-                    .AppendFormat("Hours Talk: {0}", this.hoursTalk);
+                stringBuilder.AppendLine(string.Format("Hours Talk: {0}", this.HoursTalk));
             }
 
             return stringBuilder.ToString();

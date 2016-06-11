@@ -16,12 +16,14 @@
             this.NumberOfColors = null;
         }
 
-        public Display(double? size) : this()
+        public Display(double? size)
+            : this()
         {
             this.Size = size;
         }
 
-        public Display(double? size, ulong? numberOfColors) : this(size)
+        public Display(double? size, ulong? numberOfColors)
+            : this(size)
         {
             this.NumberOfColors = numberOfColors;
         }
@@ -40,10 +42,8 @@
                 {
                     throw new ArgumentOutOfRangeException("The display size can not be less than 2 inches.");
                 }
-                else
-                {
-                    this.size = value;
-                }               
+
+                this.size = value;
             }
         }
 
@@ -60,10 +60,8 @@
                 {
                     throw new ArgumentOutOfRangeException("Nokia 3310 RLZ!");
                 }
-                else
-                {
-                    this.numberOfColors = value;
-                }
+
+                this.numberOfColors = value;
             }
         }
 
@@ -72,18 +70,16 @@
         {
             StringBuilder stringBuilder = new StringBuilder();
 
-            stringBuilder.Append("-=Display details=-");
+            stringBuilder.AppendLine("-=Display details=-");
 
             if (this.Size != null)
             {
-                stringBuilder.AppendLine()
-                    .AppendFormat("Size: {0}", this.Size);
+                stringBuilder.AppendLine(string.Format("Size: {0}", this.Size));
             }
 
             if (this.NumberOfColors != null)
             {
-                stringBuilder.AppendLine()
-                    .AppendFormat("Number of Colors: {0}", this.NumberOfColors);
+                stringBuilder.AppendLine(string.Format("Number of Colors: {0}", this.NumberOfColors));
             }
 
             return stringBuilder.ToString();

@@ -6,6 +6,7 @@
     {
         public static void Main()
         {
+            Gsm smartphone = new Gsm("Fancy Phone", "Bulgaria");
             string separator = new string('=', 100);
 
             // Print mobile device information
@@ -18,7 +19,7 @@
                 Console.WriteLine(mobilePhone.ToString());
             }
 
-            Console.WriteLine(Gsm.IPhone4S.ToString());
+            Console.WriteLine(smartphone.IPhone4S.ToString());
 
             Console.WriteLine(separator);
 

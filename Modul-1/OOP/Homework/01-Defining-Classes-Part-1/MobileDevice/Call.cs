@@ -6,10 +6,10 @@
     public class Call
     {
         private string dialedNumber;
-        private int duration;
+        private uint duration;
 
         // constructors
-        public Call(DateTime dateTime, string dialedNumber, int duration)
+        public Call(DateTime dateTime, string dialedNumber, uint duration)
         {
             this.Date = dateTime.ToShortDateString();
             this.Time = dateTime.ToLongTimeString();
@@ -35,14 +35,12 @@
                 {
                     throw new ArgumentNullException("The dialed number can not be empty.");
                 }
-                else
-                {
-                    this.dialedNumber = value;
-                }
+
+                this.dialedNumber = value;
             }
         }
 
-        public int Duration
+        public uint Duration
         {
             get
             {
@@ -55,10 +53,8 @@
                 {
                     throw new ArgumentNullException("The phone call duration can not be a negative number.");
                 }
-                else
-                {
-                    this.duration = value;
-                }
+
+                this.duration = value;
             }
         }
 

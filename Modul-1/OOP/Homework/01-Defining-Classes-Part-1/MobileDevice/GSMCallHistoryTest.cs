@@ -7,6 +7,7 @@
     {
         public static void DisplayInformation()
         {
+            double fixedPrice = 0.37;
             var smartphone = new Gsm("Fancy Phone", "Bulgaria");
             string separator = new string('=', 100);
 
@@ -24,14 +25,14 @@
             smartphone.CallHistoryInformation();
 
             Console.WriteLine(separator);
-            Console.WriteLine("Total Price of Calls: {0} BGN", smartphone.TotalCallPrice());
+            Console.WriteLine("Total Price of Calls: {0} BGN", smartphone.TotalCallPrice(fixedPrice));
             Console.WriteLine(separator);
 
             Call longestCall = smartphone.CallHistory.OrderByDescending(x => x.Duration).First();
 
             smartphone.DeleteCall(longestCall);
 
-            Console.WriteLine("Total Price after last call removed: {0} BGN", smartphone.TotalCallPrice());
+            Console.WriteLine("Total Price after last call removed: {0} BGN", smartphone.TotalCallPrice(fixedPrice));
             Console.WriteLine(separator);
             Console.WriteLine("History cleared:");
 
