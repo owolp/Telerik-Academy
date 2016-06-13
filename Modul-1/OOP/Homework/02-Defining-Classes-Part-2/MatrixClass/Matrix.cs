@@ -3,7 +3,12 @@
     using System;
     using System.Text;
 
-    public class Matrix<T>
+    public class Matrix<T> where T : struct,
+          IComparable,
+          IComparable<T>,
+          IConvertible,
+          IEquatable<T>,
+          IFormattable
     {
         // fields
         private T[,] matrix;
