@@ -1,3 +1,6 @@
+/* globals console*/
+"use strict";
+
 function Rectangle(args) {
     var width = +args[0];
     var height = +args[1];

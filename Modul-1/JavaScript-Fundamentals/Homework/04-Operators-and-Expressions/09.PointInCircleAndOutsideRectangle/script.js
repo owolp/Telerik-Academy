@@ -1,3 +1,6 @@
+/* globals console*/
+"use strict";
+
 function PointInCircleAndOutsideRectangle(params) {
     var x = params[0];
     var y = params[1];

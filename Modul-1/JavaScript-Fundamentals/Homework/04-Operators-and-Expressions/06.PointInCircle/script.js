@@ -1,3 +1,6 @@
+/* globals console*/
+"use strict";
+
 function PointIntCircle(params) {
     var xCoordinate = +params[0];
     var yCoordinate = +params[1];

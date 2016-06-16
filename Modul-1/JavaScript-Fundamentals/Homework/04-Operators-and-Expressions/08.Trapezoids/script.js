@@ -1,3 +1,6 @@
+/* globals console*/
+"use strict";
+
 function Trapezoids(params) {
     var a = +params[0];
     var b = +params[1];

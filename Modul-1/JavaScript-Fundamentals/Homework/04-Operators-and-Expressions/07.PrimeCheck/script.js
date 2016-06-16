@@ -1,3 +1,6 @@
+/* globals console*/
+"use strict";
+
 function PrimeCheck(number) {
     var count = 0;
 
