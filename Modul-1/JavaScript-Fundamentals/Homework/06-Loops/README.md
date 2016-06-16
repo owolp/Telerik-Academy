@@ -7,6 +7,6 @@ Homework: Loops
 
 1. [Numbers](./01.Numbers)
 1. [MMSA](./02.MMSA)
-1. [Matrix of numbers](./03.MatrixOfnumbers)
+1. [Matrix of numbers](./03.MatrixOfNumbers)
 1. [Lexicographically smallest](./04.LexicographicallySmallest)
 1. [Hex to Decimal](./05.HexToDecimal)
