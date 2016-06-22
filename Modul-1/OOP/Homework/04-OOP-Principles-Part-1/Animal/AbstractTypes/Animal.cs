@@ -70,6 +70,7 @@
 
         public virtual void MakeSound()
         {
+            Console.WriteLine("I'm an animal!");
         }
     }
 }
