@@ -1,30 +1,30 @@
-﻿namespace Animal.Types.Felidae
+﻿namespace Animal.Models.Felidae
 {
     using System;
     using Enumerators;
 
     public class Tomcat : Cat
     {
-        public Tomcat(string name, int age, SexType sex)
+        public Tomcat(string name, int age, GenderType sex)
             : base(name, age, sex)
         {
         }
 
-        public override SexType Sex
+        public override GenderType Gender
         {
             get
             {
-                return base.Sex;
+                return base.Gender;
             }
 
             protected set
             {
-                if (value == SexType.Female)
+                if (value == GenderType.Female)
                 {
                     throw new ArgumentException("Tomcats can be only Male.");
                 }
 
-                base.Sex = value;
+                base.Gender = value;
             }
         }
     }

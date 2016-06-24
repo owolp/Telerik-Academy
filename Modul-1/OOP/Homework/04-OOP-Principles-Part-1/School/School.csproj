@@ -41,14 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\ICommentable.cs" />
-    <Compile Include="People\Class.cs" />
+    <Compile Include="Models\Class.cs" />
     <Compile Include="Enumerators\ClassId.cs" />
     <Compile Include="Enumerators\DisciplineSubject.cs" />
-    <Compile Include="People\Discipline.cs" />
-    <Compile Include="People\People.cs" />
-    <Compile Include="People\Student.cs" />
+    <Compile Include="Models\Discipline.cs" />
+    <Compile Include="AbstractModels\People.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="People\Teacher.cs" />
+    <Compile Include="Models\Teacher.cs" />
     <Compile Include="School.cs" />
   </ItemGroup>
   <ItemGroup>

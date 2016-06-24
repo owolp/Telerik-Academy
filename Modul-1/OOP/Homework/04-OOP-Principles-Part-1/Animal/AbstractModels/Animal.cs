@@ -1,4 +1,4 @@
-﻿namespace Animal.AbstractTypes
+﻿namespace Animal.AbstractModels
 {
     using System;
     using System.Collections.Generic;
@@ -10,19 +10,19 @@
     {
         private string name;
         private int age;
-        private SexType sex;
+        private GenderType gender;
 
-        public Animal(string name, int age, SexType sex)
+        public Animal(string name, int age, GenderType gender)
         {
             this.Name = name;
             this.Age = age;
-            this.Sex = sex;
+            this.Gender = gender;
         }
 
-        public virtual SexType Sex
+        public virtual GenderType Gender
         {
-            get { return this.sex; }
-            protected set { this.sex = value; }
+            get { return this.gender; }
+            protected set { this.gender = value; }
         }
 
         public int Age

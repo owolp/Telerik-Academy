@@ -1,30 +1,30 @@
-﻿namespace Animal.Types.Felidae
+﻿namespace Animal.Models.Felidae
 {
     using System;
     using Enumerators;
 
     public class Kitten : Cat
     {
-        public Kitten(string name, int age, SexType sex)
-            : base(name, age, sex)
+        public Kitten(string name, int age, GenderType gender)
+            : base(name, age, gender)
         {
         }
 
-        public override SexType Sex
+        public override GenderType Gender
         {
             get
             {
-                return base.Sex;
+                return base.Gender;
             }
 
             protected set
             {
-                if (value == SexType.Male)
+                if (value == GenderType.Male)
                 {
                     throw new ArgumentException("Kittens can be only female.");
                 }
 
-                base.Sex = value;
+                base.Gender = value;
             }
         }
     }

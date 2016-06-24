@@ -2,20 +2,20 @@
 {
     using System;
     using System.Collections.Generic;
-    using Animal.AbstractTypes;
+    using Animal.AbstractModels;
     using Animal.Enumerators;
-    using Animal.Types;
-    using Animal.Types.Felidae;
+    using Animal.Models;
+    using Animal.Models.Felidae;
 
     public class TestAnimal
     {
         public static void Main()
         {
-            var cat = new Cat("Ivan", 2, SexType.Male);
-            var dog = new Dog("Dobrin", 1, SexType.Male);
-            var kitten = new Kitten("Maria", 3, SexType.Female);
-            var tomcat = new Tomcat("Grigor", 5, SexType.Male);
-            var frog = new Frog("Penka", 100, SexType.Female);
+            var cat = new Cat("Ivan", 2, GenderType.Male);
+            var dog = new Dog("Dobrin", 1, GenderType.Male);
+            var kitten = new Kitten("Maria", 3, GenderType.Female);
+            var tomcat = new Tomcat("Grigor", 5, GenderType.Male);
+            var frog = new Frog("Penka", 100, GenderType.Female);
 
             var animals = new List<Animal>();
             animals.Add(cat);

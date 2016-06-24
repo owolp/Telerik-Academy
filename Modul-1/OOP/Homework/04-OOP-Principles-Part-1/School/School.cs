@@ -1,7 +1,7 @@
 ﻿namespace School
 {
     using System.Collections.Generic;
-    using People;
+    using Models;
 
     public class School
     {

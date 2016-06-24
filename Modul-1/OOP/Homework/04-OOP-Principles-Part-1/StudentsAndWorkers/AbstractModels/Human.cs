@@ -1,23 +1,16 @@
-﻿namespace School.People
+﻿namespace StudentsAndWorkers.AbstractModels
 {
-    using Interfaces;
+    using System.Collections.Generic;
 
-    public class People : ICommentable
+    public abstract class Human
     {
         private string firstName;
         private string lastName;
-        private string comment;
 
-        public People(string firstName, string lastName)
+        public Human(string firstName, string lastName)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
-        }
-
-        public string CommentBox
-        {
-            get { return this.comment; }
-            set { this.comment = value; }
         }
 
         public string LastName
@@ -30,6 +23,16 @@
         {
             get { return this.firstName; }
             set { this.firstName = value; }
+        }
+
+        public virtual List<Human> Order()
+        {
+            return new List<Human>();
+        }
+
+        public override string ToString()
+        {
+            return string.Format(this.FirstName + " " + this.LastName);
         }
     }
 }

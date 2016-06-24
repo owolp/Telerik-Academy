@@ -1,5 +1,7 @@
-﻿namespace School.People
+﻿namespace School.Models
 {
+    using AbstractModels;
+
     public class Student : People
     {
         private int uniqueNumber;

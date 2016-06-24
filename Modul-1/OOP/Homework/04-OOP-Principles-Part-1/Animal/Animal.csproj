@@ -40,15 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractTypes\Animal.cs" />
-    <Compile Include="Enumerators\SexType.cs" />
+    <Compile Include="AbstractModels\Animal.cs" />
+    <Compile Include="Enumerators\GenderType.cs" />
     <Compile Include="Interfaces\ISound.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Types\Cat.cs" />
-    <Compile Include="Types\Dog.cs" />
-    <Compile Include="Types\Felidae\Kitten.cs" />
-    <Compile Include="Types\Felidae\Tomcat.cs" />
-    <Compile Include="Types\Frog.cs" />
+    <Compile Include="Models\Cat.cs" />
+    <Compile Include="Models\Dog.cs" />
+    <Compile Include="Models\Felidae\Kitten.cs" />
+    <Compile Include="Models\Felidae\Tomcat.cs" />
+    <Compile Include="Models\Frog.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,4 @@
-﻿namespace School.People
+﻿namespace School.Models
 {
     using System.Collections.Generic;
     using Enumerators;

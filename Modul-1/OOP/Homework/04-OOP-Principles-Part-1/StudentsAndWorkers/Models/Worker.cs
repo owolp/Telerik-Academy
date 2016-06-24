@@ -1,9 +1,9 @@
-﻿namespace StudentsAndWorkers.Types
+﻿namespace StudentsAndWorkers.Models
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using AbstractTypes;
+    using AbstractModels;
 
     public class Worker : Human
     {

@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using School;
     using School.Enumerators;
-    using School.People;
+    using School.Models;
 
     public class TestSchool
     {

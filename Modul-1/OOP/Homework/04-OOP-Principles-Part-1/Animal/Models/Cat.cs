@@ -1,13 +1,13 @@
-﻿namespace Animal.Types
+﻿namespace Animal.Models
 {
     using System;
-    using AbstractTypes;
+    using AbstractModels;
     using Enumerators;
 
     public class Cat : Animal
     {
-        public Cat(string name, int age, SexType sex)
-            : base(name, age, sex)
+        public Cat(string name, int age, GenderType gender)
+            : base(name, age, gender)
         {
         }
 
