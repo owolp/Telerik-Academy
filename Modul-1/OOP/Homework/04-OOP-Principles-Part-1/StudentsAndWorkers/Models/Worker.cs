@@ -7,9 +7,6 @@
 
     public class Worker : Human
     {
-        private int weekSalary;
-        private int workHoursPerDay;
-
         public Worker(string firstName, string lastName, int weekSalary, int workHoursPerDay)
             : base(firstName, lastName)
         {
@@ -17,24 +14,16 @@
             this.WorkHoursPerDay = workHoursPerDay;
         }
 
-        public int WorkHoursPerDay
-        {
-            get { return this.workHoursPerDay; }
-            set { this.workHoursPerDay = value; }
-        }
+        public int WorkHoursPerDay { get; private set; }
 
-        public int WeekSalary
-        {
-            get { return this.weekSalary; }
-            set { this.weekSalary = value; }
-        }
+        public int WeekSalary { get; private set; }
 
         public decimal MoneyPerHour()
         {
             return this.WeekSalary / this.WorkHoursPerDay;
         }
 
-        public virtual List<Worker> Order(List<Worker> workers)
+        public virtual List<Worker> Order(IEnumerable<Worker> workers)
         {
             if (workers.Count() == 0)
             {
@@ -46,7 +35,7 @@
 
         public override string ToString()
         {
-            return string.Format(this.FirstName + " " + this.LastName + " {0}", this.MoneyPerHour());
+            return string.Format(base.ToString() + " {0}", this.MoneyPerHour());
         }
     }
 }

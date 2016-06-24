@@ -7,21 +7,15 @@
 
     public class Student : Human
     {
-        private int grade;
-
         public Student(string firstName, string lastName, int grade)
             : base(firstName, lastName)
         {
             this.Grade = grade;
         }
 
-        public int Grade
-        {
-            get { return this.grade; }
-            set { this.grade = value; }
-        }
+        public int Grade { get; private set; }
 
-        public virtual List<Student> Order(List<Student> students)
+        public virtual List<Student> Order(IEnumerable<Student> students)
         {
             if (students.Count() == 0)
             {
@@ -33,7 +27,7 @@
 
         public override string ToString()
         {
-            return string.Format(this.FirstName + " " + this.LastName + " {0}", this.Grade);
+            return string.Format(base.ToString() + " {0}", this.Grade);
         }
     }
 }

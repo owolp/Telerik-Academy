@@ -68,9 +68,6 @@
             return (double)totalAge.Sum() / totalAge.Count();
         }
 
-        public virtual void MakeSound()
-        {
-            Console.WriteLine("I'm an animal!");
-        }
+        public abstract void MakeSound();
     }
 }

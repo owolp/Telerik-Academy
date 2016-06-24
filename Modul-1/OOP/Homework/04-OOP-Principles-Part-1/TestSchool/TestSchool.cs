@@ -28,6 +28,14 @@
             teachers.Add(firstTeacher);
             teachers.Add(secondTeacher);
             teachers.Add(thirdTeacher);
+
+            newSchool.AddStudent(firstStudent);
+            newSchool.AddStudent(secondStudent);
+            newSchool.AddStudent(thirdStudent);
+    
+            newSchool.AddTeacher(firstTeacher);
+            newSchool.AddTeacher(secondTeacher);
+            newSchool.AddTeacher(thirdTeacher);
         }
     }
 }

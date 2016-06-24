@@ -6,13 +6,6 @@
 
     public class Discipline : ICommentable
     {
-        private DisciplineSubject name;
-        private int numberOfLectures;
-        private int numberOfExercises;
-        private string comment;
-        private List<Student> students;
-        private List<Teacher> teachers;
-
         public Discipline()
         {
             this.Students = new List<Student>();
@@ -26,40 +19,16 @@
             this.NumberOfLectures = numberOfLectures;
         }
 
-        public string CommentBox
-        {
-            get { return this.comment; }
-            set { this.comment = value; }
-        }
+        public string CommentBox { get; private set; }
 
-        public List<Student> Students
-        {
-            get { return this.students; }
-            set { this.students = value; }
-        }
+        public IEnumerable<Student> Students { get; private set; }
 
-        public List<Teacher> Teachers
-        {
-            get { return this.teachers; }
-            set { this.teachers = value; }
-        }
+        public IEnumerable<Teacher> Teachers { get; private set; }
 
-        public int NumberOfExercises
-        {
-            get { return this.numberOfExercises; }
-            set { this.numberOfExercises = value; }
-        }
+        public int NumberOfExercises { get; private set; }
 
-        public int NumberOfLectures
-        {
-            get { return this.numberOfLectures; }
-            set { this.numberOfLectures = value; }
-        }
+        public int NumberOfLectures { get; private set; }
 
-        public DisciplineSubject Name
-        {
-            get { return this.name; }
-            set { this.name = value; }
-        }
+        public DisciplineSubject Name { get; private set; }
     }
 }

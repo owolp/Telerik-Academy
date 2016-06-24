@@ -33,18 +33,23 @@
 
             age = Animal.AverageAge(animals, typeof(Cat));
             Console.WriteLine("The average age of Cat is {0}", age);
+            cat.MakeSound();
 
             age = Animal.AverageAge(animals, typeof(Dog));
             Console.WriteLine("The average age of Dog is {0}", age);
+            dog.MakeSound();
 
             age = Animal.AverageAge(animals, typeof(Kitten));
             Console.WriteLine("The average age of Kitten is {0}", age);
+            kitten.MakeSound();
 
             age = Animal.AverageAge(animals, typeof(Tomcat));
             Console.WriteLine("The average age of Tomcat is {0}", age);
+            tomcat.MakeSound();
 
             age = Animal.AverageAge(animals, typeof(Frog));
             Console.WriteLine("The average age of Frog is {0}", age);
+            frog.MakeSound();
         }
     }
 }

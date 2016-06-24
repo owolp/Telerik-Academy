@@ -4,28 +4,17 @@
 
     public abstract class Human
     {
-        private string firstName;
-        private string lastName;
-
         public Human(string firstName, string lastName)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
         }
 
-        public string LastName
-        {
-            get { return this.lastName; }
-            set { this.lastName = value; }
-        }
+        public string LastName { get; private set; }
 
-        public string FirstName
-        {
-            get { return this.firstName; }
-            set { this.firstName = value; }
-        }
+        public string FirstName { get; private set; }
 
-        public virtual List<Human> Order()
+        public virtual IEnumerable<Human> Order()
         {
             return new List<Human>();
         }

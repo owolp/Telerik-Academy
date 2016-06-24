@@ -5,38 +5,44 @@
 
     public class School
     {
-        private string name;
-        private List<Teacher> teachers;
         private List<Student> students;
-
-        public School()
-        {
-            this.Students = new List<Student>();
-            this.Teachers = new List<Teacher>();
-        }
+        private List<Teacher> teachers;
 
         public School(string name)
-            : this()
         {
             this.Name = name;
         }
 
         public List<Student> Students
         {
-            get { return this.students; }
-            set { this.students = value; }
+            get
+            {
+                // 01 in order the list of students not to be modified from outside
+                return new List<Student>(this.students);
+            }
         }
 
         public List<Teacher> Teachers
         {
-            get { return this.teachers; }
-            set { this.teachers = value; }
+            get
+            {
+                // 02 in order the list of teachers not to be modified from outside
+                return new List<Teacher>(this.teachers);
+            }
         }
 
-        public string Name
+        public string Name { get; private set; }
+
+        // 01
+        public void AddStudent(Student student)
         {
-            get { return this.name; }
-            set { this.name = value; }
+            this.students.Add(student);
+        }
+
+        // 02
+        public void AddTeacher(Teacher teacher)
+        {
+            this.teachers.Add(teacher);
         }
     }
 }
