@@ -22,7 +22,11 @@
 
         public IEnumerator<Account> GetEnumerator()
         {
-            return this.accounts.GetEnumerator();
+            // return this.accounts.GetEnumerator();
+            for (int i = 0; i < this.accounts.Count; i++)
+            {
+                yield return this.accounts[i];
+            }
         }
 
         public void RemoveAccount(Account customer)
