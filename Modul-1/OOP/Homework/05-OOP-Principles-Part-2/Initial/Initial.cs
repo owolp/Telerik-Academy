@@ -19,11 +19,15 @@
             Console.WriteLine("Problem 1:");
             Console.WriteLine();
             TestShapes();
+
             Console.WriteLine(new string('=', 50));
+
             Console.WriteLine("Problem 2:");
             Console.WriteLine();
             TestBank();
+
             Console.WriteLine(new string('=', 50));
+
             Console.WriteLine("Problem 3:");
             Console.WriteLine();
             TestExceptions();
