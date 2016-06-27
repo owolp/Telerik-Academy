@@ -7,8 +7,8 @@ function solve(input) {
     maxSum = input[0];
 
     length = input.length;
-    for (i = 0; i <= length; i += 1) {
-        for (j = i; j <= length; j += 1) {
+    for (i = 0; i < length; i += 1) {
+        for (j = i; j < length; j += 1) {
             for (k = i; k <= j; k += 1) {
                 currentSum += input[k];
             }
