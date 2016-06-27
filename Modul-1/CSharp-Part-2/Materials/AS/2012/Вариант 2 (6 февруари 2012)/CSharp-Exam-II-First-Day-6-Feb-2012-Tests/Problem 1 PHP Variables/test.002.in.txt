@@ -1,5 +1,0 @@
-<?php
-// some $var
-phpinfo(strlen("\$var"));
-$not_empty_var = "some 'value'";
-?>

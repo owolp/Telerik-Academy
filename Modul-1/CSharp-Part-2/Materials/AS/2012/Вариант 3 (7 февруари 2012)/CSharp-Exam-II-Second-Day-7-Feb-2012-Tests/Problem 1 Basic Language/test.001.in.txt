@@ -1,2 +1,0 @@
-FOR(19)PRINT(a);
-EXIT;

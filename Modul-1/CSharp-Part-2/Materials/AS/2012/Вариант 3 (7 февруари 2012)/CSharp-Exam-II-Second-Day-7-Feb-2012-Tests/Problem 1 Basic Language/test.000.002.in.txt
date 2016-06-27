@@ -1,2 +1,0 @@
-FOR   ( 1  ,   5   )    PRINT  (ha)   ;
-FOR(2)FOR(2,3)PRINT(xi);PRINT(i);EXIT;

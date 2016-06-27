@@ -1,4 +1,0 @@
-PRINT(Black and yellow, );
-FOR(0,1)PRINT(black and yellow, );
-PRINT(black and yellow...);
-EXIT;

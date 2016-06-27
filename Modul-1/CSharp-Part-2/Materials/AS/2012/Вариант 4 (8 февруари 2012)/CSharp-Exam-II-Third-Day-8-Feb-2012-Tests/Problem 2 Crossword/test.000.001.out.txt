@@ -1,4 +1,0 @@
-FACE
-ICED
-RING
-EDGE
