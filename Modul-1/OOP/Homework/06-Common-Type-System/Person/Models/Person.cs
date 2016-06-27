@@ -10,7 +10,7 @@
             this.Age = null;
         }
 
-        public Person(string name, int? age)
+        public Person(string name, int age)
             : this(name)
         {
             this.Age = age;
