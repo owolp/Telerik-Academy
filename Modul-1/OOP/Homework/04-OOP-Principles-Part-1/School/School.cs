@@ -11,25 +11,27 @@
         public School(string name)
         {
             this.Name = name;
+            this.students = new List<Student>();
+            this.teachers = new List<Teacher>();
         }
 
-        public List<Student> Students
-        {
-            get
-            {
-                // 01 in order the list of students not to be modified from outside
-                return new List<Student>(this.students);
-            }
-        }
+        //public List<Student> Students
+        //{
+        //    get
+        //    {
+        //        // 01 in order the list of students not to be modified from outside
+        //        return new List<Student>(this.students);
+        //    }
+        //}
 
-        public List<Teacher> Teachers
-        {
-            get
-            {
-                // 02 in order the list of teachers not to be modified from outside
-                return new List<Teacher>(this.teachers);
-            }
-        }
+        //public List<Teacher> Teachers
+        //{
+        //    get
+        //    {
+        //        // 02 in order the list of teachers not to be modified from outside
+        //        return new List<Teacher>(this.teachers);
+        //    }
+        //}
 
         public string Name { get; private set; }
 
