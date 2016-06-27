@@ -8,4 +8,4 @@
 | 19 May 2014 | Vehicles | Paths | Shaver Parser | Coord System |
 | 20 May 2014 | Cakes | Horsy | NikolAngular JS | Catalan Numbers |
 | 1 April 2013 Evening | Max Sum | Labyrinth Escape | Listy | N/A |
-| 1 April 2013 Morning | Sequences | Joro the Naughty | Clojure Parsing | N/A |
+| [1 April 2013 Morning](http://bgcoder.com/Contests/Practice/Index/74#0) | [Sequences](./Sequences) | Joro the Naughty | Clojure Parsing | N/A |
