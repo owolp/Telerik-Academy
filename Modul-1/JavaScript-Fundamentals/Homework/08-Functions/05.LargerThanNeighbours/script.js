@@ -1,30 +1,21 @@
-function Solve(params) {
-    var isTrue, i, length, previous, current, next,
-        counter = 0;
-    var input = (params + "").split("\n");
-    var numbers = input.slice(1, input.length);
+function solve(args) {
+    var i,
+        length = +args[0],
+        numbers = args[1].split(' '),
+        count;
 
-    numbers = (numbers + "").split(" ").map(Number);
+    console.log(largerThanNeighboursCount(numbers, length));
 
-    for (i = 1, length = numbers.length; i < length; i += 1) {
-        previous = numbers[i - 1];
-        current = numbers[i];
-        next = numbers[i + 1];
-
-        isTrue = LargerThanNeighbour(previous, current, next);
-        
-        if(isTrue) {
-            counter += 1;
+    function largerThanNeighboursCount(numbers, length) {
+        count = 0;
+        for (i = 1; i < length - 1; i += 1) {
+            if (+numbers[i] > +numbers[i - 1] && +numbers[i] > +numbers[i + 1]) {
+                count += 1;
+            }
         }
-    }
 
-    console.log(counter);
-
-    function LargerThanNeighbour(a, b, c) {
-        if (a < b && b > c) {
-            return true;
-        }
+        return count;
     }
 }
 
-//Solve("6\n-26 -25 -28 31 2 27");
+//solve("6\n-26 -25 -28 31 2 27");
