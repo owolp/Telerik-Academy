@@ -1,59 +1,48 @@
 'use strict';
 
-function solve(input) {
-    var i, length, min, max, temp;
-    var n = parseInt(input[0]),
-        k = parseInt(input[1]),
-        numbersAsString = input[2],
-        index = 0;
-    var result = [];
-    var numbers = (numbersAsString + "").split(" ").map(Number);
+function solve(params) {
+    var n = parseInt(params[0]),
+        k = parseInt(params[1]),
+        numbersAsString = params[2],
+        result = [];
 
-    length = numbers.length;
-
-    while(true) {
-        if (index + k > length) {
+    var numbers = numbersAsString.split(" ").map(Number);
+    var index = 0;
+    while (true) {
+        if (index + k > numbers.length) {
             break;
         }
-        min = numbers[index];
-        max = numbers[index];
-
-        for (i = index; i < index + k; i += 1) {
-            if (min > numbers[i]) {
-                min = numbers[i];
+        
+        var minEl = numbers[index];
+        var maxEl = numbers[index];
+        for (var i = index + 1; i < index + k; i += 1) {
+            if (numbers[i] < minEl) {
+                minEl = numbers[i];
             }
-
-            if (max < numbers[i]) {
-                max = numbers[i];
+            
+            if (numbers[i] > maxEl) {
+                maxEl = numbers[i];
             }
         }
-
-        temp = min + max;
-
-        result.push(temp);
+        var sum = minEl + maxEl;
+        result.push(sum);
         index += 1;
     }
 
     return result.join(",");
 }
 
+
 var input1 = [
-    [4],
-    [2],
-    ["1 3 1 8"]
+    4, 2, "1 3 1 8"
 ];
 
 var input2 = [
-    [5],
-    [3],
-    ["7 7 8 9 10"]
-
+    5, 3, "7 7 8 9 10"
 ];
 
 var input3 = [
-    [8],
-    [4],
-    ["1 8 8 4 2 9 8 11"]
+    8, 4, "1 8 8 4 2 9 8 11"
 ];
 
 console.log(solve(input1) == "4,4,9");

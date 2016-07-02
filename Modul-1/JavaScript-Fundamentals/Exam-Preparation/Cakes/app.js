@@ -1,58 +1,36 @@
-function solve(input) {
-    var totalMoney, firstCakePrice, secondCakePrice, thirdCakePrice, i, j, k, currentAmmount,
-        iLength, jLenght, kLength,
-        maxAmount = 0;
+'use strict';
 
-    input = input.map(Number);
+function solve(params) {
+    var s = params[0],
+        c1 = params[1],
+        c2 = params[2],
+        c3 = params[3];
+    var maxAmount = 0;
+    var currentAmmount = 0;
+    var iLength = (s / c1) + 1;
+    var jLength = (s / c2) + 1;
+    var kLength = (s / c3) + 1;
 
-    totalMoney = input[0];
-    firstCakePrice = input[1];
-    secondCakePrice = input[2];
-    thirdCakePrice = input[3];
-
-    iLength = (totalMoney / firstCakePrice);
-    jLength = (totalMoney / secondCakePrice);
-    kLength = (totalMoney / thirdCakePrice);
-
-    // iLength = (totalMoney / firstCakePrice) + 1;
-    // jLength = (totalMoney / secondCakePrice) + 1;
-    // kLength = (totalMoney / thirdCakePrice) + 1;
-
-    for (i = 0; i < iLength; i += 1) {
-        for (j = 0; j < jLength; j += 1) {
-            for (k = 0; k < kLength; k += 1) {
-                currentAmmount = firstCakePrice * i + secondCakePrice * j + thirdCakePrice * k;
-
-                if (currentAmmount > maxAmount && currentAmmount <= totalMoney) {
+    for (var i = 0; i < iLength; i += 1) {
+        for (var j = 0; j < jLength; j += 1) {
+            for (var k = 0; k < kLength; k += 1) {
+                currentAmmount = i * c1 + j * c2 + k * c3;
+                if (currentAmmount <= s && currentAmmount > maxAmount ) {
                     maxAmount = currentAmmount;
                 }
             }
         }
     }
 
-    return (maxAmount);
+    return maxAmount;
 }
 
-input1 = [
-    110,
-    13,
-    15,
-    17
-];
 
-input2 = [
-    20,
-    11,
-    200,
-    300
-];
+var input1 = [110, 13, 15, 17];
 
-input3 = [
-    110,
-    19,
-    29,
-    39
-];
+var input2 = [20, 11, 200, 300];
+
+var input3 = [110, 19, 29, 39];
 
 console.log(solve(input1) == 110);
 console.log(solve(input2) == 11);
