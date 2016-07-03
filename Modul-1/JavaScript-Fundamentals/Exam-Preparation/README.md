@@ -7,5 +7,5 @@
 | [13 June 2015 Re-Test](http://bgcoder.com/Contests/Practice/Index/248) | [MinMax](./MinMax) | Triathlon | N/A | N/A |
 | [19 May 2014](http://bgcoder.com/Contests/Practice/Index/187) | [Vehicles](./Vehicles) | [Paths](./Paths) | Shaver Parser | Coord System |
 | [20 May 2014](http://bgcoder.com/Contests/Practice/Index/189) | [Cakes](./Cakes) | [Horsy](./Horsy) | NikolAngular JS | Catalan Numbers |
-| [1 April 2013 Evening](http://bgcoder.com/Contests/Practice/Index/75) | [Max Sum](./MaxSum) | Labyrinth Escape | Listy | N/A |
+| [1 April 2013 Evening](http://bgcoder.com/Contests/Practice/Index/75) | [Max Sum](./MaxSum) | [Labyrinth Escape](./LabyrinthEscape) | Listy | N/A |
 | [1 April 2013 Morning](http://bgcoder.com/Contests/Practice/Index/74) | [Sequences](./Sequences) | Joro the Naughty | Clojure Parsing | N/A |
