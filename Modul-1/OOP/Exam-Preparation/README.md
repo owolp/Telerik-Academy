@@ -2,7 +2,7 @@
 
 | Exam | Problem 1 | Problem 2 |
 | :-: | :-: | :-: |
-| [April 2015](http://bgcoder.com/Contests/226/OOP-06-April-2015-Evening) | [Cosmetics Shop](./CosmeticsShop) | Army of Creatures |
+| [April 2015](http://bgcoder.com/Contests/226/OOP-06-April-2015-Evening) | [Cosmetics Shop](./CosmeticsShop) | [Army of Creatures](./ArmyOfCreatures) |
 | [March 2014](http://bgcoder.com/Contests/Practice/Index/153) | [Furniture](./Furniture) | Infestation |
 | March 2013 | HTML Renderer | AcademyEcosystem |
 | March 2013 | Software Academy | AcademyRPG |
