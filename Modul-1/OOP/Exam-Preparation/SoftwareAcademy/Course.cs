@@ -5,12 +5,14 @@
     public abstract class Course : ICourse
     {
         private string name;
+        private ICollection<string> topics;
 
         public Course(string name, ITeacher teacher)
         {
             this.Name = name;
             this.Teacher = teacher;
-            this.Topics = new List<string>();
+            // this.Topics = new List<string>();
+            this.topics = new List<string>();
         }
 
         public string Name
@@ -34,7 +36,7 @@
 
         public ITeacher Teacher { get; set; }
 
-        public IList<string> Topics { get; private set; }
+        //public IList<string> topics { get; private set; }
 
         public void AddTopic(string topic)
         {
@@ -44,7 +46,7 @@
                     GlobalErrorMessages.StringCannotBeNullOrEmpty,
                     "Topic name"));
 
-            this.Topics.Add(topic);
+            this.topics.Add(topic);
         }
 
         public override string ToString()
@@ -58,9 +60,9 @@
                 result.AppendFormat("; Teacher={0}", this.Teacher.Name);
             }
 
-            if (this.Topics.Count != 0)
+            if (this.topics.Count != 0)
             {
-                result.AppendFormat("; Topics=[{0}]", string.Join(", ", this.Topics));
+                result.AppendFormat("; Topics=[{0}]", string.Join(", ", this.topics));
             }
 
             return result.ToString().Trim();
