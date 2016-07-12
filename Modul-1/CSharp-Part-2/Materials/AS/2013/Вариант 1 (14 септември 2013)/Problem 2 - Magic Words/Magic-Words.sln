@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magic-Words", "Magic-Words.csproj", "{B240FFE3-FAD0-4514-9EDC-244C066025F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicWords-TestGenerator", "MagicWords-TestGenerator.csproj", "{FE367E71-D399-49C5-AA19-CD76EE290DC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B240FFE3-FAD0-4514-9EDC-244C066025F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B240FFE3-FAD0-4514-9EDC-244C066025F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B240FFE3-FAD0-4514-9EDC-244C066025F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B240FFE3-FAD0-4514-9EDC-244C066025F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE367E71-D399-49C5-AA19-CD76EE290DC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE367E71-D399-49C5-AA19-CD76EE290DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE367E71-D399-49C5-AA19-CD76EE290DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE367E71-D399-49C5-AA19-CD76EE290DC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
