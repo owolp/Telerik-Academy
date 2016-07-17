@@ -15,5 +15,3 @@
 ---
 
 ![Telerik Academy Curriculum](./Sources/telerik-academy-curriculum.png)
-
-Delete me
