@@ -6,10 +6,10 @@
     [TestFixture]
     public class CardTests
     {
-        //[Test, Ignore("Just a test to show how to ignore Tests with Nunit")]
-        //public void TestShouldBeIgnored()
-        //{
-        //}
+        [Test, Ignore("Just a test to show how to ignore Tests with Nunit")]
+        public void TestShouldBeIgnored()
+        {
+        }
 
         [Test]
         public void Card_ToStringMethodShouldReturnNoExceptions()

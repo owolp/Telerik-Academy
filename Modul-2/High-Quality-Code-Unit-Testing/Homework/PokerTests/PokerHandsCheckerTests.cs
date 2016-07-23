@@ -1,8 +1,8 @@
 ﻿namespace PokerTests
 {
+    using System.Collections.Generic;
     using NUnit.Framework;
     using Poker;
-    using System.Collections.Generic;
 
     [TestFixture]
     public class PokerHandsCheckerTests
