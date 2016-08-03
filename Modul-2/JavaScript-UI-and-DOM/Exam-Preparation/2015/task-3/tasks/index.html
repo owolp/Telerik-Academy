@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3 - Handlebars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="calendar"></div>
+    <script id="calendar-template" type='text/x-handlebars-template'>	
+        {{#with data}}
+        <div class="events-calendar">
+            <h2 class="header">
+                Appointments for <span class="month">{{month}}</span> <span class="year">{{year}}</span>
+            </h2>
+
+            {{#days}}
+            <div class="col-date">
+                <div class="date">{{this.day}}</div>
+                <div class="events">
+                    {{#this.events}}
+                    <div class="event {{this.importance}}">
+                        {{#if this.title}}
+                        <div class="title">{{title}}</div>
+                        <span class="time">at: {{time}}</span>
+                        {{else}}
+                            <div class="title">Free slot</div>
+                        {{/if}}
+                    </div>
+                    {{/this.events}}
+                </div>
+            </div>
+            {{/days}}
+        {{/with}}
+    </script>
+    <script src="handlebars.js"></script>
+    <script src="task-3.js"></script>
+    <script>
+        solve()('calendar');
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
