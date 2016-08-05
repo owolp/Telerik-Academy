@@ -35,5 +35,5 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-// Expose internal objects to the UnitTests class
-[assembly: InternalsVisibleTo("Cosmetics.UnitTests")]
+[assembly: InternalsVisibleTo("Cosmetics.Tests")]
+[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
