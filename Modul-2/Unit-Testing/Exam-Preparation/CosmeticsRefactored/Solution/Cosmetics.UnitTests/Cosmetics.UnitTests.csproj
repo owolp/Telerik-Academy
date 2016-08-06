@@ -90,8 +90,15 @@
     <Compile Include="Engine\CosmeticsFactory\CreateShampoo_Should.cs" />
     <Compile Include="Engine\CosmeticsFactory\CreateShoppingCart_Should.cs" />
     <Compile Include="Engine\CosmeticsFactory\CreateToothpaste_Should.cs" />
+    <Compile Include="Products\Category\AddCosmetics_Should.cs" />
+    <Compile Include="Products\Category\Mock\MockedCategory.cs" />
     <Compile Include="Products\Category\Print_Should.cs" />
     <Compile Include="Products\Shampoo\Print_Should.cs" />
+    <Compile Include="Products\ShoppingCart\AddProduct_Should.cs" />
+    <Compile Include="Products\ShoppingCart\ContainsProduct_Should.cs" />
+    <Compile Include="Products\ShoppingCart\Mock\MockedShoppingCart.cs" />
+    <Compile Include="Products\ShoppingCart\RemoveProduct_Should.cs" />
+    <Compile Include="Products\ShoppingCart\TotalPrice_Should.cs" />
     <Compile Include="Products\Toothpaste\Print_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
