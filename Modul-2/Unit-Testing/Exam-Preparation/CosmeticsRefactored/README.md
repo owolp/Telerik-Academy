@@ -26,7 +26,9 @@ You are given an already built software system. Your task is to get to know with
 
  - **Parse** should **return new Command**, when the "input" string is in the required valid format.  
 
- - **Parse** should set correct values to the newly returned Command object's Properties ("Name" & "Parameters"), when the "input" string is in the valid required format.  
+ - **Parse** should set correct values to the newly returned Command object's Properties ("Name" & "Parameters"), when the "input" string is in the valid required format. 
+
+ - **Parse** should throw **NullReferenceException** when the "input" string is Null.   
 
  - **Parse** should throw **ArgumentNullException** with a message that contains the string "Name", when the "input" string that represents the Command Name is Null Or Empty.  
 
@@ -35,8 +37,6 @@ You are given an already built software system. Your task is to get to know with
 ### Class - Cosmetics.Engine.CosmeticsEngine
 
 #### Test cases:
-
- - **Start** should throw **ArgumentNullException**, when the "input" string of commands is not in the correct format.  
 
  - **Start** should read, parse and execute **"CreateCategory" command**, when the passed input string is in the format that represents a CreateCategory command, which should result in adding the new Category in the list of categories.   
 
@@ -57,21 +57,31 @@ You are given an already built software system. Your task is to get to know with
 ### Class - Cosmetics.Engine.CosmeticsFactory
 
 #### Test cases:
- - **CreateShampoo** should throw **ArgumentNullException**, when the passed "name" parameter is invalid. (Null or Empty, or with length out of range)  
+ - **CreateShampoo** should throw **NullReferenceException**, when the passed "name" parameter is invalid. (Null or Empty)  
 
- - **CreateShampoo** should throw **ArgumentNullException**, when the passed "brand" parameter is invalid. (Null or Empty, or with length out of range)  
+ - **CreateShampoo** should throw **IndexOutOfRangeException**, when the passed "name" parameter is invalid. (length out of range)  
+
+ - **CreateShampoo** should throw **NullReferenceException**, when the passed "brand" parameter is invalid. (Null or Empty)  
+
+ - **CreateShampoo** should throw **IndexOutOfRangeException**, when the passed "brand" parameter is invalid. (length out of range)  
 
  - **CreateShampoo** should return a **new Shampoo**, when the passed parameters are all valid.  
 
- - **CreateCategory** should throw **ArgumentNullException**, when the passed "name" parameter is invalid. (Null or Empty, or with length out of range)
+ - **CreateCategory** should throw **NullReferenceException**, when the passed "name" parameter is invalid. (Null or Empty)
+
+ - **CreateCategory** should throw **IndexOutOfRangeException**, when the passed "name" parameter is invalid. (length out of range)
 
  - **CreateCategory** should return a **new Category**, when the passed parameters are all valid.  
 
- - **CreateToothpaste** should throw **ArgumentNullException**, when the passed "name" parameter is invalid. (Null or Empty, or with length out of range)
+ - **CreateToothpaste** should throw **NullReferenceException**, when the passed "name" parameter is invalid. (Null or Empty)
 
- - **CreateToothpaste** should throw **ArgumentNullException**, when the passed "brand" parameter is invalid. (Null or Empty, or with length out of range)
+ - **CreateToothpaste** should throw **IndexOutOfRangeException**, when the passed "name" parameter is invalid. (length out of range)
 
- - **CreateToothpaste** should throw **IndexOutOfRangeException**, when the count of items in the list of ingredients is not in the allowed boundaries.
+ - **CreateToothpaste** should throw **NullReferenceException**, when the passed "brand" parameter is invalid. (Null or Empty)
+
+ - **CreateToothpaste** should throw **IndexOutOfRangeException**, when the passed "brand" parameter is invalid. (length out of range)
+
+ - **CreateToothpaste** should throw **IndexOutOfRangeException**, when the lenght of any item's name is not in the allowed boundaries.
 
  - **CreateShoppingCart** should always return a new **ShoppingCart**.
 
@@ -84,4 +94,22 @@ You are given an already built software system. Your task is to get to know with
 
  - **Category.Print()** should return a string with the category details in the required format.
 
- - **ShoppingCart.Print()** should return a string with the shopping cart details in the required format.
+## Extra Tests
+
+We've added a few more tests and some small changes to the code (in the CosmeticsEngine class) to give you an example of how you should change the code to avoid being coupled to Console.
+
+### Class - Cosmetics.Products.ShoppingCart
+
+  - **AddProduct** should add the passed product to the products list.
+
+  - **RemoveProduct** should remove the passed product from the products list.
+
+  - **ContainsProduct** should return true if the passed product is contained within the products list.
+
+  - **TotalPrice** should return the total sum of the prices of all products in the products list. (or 0 if there are no products)
+
+### Class - Cosmetics.Products.Category
+
+  - **AddCosmetics** should add the passed cosmetic to the products list.
+
+  - **RemoveCosmetics** should remove the passed cosmetic from the products list.

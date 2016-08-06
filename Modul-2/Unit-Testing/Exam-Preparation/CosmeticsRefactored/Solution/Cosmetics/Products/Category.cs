@@ -14,7 +14,7 @@
         private const int MaxCategoryNameLength = 15;
 
         private string name;
-        private readonly IList<IProduct> products;
+        protected readonly IList<IProduct> products;
 
         public Category(string name)
         {
@@ -36,21 +36,21 @@
             }
         }
 
-        public void AddCosmetics(IProduct cosmetics)
+        public void AddProduct(IProduct product)
         {
-            Validator.CheckIfNull(cosmetics, string.Format(GlobalErrorMessages.ObjectCannotBeNull, "Cosmetics to add to category"));
-            this.products.Add(cosmetics);
+            Validator.CheckIfNull(product, string.Format(GlobalErrorMessages.ObjectCannotBeNull, "Cosmetics to add to category"));
+            this.products.Add(product);
         }
 
-        public void RemoveCosmetics(IProduct cosmetics)
+        public void RemoveProduct(IProduct product)
         {
-            Validator.CheckIfNull(cosmetics, string.Format(GlobalErrorMessages.ObjectCannotBeNull, "Cosmetics to remove from category"));
-            if (!this.products.Contains(cosmetics))
+            Validator.CheckIfNull(product, string.Format(GlobalErrorMessages.ObjectCannotBeNull, "Cosmetics to remove from category"));
+            if (!this.products.Contains(product))
             {
-                throw new InvalidOperationException(string.Format("Product {0} does not exist in category {1}!", cosmetics.Name, this.Name));
+                throw new InvalidOperationException(string.Format("Product {0} does not exist in category {1}!", product.Name, this.Name));
             }
 
-            this.products.Remove(cosmetics);
+            this.products.Remove(product);
         }
 
         public string Print()

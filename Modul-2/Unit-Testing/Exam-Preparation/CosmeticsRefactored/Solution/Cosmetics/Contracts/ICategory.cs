@@ -4,9 +4,9 @@
     {
         string Name { get; }
 
-        void AddCosmetics(IProduct cosmetics);
+        void AddProduct(IProduct cosmetics);
 
-        void RemoveCosmetics(IProduct cosmetics);
+        void RemoveProduct(IProduct cosmetics);
 
         string Print();
     }

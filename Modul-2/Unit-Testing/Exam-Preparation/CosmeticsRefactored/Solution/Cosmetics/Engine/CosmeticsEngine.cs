@@ -31,42 +31,46 @@
 
         private readonly ICosmeticsFactory factory;
         private readonly IShoppingCart shoppingCart;
+        private readonly ICommandParser commandParser;
         protected readonly IDictionary<string, ICategory> categories;
         protected readonly IDictionary<string, IProduct> products;
 
         public CosmeticsEngine(
-            ICosmeticsFactory factory, 
-            IShoppingCart shoppingCart)
+            ICosmeticsFactory factory,
+            IShoppingCart shoppingCart,
+            ICommandParser commandParser)
         {
             this.factory = factory;
             this.shoppingCart = shoppingCart;
+            this.commandParser = commandParser;
             this.categories = new Dictionary<string, ICategory>();
             this.products = new Dictionary<string, IProduct>();
         }
 
         public void Start()
         {
-            var commands = this.ReadCommands();
+            var commands = commandParser.ReadCommands();
             var commandResult = this.ProcessCommands(commands);
             this.PrintReports(commandResult);
         }
 
-        private IList<ICommand> ReadCommands()
-        {
-            var commands = new List<ICommand>();
+        // This is removed due to inadequate testing. You will need to use Console which is Integration testing.
+        //private IList<ICommand> ReadCommands()
+        //{
+        //    var commands = new List<ICommand>();
 
-            var currentLine = Console.ReadLine();
+        //    var currentLine = Console.ReadLine();
 
-            while (!string.IsNullOrEmpty(currentLine))
-            {
-                var currentCommand = Command.Parse(currentLine);
-                commands.Add(currentCommand);
+        //    while (!string.IsNullOrEmpty(currentLine))
+        //    {
+        //        var currentCommand = Command.Parse(currentLine);
+        //        commands.Add(currentCommand);
 
-                currentLine = Console.ReadLine();
-            }
+        //        currentLine = Console.ReadLine();
+        //    }
 
-            return commands;
-        }
+        //    return commands;
+        //}
 
         private IList<string> ProcessCommands(IList<ICommand> commands)
         {
@@ -183,7 +187,7 @@
             var category = this.categories[categoryNameToAdd];
             var product = this.products[productToAdd];
 
-            category.AddCosmetics(product);
+            category.AddProduct(product);
 
             return string.Format(ProductAddedToCategory, productToAdd, categoryNameToAdd);
         }
@@ -203,7 +207,7 @@
             var category = this.categories[categoryNameToAdd];
             var product = this.products[productToRemove];
 
-            category.RemoveCosmetics(product);
+            category.RemoveProduct(product);
 
             return string.Format(ProductRemovedCategory, productToRemove, categoryNameToAdd);
         }

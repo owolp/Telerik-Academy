@@ -80,6 +80,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Validator\CheckIfNull_Should.cs" />
+    <Compile Include="Common\Validator\CheckIfStringIsNullOrEmpty_Should.cs" />
+    <Compile Include="Common\Validator\CheckIfStringLengthIsValid_Should.cs" />
+    <Compile Include="Engine\Command\Parse_Should.cs" />
+    <Compile Include="Engine\CosmeticsEngine\Mocks\MockedCosmeticsEngine.cs" />
+    <Compile Include="Engine\CosmeticsEngine\Start_Should.cs" />
+    <Compile Include="Engine\CosmeticsFactory\CreateCategory_Should.cs" />
+    <Compile Include="Engine\CosmeticsFactory\CreateShampoo_Should.cs" />
+    <Compile Include="Engine\CosmeticsFactory\CreateShoppingCart_Should.cs" />
+    <Compile Include="Engine\CosmeticsFactory\CreateToothpaste_Should.cs" />
+    <Compile Include="Products\Category\Print_Should.cs" />
+    <Compile Include="Products\Shampoo\Print_Should.cs" />
+    <Compile Include="Products\Toothpaste\Print_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +103,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

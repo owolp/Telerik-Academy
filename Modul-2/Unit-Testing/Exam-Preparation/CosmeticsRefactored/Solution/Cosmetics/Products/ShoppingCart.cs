@@ -9,7 +9,7 @@
 
     internal class ShoppingCart : IShoppingCart
     {
-        private readonly IList<IProduct> products;
+        protected readonly IList<IProduct> products;
 
         public ShoppingCart()
         {
