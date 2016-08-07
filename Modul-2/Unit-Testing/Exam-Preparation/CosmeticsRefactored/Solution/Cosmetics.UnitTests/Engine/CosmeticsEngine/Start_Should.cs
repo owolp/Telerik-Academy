@@ -68,5 +68,13 @@
             Assert.IsTrue(mockedCosmeticsEngine.Categories.ContainsKey(categoryName));
             Assert.AreEqual(mockedCategory.Object, mockedCosmeticsEngine.Categories[categoryName]);
         }
+
+        // Start should read, parse and execute "AddToCategory" command
+        // when the passed input string is in the format that represents a AddToCategory command, which should result in adding the selected product in the respective category.
+        [Test]
+        public void ReadParseAndExecuteAddToCategory_WhenThePassedInputStringIsInTheCorrectFormat_WhichShouldAddTheSelectedProductToTheRespectiveCategory()
+        {
+
+        }
     }
 }
