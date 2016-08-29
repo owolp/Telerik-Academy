@@ -26,7 +26,7 @@
                 if (isStartOfGame)
                 {
                     Console.WriteLine("Let's play Minesweeper. Try to find all fields without mines. " +
-                        "Top shows the current Scorechart, Restart starts a new game, Exit quits the game.");
+                        "Top shows the current Score-chart, Restart starts a new game, Exit quits the game.");
                     PrintBoard(field);
                     isStartOfGame = false;
                 }
