@@ -8,7 +8,7 @@
 
         public static void ReadInput()
         {
-            var booleanPrinter = new BooleanPrinter();
+            BooleanPrinter booleanPrinter = new BooleanPrinter();
             booleanPrinter.Print(true);
         }
 
