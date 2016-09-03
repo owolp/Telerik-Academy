@@ -31,10 +31,6 @@
 
         public int FindMax(params int[] elements)
         {
-            Validator.ValidateNull(
-                elements,
-                string.Format(Constants.ObjectCannotBeNull, "Elements"));
-
             Validator.ValidateIntRange(
                 elements.Length,
                 Constants.MinArrayLength,
@@ -48,14 +44,6 @@
 
         public string PrintAsNumber(object number, string format)
         {
-            Validator.ValidateNull(
-                number,
-                string.Format(Constants.ObjectCannotBeNull, "Number"));
-
-            Validator.ValidateNull(
-                format,
-                string.Format(Constants.ObjectCannotBeNull, "Format"));
-
             var numberAsString = string.Empty;
 
             if (format == "f")
