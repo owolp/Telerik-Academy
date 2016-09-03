@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kitchen", "Kitchen\Kitchen.csproj", "{FE247025-A891-4211-BFA3-A35C12EAE142}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refactor", "RefactorIf\Refactor.csproj", "{F9E4F5F7-775D-4803-8A27-451930FE6AF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTaskOne", "CSharpTaskOne\CSharpTaskOne.csproj", "{17535F25-2C75-4A69-AC95-8E72B9183B20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTaskThree", "CSharpTaskThree\CSharpTaskThree.csproj", "{DD215C65-3451-4B40-8C3B-0123E5BD05D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTaskFour", "CSharpTaskFour\CSharpTaskFour.csproj", "{FB24BE7C-4A3E-4096-9CFC-EAC34F3EA82E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTaskTwo", "CSharpTaskTwo\CSharpTaskTwo.csproj", "{5BA49D3D-6DD9-4E4E-852A-7B6553370D24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE247025-A891-4211-BFA3-A35C12EAE142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE247025-A891-4211-BFA3-A35C12EAE142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE247025-A891-4211-BFA3-A35C12EAE142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE247025-A891-4211-BFA3-A35C12EAE142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E4F5F7-775D-4803-8A27-451930FE6AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E4F5F7-775D-4803-8A27-451930FE6AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E4F5F7-775D-4803-8A27-451930FE6AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E4F5F7-775D-4803-8A27-451930FE6AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17535F25-2C75-4A69-AC95-8E72B9183B20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17535F25-2C75-4A69-AC95-8E72B9183B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17535F25-2C75-4A69-AC95-8E72B9183B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17535F25-2C75-4A69-AC95-8E72B9183B20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD215C65-3451-4B40-8C3B-0123E5BD05D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD215C65-3451-4B40-8C3B-0123E5BD05D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD215C65-3451-4B40-8C3B-0123E5BD05D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD215C65-3451-4B40-8C3B-0123E5BD05D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB24BE7C-4A3E-4096-9CFC-EAC34F3EA82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB24BE7C-4A3E-4096-9CFC-EAC34F3EA82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB24BE7C-4A3E-4096-9CFC-EAC34F3EA82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB24BE7C-4A3E-4096-9CFC-EAC34F3EA82E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA49D3D-6DD9-4E4E-852A-7B6553370D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA49D3D-6DD9-4E4E-852A-7B6553370D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA49D3D-6DD9-4E4E-852A-7B6553370D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA49D3D-6DD9-4E4E-852A-7B6553370D24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
