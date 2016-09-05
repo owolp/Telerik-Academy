@@ -288,4 +288,4 @@ fabric.properties
 .vscode/
 
 # JavaScript config file
-*jsconfig.json
+jsconfig.json
