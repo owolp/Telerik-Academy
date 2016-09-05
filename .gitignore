@@ -286,3 +286,6 @@ fabric.properties
 
 # VS Code Extention
 .vscode/
+
+# JavaScript config file
+*jsconfig.json
