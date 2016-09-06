@@ -5,7 +5,7 @@ function solve(){
 		},
 		getMedia: function (name, rating, duration, description) {
 			//return a media instance
-		}
+		},
 		getBookCatalog: function (name) {
 			//return a book catalog instance
 		},
