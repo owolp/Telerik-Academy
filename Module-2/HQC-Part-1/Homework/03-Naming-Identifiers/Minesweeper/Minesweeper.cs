@@ -12,7 +12,7 @@
             const int FieldsWithoutMines = 35;
             string command = string.Empty;
             char[,] field = CreateBoard();
-            char[,] bombite = CreateMines();
+            char[,] mines = CreateMines();
             int pointsCounter = 0;
             int row = 0;
             int col = 0;
@@ -52,7 +52,7 @@
 
                     case "restart":
                         field = CreateBoard();
-                        bombite = CreateMines();
+                        mines = CreateMines();
                         PrintBoard(field);
                         isMine = false;
                         isStartOfGame = false;
@@ -63,11 +63,11 @@
                         break;
 
                     case "turn":
-                        if (bombite[row, col] != Mine)
+                        if (mines[row, col] != Mine)
                         {
-                            if (bombite[row, col] == '-')
+                            if (mines[row, col] == '-')
                             {
-                                CalculateFieldValue(field, bombite, row, col);
+                                CalculateFieldValue(field, mines, row, col);
                                 pointsCounter++;
                             }
 
@@ -94,7 +94,7 @@
 
                 if (isMine)
                 {
-                    PrintBoard(bombite);
+                    PrintBoard(mines);
 
                     Console.Write($"Your score is {pointsCounter}. Please type your name: ");
 
@@ -124,7 +124,7 @@
                     ScoreChart(scoreChart);
 
                     field = CreateBoard();
-                    bombite = CreateMines();
+                    mines = CreateMines();
                     pointsCounter = 0;
                     isMine = false;
                     isStartOfGame = true;
@@ -133,14 +133,14 @@
                 if (isEndOfGame)
                 {
                     Console.WriteLine("You are the winner!");
-                    PrintBoard(bombite);
+                    PrintBoard(mines);
                     Console.WriteLine("Please enter your name: ");
                     string playerName = Console.ReadLine();
                     Score playerScore = new Score(playerName, pointsCounter);
                     scoreChart.Add(playerScore);
                     ScoreChart(scoreChart);
                     field = CreateBoard();
-                    bombite = CreateMines();
+                    mines = CreateMines();
                     pointsCounter = 0;
                     isEndOfGame = false;
                     isStartOfGame = true;
