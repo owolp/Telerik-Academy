@@ -1,3 +1,5 @@
+'use strict'
+
 function solve() {
 	function* IdGenerator() {
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield
