@@ -44,7 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssertionsHomework.cs" />
+    <Compile Include="Algorithms\Search.cs" />
+    <Compile Include="Algorithms\Sort.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

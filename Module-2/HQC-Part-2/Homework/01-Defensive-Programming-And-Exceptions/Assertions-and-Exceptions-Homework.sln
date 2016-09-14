@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions-Homework", "Exce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assertions-ConsoleClient", "Assertions-ConsoleClient\Assertions-ConsoleClient.csproj", "{92CE1286-925A-4D51-80B8-B2354D4E72AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions-ConsoleClient", "Exceptions-ConsoleClient\Exceptions-ConsoleClient.csproj", "{593EE70F-BF23-4AE9-AD50-F742B953EBAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{92CE1286-925A-4D51-80B8-B2354D4E72AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92CE1286-925A-4D51-80B8-B2354D4E72AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92CE1286-925A-4D51-80B8-B2354D4E72AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{593EE70F-BF23-4AE9-AD50-F742B953EBAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{593EE70F-BF23-4AE9-AD50-F742B953EBAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{593EE70F-BF23-4AE9-AD50-F742B953EBAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{593EE70F-BF23-4AE9-AD50-F742B953EBAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
