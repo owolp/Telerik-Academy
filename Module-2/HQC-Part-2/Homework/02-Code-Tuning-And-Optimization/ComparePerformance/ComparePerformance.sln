@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math", "Math\Math.csproj", "{73CE4FCC-BDC8-444D-B8C1-C27E76980D27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathConsoleClient", "MathConsoleClient\MathConsoleClient.csproj", "{ADF9CFE6-C056-45F7-B575-549E884A2089}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73CE4FCC-BDC8-444D-B8C1-C27E76980D27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73CE4FCC-BDC8-444D-B8C1-C27E76980D27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73CE4FCC-BDC8-444D-B8C1-C27E76980D27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73CE4FCC-BDC8-444D-B8C1-C27E76980D27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF9CFE6-C056-45F7-B575-549E884A2089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF9CFE6-C056-45F7-B575-549E884A2089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF9CFE6-C056-45F7-B575-549E884A2089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF9CFE6-C056-45F7-B575-549E884A2089}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
