@@ -29,52 +29,46 @@ var data = (function() {
 	}
 
 	function threadById(id) {
-		return new Promise((resolve) => {
-			$.getJSON(`api/threads/${id}`, function(resource) {
-				resolve(resource);
-			});
+		return new Promise((resolve, reject) => {
+			$.getJSON(`api/threads/${id}`)
+				.done(resolve)
+				.fail(reject);
 		});
 	}
 
 	function threadsAdd(title) {
+		let body = {
+			title: title,
+			username: 'anonymous'
+		}
+
 		return new Promise((resolve, reject) => {
 			$.ajax({
-				url: url + 'api/threads',
-				method: 'POST',
-				data: JSON.stringify({
-					title
-				}),
-				contentType: 'application/json',
-				success: function(title) {
-					resolve(title);
-				},
-				error: function(err) {
-					reject(err);
-				}
-			});
+					url: url + 'api/threads',
+					method: 'POST',
+					data: JSON.stringify(body),
+					contentType: 'application/json'
+				})
+				.done(resolve)
+				.fail(reject);
 		});
 	}
 
 	function threadsAddMessage(threadId, content) {
 		return new Promise((resolve, reject) => {
-			userGetCurrent()
-				.then((username) => {
-					let body = {
-						content,
-						username
-					};
+			let body = {
+				content: content,
+				username: 'anonymous'
+			};
 
-					$.ajax({
-							url: url + `api/threads/${threadId}/messages`,
-							method: 'POST',
-							data: JSON.stringify(
-								body
-							),
-							contentType: 'application/json'
-						})
-						.done(resolve)
-						.fail(reject);
+			$.ajax({
+					url: url + `api/threads/${threadId}/messages`,
+					method: 'POST',
+					data: JSON.stringify(body),
+					contentType: 'application/json'
 				})
+				.done(resolve)
+				.fail(reject);
 		});
 	}
 	// end threads
@@ -88,11 +82,11 @@ var data = (function() {
 			// 	resolve(resource);
 			// });
 			$.ajax({
-				url: REDDIT_URL,
-				dataType: 'jsonp'
-			})
-			.done(resolve)
-			.fail(reject);
+					url: REDDIT_URL,
+					dataType: 'jsonp'
+				})
+				.done(resolve)
+				.fail(reject);
 		})
 	}
 	// end gallery

@@ -1,198 +1,204 @@
 ﻿$(() => { // on document ready
-  const GLYPH_UP = 'glyphicon-chevron-up',
-        GLYPH_DOWN = 'glyphicon-chevron-down',
-        root = $('#root'),
-        navbar = root.find('nav.navbar'),
-        mainNav = navbar.find('#main-nav'),
-        contentContainer = $('#root #content'),
-        loginForm = $('#login'),
-        logoutForm = $('#logout'),
-        usernameSpan = $('#span-username'),
-        usernameInput = $('#login input'),
-        alertTemplate = $($('#alert-template').text());
+	const GLYPH_UP = 'glyphicon-chevron-up',
+		GLYPH_DOWN = 'glyphicon-chevron-down',
+		root = $('#root'),
+		navbar = root.find('nav.navbar'),
+		mainNav = navbar.find('#main-nav'),
+		contentContainer = $('#root #content'),
+		loginForm = $('#login'),
+		logoutForm = $('#logout'),
+		usernameSpan = $('#span-username'),
+		usernameInput = $('#login input'),
+		alertTemplate = $($('#alert-template').text());
 
-  (function checkForLoggedUser() {
-    data.users.current()
-      .then((user) => {
-        if (user) {
-          usernameSpan.text(user);
-          loginForm.addClass('hidden');
-          logoutForm.removeClass('hidden');
-        }
-      });
-  })();
+	(function checkForLoggedUser() {
+		data.users.current()
+			.then((user) => {
+				if (user) {
+					usernameSpan.text(user);
+					loginForm.addClass('hidden');
+					logoutForm.removeClass('hidden');
+				}
+			});
+	})();
 
-  function showMsg(msg, type, cssClass, delay) {
-    let container = alertTemplate.clone(true)
-        .addClass(cssClass).text(`${type}: ${msg}`)
-        .appendTo(root);
+	function showMsg(msg, type, cssClass, delay) {
+		let container = alertTemplate.clone(true)
+			.addClass(cssClass).text(`${type}: ${msg}`)
+			.appendTo(root);
 
-    setTimeout(() => {
-      container.remove();
-    }, delay || 2000)
-  }
+		setTimeout(() => {
+			container.remove();
+		}, delay || 2000)
+	}
 
-  // start threads
-  function loadThreadsContent(threads) {
-    let container = $($('#threads-container-template').text()),
-        threadsContainer = container.find('#threads');
+	// start threads
+	function loadThreadsContent(threads) {
+		let container = $($('#threads-container-template').text()),
+			threadsContainer = container.find('#threads');
 
-    function getThreadUI(title, id, creator, date) {
-      let template = $($('#thread-template').text()).attr('data-id', id),
-          threadTitle = template.find('.thread-title').text(title),
-          threadCreator = template.find('.thread-creator').text(creator || 'anonymous'),
-          threadDate = template.find('.thread-date').text(date || 'unknown');
+		function getThreadUI(title, id, creator, date) {
+			let template = $($('#thread-template').text()).attr('data-id', id),
+				threadTitle = template.find('.thread-title').text(title),
+				threadCreator = template.find('.thread-creator').text(creator || 'anonymous'),
+				threadDate = template.find('.thread-date').text(date || 'unknown');
 
-      return template.clone(true);
-    }
-    function getAddNewThreadUI() {
-      let template = $($('#thread-new-template').html());
-      return template.clone(true);
-    }
+			return template.clone(true);
+		}
 
-    threads.forEach((th) => {
-      let currentThreadUI = getThreadUI(th.title, th.id, th.username, th.date);
-      threadsContainer.append(currentThreadUI);
-    })
-    threadsContainer.append(getAddNewThreadUI());
+		function getAddNewThreadUI() {
+			let template = $($('#thread-new-template').html());
+			return template.clone(true);
+		}
 
-    contentContainer.find('#container-thraeds').remove();
-    contentContainer.html('').prepend(container);
-  }
+		threads.forEach((th) => {
+			let currentThreadUI = getThreadUI(th.title, th.id, th.username, th.date);
+			threadsContainer.append(currentThreadUI);
+		})
+		threadsContainer.append(getAddNewThreadUI());
 
-  function loadMessagesContent(data) {
-    let container = $($('#messages-container-template').text()),
-        messagesContainer = container.find('.panel-body');
-    container.attr('data-thread-id', data.result.id);
+		contentContainer.find('#container-thraeds').remove();
+		contentContainer.html('').prepend(container);
+	}
 
-    function getMsgUI(msg, author, date) {
-      let template = $($('#messages-template').text());
-      template.find('.message-content').text(msg);
-      template.find('.message-creator').text(author || 'anonymous');
-      template.find('.message-date').text(date || 'unknown');
-      return template.clone(true);
-    }
-    function getAddNewMsgUI() {
-      let template = $($('#message-new-template').html());
-      return template.clone(true);
-    }
+	function loadMessagesContent(data) {
+		let container = $($('#messages-container-template').text()),
+			messagesContainer = container.find('.panel-body');
+		container.attr('data-thread-id', data.result.id);
 
-    if (data.result.messages && data.result.messages.length > 0) {
-      data.result.messages.forEach((msg) => {
-        messagesContainer.append(getMsgUI(msg))
-      })
-    } else {
-      messagesContainer.append(getMsgUI('No messages!'))
-    }
+		function getMsgUI(msg, author, date) {
+			let template = $($('#messages-template').text());
+			template.find('.message-content').text(msg.content);
+			template.find('.message-creator').text(author || msg.username || 'anonymous');
+			template.find('.message-date').text(date || msg.postDate || 'unknown');
+			return template.clone(true);
+		}
 
-    messagesContainer.append(getAddNewMsgUI());
+		function getAddNewMsgUI() {
+			let template = $($('#message-new-template').html());
+			return template.clone(true);
+		}
 
-    container.find('.thread-title').text(data.result.title);
-    contentContainer.append(container);
-  }
+		if (data.result.messages && data.result.messages.length > 0) {
+			data.result.messages.forEach((msg) => {
+				messagesContainer.append(getMsgUI(msg))
+			})
+		} else {
+			messagesContainer.append(getMsgUI('No messages!'))
+		}
 
-  function loadGalleryContent(data) {
-    let list = data.data.children,
-        containerGallery = $($('#gallery-container-tempalte').text()),
-        containerImgs = containerGallery.find('#gallery-imgs'),
-        item = $($('#gallery-img-tempalte').text()),
-        itemImg = item.find('img.gallery-item-img'),
-        itemTitle = item.find('.gallery-item-title')
+		messagesContainer.append(getAddNewMsgUI());
 
-    list.forEach((el) => {
-      itemTitle.text(el.data.title);
-      itemImg.attr('src', el.data.thumbnail);
+		container.find('.thread-title').text(data.result.title);
+		contentContainer.append(container);
+	}
 
-      containerImgs.append(item.clone(true));
-    });
+	function loadGalleryContent(data) {
+		let list = data.data.children,
+			containerGallery = $($('#gallery-container-tempalte').text()),
+			containerImgs = containerGallery.find('#gallery-imgs'),
+			item = $($('#gallery-img-tempalte').text()),
+			itemImg = item.find('img.gallery-item-img'),
+			itemTitle = item.find('.gallery-item-title')
 
-    contentContainer.html('').append(containerGallery);
-  }
+		list.forEach((el) => {
+			itemTitle.text(el.data.title);
+			itemImg.attr('src', el.data.thumbnail);
 
-  navbar.on('click', 'li', (ev) => {
-    let $target = $(ev.target);
-    $target.parents('nav').find('li').removeClass('active');
-    $target.parents('li').addClass('active');
-  });
+			containerImgs.append(item.clone(true));
+		});
 
-  navbar.on('click', '#btn-threads', (ev) => {
-    data.threads.get()
-        .then((data) => {
-          loadThreadsContent(data.result)
-        })
-  });
+		contentContainer.html('').append(containerGallery);
+	}
 
-  contentContainer.on('click', '#btn-add-thread', (ev) => {
-    let title = $(ev.target).parents('form').find('input#input-add-thread').val() || null;
-    data.threads.add(title)
-        .then(/* add to UI */)
-        .then(showMsg('Successfuly added the new thread', 'Success', 'alert-success'))
-        .catch((err) => showMsg(JSON.parse(err.responseText).err, 'Error', 'alert-danger'));
-  })
+	navbar.on('click', 'li', (ev) => {
+		let $target = $(ev.target);
+		$target.parents('nav').find('li').removeClass('active');
+		$target.parents('li').addClass('active');
+	});
 
-  contentContainer.on('click', 'a.thread-title', (ev) => {
-    let $target = $(ev.target),
-        threadId = $target.parents('.thread').attr('data-id');
+	navbar.on('click', '#btn-threads', (ev) => {
+		data.threads.get()
+			.then((data) => {
+				loadThreadsContent(data.result)
+			})
+	});
 
-    data.threads.getById(threadId)
-      .then(loadMessagesContent)
-      .catch((err) => showMsg(err, 'Error', 'alert-danger'))
-  })
+	contentContainer.on('click', '#btn-add-thread', (ev) => {
+		let title = $(ev.target).parents('form').find('input#input-add-thread').val() || null;
+		data.threads.add(title)
+			.then((thread) => {
+				loadThreadsContent([thread]);
+			})
+			.then(showMsg('Successfuly added the new thread', 'Success', 'alert-success'))
+			.catch((err) => showMsg(JSON.parse(err.responseText).err, 'Error', 'alert-danger'));
+	})
 
-  contentContainer.on('click', '.btn-add-message', (ev) => {
-    let $target = $(ev.target),
-        $container = $target.parents('.container-messages'),
-        thId = $container.attr('data-thread-id'),
-        msg = $container.find('.input-add-message').val();
+	contentContainer.on('click', 'a.thread-title', (ev) => {
+		let $target = $(ev.target),
+			threadId = $target.parents('.thread').attr('data-id');
 
-    data.threads.addMessage(thId, msg)
-        .then(/* add to UI */)
-        .then(showMsg('Successfuly added the new mssagee', 'Success', 'alert-success'))
-        .catch((err) => showMsg(JSON.parse(err.responseText).err, 'Error', 'alert-danger'));
-  })
+		data.threads.getById(threadId)
+			.then(loadMessagesContent)
+			.catch((err) => showMsg(err, 'Error', 'alert-danger'))
+	})
 
-  contentContainer.on('click', '.btn-close-msg', (ev) => {
-    let msgContainer = $(ev.target).parents('.container-messages').remove();
-  });
+	contentContainer.on('click', '.btn-add-message', (ev) => {
+		let $target = $(ev.target),
+			$container = $target.parents('.container-messages'),
+			thId = $container.attr('data-thread-id'),
+			msg = $container.find('.input-add-message').val();
 
-  contentContainer.on('click', '.btn-collapse-msg', (ev) => {
-    let $target = $(ev.target);
-    if ($target.hasClass(GLYPH_UP)) {
-      $target.removeClass(GLYPH_UP).addClass(GLYPH_DOWN);
-    } else {
-      $target.removeClass(GLYPH_DOWN).addClass(GLYPH_UP);
-    }
+		data.threads.addMessage(thId, msg)
+			.then((message) => {
+				loadMessagesContent([message]);
+			})
+			.then(showMsg('Successfuly added the new mssagee', 'Success', 'alert-success'))
+			.catch((err) => showMsg(JSON.parse(err.responseText).err, 'Error', 'alert-danger'));
+	})
 
-    $target.parents('.container-messages').find('.messages').toggle();
-  });
-  // end threads
+	contentContainer.on('click', '.btn-close-msg', (ev) => {
+		let msgContainer = $(ev.target).parents('.container-messages').remove();
+	});
 
-  // start gallery
-  navbar.on('click', '#btn-gallery', (ev) => {
-    data.gallery.get()
-      .then(loadGalleryContent)
-      .catch(console.log)
-  })
-  // end gallery
+	contentContainer.on('click', '.btn-collapse-msg', (ev) => {
+		let $target = $(ev.target);
+		if ($target.hasClass(GLYPH_UP)) {
+			$target.removeClass(GLYPH_UP).addClass(GLYPH_DOWN);
+		} else {
+			$target.removeClass(GLYPH_DOWN).addClass(GLYPH_UP);
+		}
 
-  // start login/logout
-  navbar.on('click', '#btn-login', (ev) => {
-    let username = usernameInput.val() || 'anonymous';
-    data.users.login(username)
-      .then((user) => {
-        usernameInput.val('')
-        usernameSpan.text(user);
-        loginForm.addClass('hidden');
-        logoutForm.removeClass('hidden');
-      })
-  });
-  navbar.on('click', '#btn-logout', (ev) => {
-    data.users.logout()
-    .then(() => {
-      usernameSpan.text('');
-      loginForm.removeClass('hidden');
-      logoutForm.addClass('hidden');
-    })
-  });
-  // end login/logout
+		$target.parents('.container-messages').find('.messages').toggle();
+	});
+	// end threads
+
+	// start gallery
+	navbar.on('click', '#btn-gallery', (ev) => {
+			data.gallery.get()
+				.then(loadGalleryContent)
+				.catch(console.log)
+		})
+		// end gallery
+
+	// start login/logout
+	navbar.on('click', '#btn-login', (ev) => {
+		let username = usernameInput.val() || 'anonymous';
+		data.users.login(username)
+			.then((user) => {
+				usernameInput.val('')
+				usernameSpan.text(user);
+				loginForm.addClass('hidden');
+				logoutForm.removeClass('hidden');
+			})
+	});
+	navbar.on('click', '#btn-logout', (ev) => {
+		data.users.logout()
+			.then(() => {
+				usernameSpan.text('');
+				loginForm.removeClass('hidden');
+				logoutForm.addClass('hidden');
+			})
+	});
+	// end login/logout
 });
