@@ -1,4 +1,4 @@
-var homeController = function () {
+var loginController = function () {
 
 	function login() {
 		templates.load('login')

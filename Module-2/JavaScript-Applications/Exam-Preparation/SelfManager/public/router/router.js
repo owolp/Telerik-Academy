@@ -13,8 +13,8 @@ var router = (function () {
 	navigo
 		.on('/home', homeController.main);
 
-	// navigo
-	// 	.on('/login', userController.login);
+	navigo
+		.on('/login', loginController.login);
 
 	navigo
 		.notFound(() => {
