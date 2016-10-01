@@ -12,11 +12,11 @@ const requester = (() => {
         });
     }
 
-    function postJSON(url, json, headers = {}) {
+    function putJSON(url, json, headers = {}) {
         return new Promise((resolve, reject) => {
             $.ajax({
                 url: url,
-                method: 'POST',
+                method: 'PUT',
                 headers: headers,
                 contentType: 'application/json',
                 data: JSON.stringify(json)
@@ -26,11 +26,11 @@ const requester = (() => {
         });
     }
 
-    function putJSON(url, json, headers = {}) {
+    function postJSON(url, json, headers = {}) {
         return new Promise((resolve, reject) => {
             $.ajax({
                 url: url,
-                method: 'PUT',
+                method: 'POST',
                 headers: headers,
                 contentType: 'application/json',
                 data: JSON.stringify(json)
