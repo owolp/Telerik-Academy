@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Self Manager</title>
+
+	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="./bower_components/toastr/toastr.css">
+
+</head>
+
+<body>
+	<div id="root" class="container">
+		<header>
+			<div class="row">
+				<h1 class="page-header col-md-9">Self Manager</h1>
+				<div class="col-md-3">
+					<a href="#/register">Register or Login</a>
+				</div>
+			</div>
+
+			<nav class="navbar navbar-default">
+				<ul class="nav navbar-nav">
+					<li><a href="#/home">Home</a></li>
+					<li><a href="#/todo">Todo</a></li>
+					<li><a href="#/events">Events</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Container is used for the controllers-->
+		<div id="container"></div>
+	</div>
+
+	<script src="./bower_components/jquery/dist/jquery.js"></script>
+	<script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="./bower_components/crypto-js/crypto-js.js"></script>
+	<script src="./bower_components/handlebars/handlebars.js"></script>
+	<script src="./bower_components/lodash/dist/lodash.js"></script>
+	<script src="./bower_components/navigo/lib/navigo.js"></script>
+	<script src="./bower_components/toastr/toastr.js"></script>
+
+
+	<script src="./controllers/homeController.js"></script>
+	<!--<script src="./controllers/loginController.js"></script>-->
+
+	<script src="./router/router.js"></script>
+	<script src="./services/template-loader.js"></script>
+
+	<script>
+		router.start();
+	</script>
+
+</body>
+
+</html>

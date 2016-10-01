@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: Simple Forum with Sammy.js, jQuery and Handlebars</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+
+  <div id="content">
+    
+  </div>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/sammy/lib/sammy.js"></script>
+  <script src="bower_components/handlebars/handlebars.js"></script>
+
+<script>
+    var sammyApp = Sammy('#content', function() {
+
+    });
+
+    $(function() {
+      sammyApp.run('#/');
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+{
+  "users": [
+    {
+      "username": "Doncho",
+      "passHash": "4cb5ba2355368d4dfd14c9eee9a134791f7001cb",
+      "usernameLower": "doncho",
+      "authKey": "undefined+tusvd@Kh_@ixbA*Q$fvLmq(CJJmu*DN%E^i@OUr&eoAJn!*uak",
+      "id": "d69707b4-d06d-42ac-bc10-1dde5aaafcf7",
+      "events": [
+        {
+          "id": 449037,
+          "title": "Test",
+          "category": "Work",
+          "description": "",
+          "date": "2015-09-08T23:00:00.000Z",
+          "creatorId": "d69707b4-d06d-42ac-bc10-1dde5aaafcf7",
+          "users": [
+            "d69707b4-d06d-42ac-bc10-1dde5aaafcf7",
+            "d69707b4-d06d-42ac-bc10-1dde5aaafcf7"
+          ]
+        },
+        {
+          "id": 449037,
+          "title": "Test",
+          "category": "Work",
+          "description": "",
+          "date": "2015-09-08T23:00:00.000Z",
+          "creatorId": "d69707b4-d06d-42ac-bc10-1dde5aaafcf7",
+          "users": [
+            "d69707b4-d06d-42ac-bc10-1dde5aaafcf7",
+            "d69707b4-d06d-42ac-bc10-1dde5aaafcf7"
+          ]
+        },
+        {
+          "id": 792579,
+          "title": "Test",
+          "category": "Free time",
+          "description": "",
+          "date": "2015-09-17T23:00:00.000Z",
+          "creatorId": "d69707b4-d06d-42ac-bc10-1dde5aaafcf7",
+          "users": [
+            "d69707b4-d06d-42ac-bc10-1dde5aaafcf7"
+          ]
+        }
+      ],
+      "todos": [
+        {
+          "id": 27882,
+          "text": "qwe",
+          "state": true,
+          "category": "Home"
+        },
+        {
+          "id": 365117,
+          "text": "NEW TODO",
+          "state": false,
+          "category": "Home"
+        }
+      ]
+    },
+    {
+      "username": "Cuki",
+      "passHash": "6edbb5c948d25789eccdfb37b70ff7f728f49786",
+      "usernameLower": "cuki",
+      "authKey": "undefinedLcy$^v^zXyoxyXQ_BbAJIRYwi%KiGGlD^ry+-N@AIwpP%EhOAUK",
+      "id": "f2c8726a-773e-403c-ad76-37dad93c9a8c"
+    },
+    {
+      "username": "Cuki2",
+      "passHash": "dfacf7f490d8e38e7895caad02e3693236216f51",
+      "usernameLower": "cuki2",
+      "authKey": "undefinedTZvCUbyZH(!=m-+)$fcAjzD)NPiWfGt(r!MHSzrCPAb(nGfp%*!",
+      "id": "1987f231-b978-49de-a5eb-d3f57f1f6fa6"
+    },
+    {
+      "username": "Cuki3",
+      "passHash": "05e18f169bb85da8722deb800fa8e3898c809146",
+      "usernameLower": "cuki3",
+      "authKey": "undefined&a*=xajP_XX&NIPuGIJIgcTfFWlZ&#BdA*zD*@TUUvNc^TmOfw(",
+      "id": "22402c86-f18e-4689-9fc3-237205fad856"
+    },
+    {
+      "username": "test",
+      "password": "test",
+      "usernameLower": "test",
+      "authKey": "undefined-JB)HGRGQjqvdmQa*xOqu$+USgsdDHJsTYFJafxnk(Y@gWq)jMa",
+      "id": "877ddae8-7df0-43bb-b138-ef71e7b0ba57"
+    },
+    {
+      "username": "register",
+      "password": "123",
+      "usernameLower": "register",
+      "authKey": "undefineduGp$o_J*YZ!MlhyeELCzpD^CU=uB+roHROTLS-m-Jy=EkL+Xc(+",
+      "id": "0658e411-82ad-4e99-a681-64be8440a2bc"
+    },
+    {
+      "username": "123",
+      "password": "123",
+      "usernameLower": "123",
+      "authKey": "undefined$@)P^tUJcsKLIB!ogqVOISyJ+Rs@WKCKzUmHksIojBiALxXJueL",
+      "id": "12f66dc8-b236-4709-8138-12084c23c21b"
+    },
+    {
+      "username": "hi",
+      "password": "hi",
+      "usernameLower": "hi",
+      "authKey": "undefinedDvqp)MPMKBFn$HnJz-uusS!PpewhaM#mvnLd-ofogZQPWZaFb&q",
+      "id": "70f078d3-9ccf-4f0c-a6f6-1bec2f40cb37"
+    },
+    {
+      "username": "new",
+      "password": "new",
+      "usernameLower": "new",
+      "authKey": "undefinedrI-ZXs@H-LsRvX@X&vbOwhg#RTRc*fBm=B@iEP((&MTUfdh$V%V",
+      "id": "9dead0d8-b7fe-434a-a86d-9e305778276c"
+    },
+    {
+      "username": "user",
+      "password": "123",
+      "usernameLower": "user",
+      "authKey": "undefinedqJna!etatnilzmhrwNNg*^JajkrUxWCWpiDYtAAoC*(B!=y*efV",
+      "id": "3c4120fc-4282-42ea-91bf-21d9c0e4ce26"
+    },
+    {
+      "username": "usernew",
+      "password": "123",
+      "usernameLower": "usernew",
+      "authKey": "undefinedk^wdXwlpH(aOIa=*&tW+FPQqRF#IK!yOhTPWarpED))HuwCUXwy",
+      "id": "69721374-7480-499c-8a3c-8e0d460914c1"
+    },
+    {
+      "username": "user3",
+      "password": "123",
+      "usernameLower": "user3",
+      "authKey": "undefinedJQgQuEPjgyuVHWM!jhaxnodlTj!xebzNfRQ=kBHzcOK&Hww_ET=",
+      "id": "e9fcad9a-fe96-42c1-9c16-7ac424916b11"
+    },
+    {
+      "username": "user4",
+      "password": "123",
+      "usernameLower": "user4",
+      "authKey": "undefinedSZcVDFy&Ez+rJL(_Q_cxz+R(%HGKmiiaqm_Vyvdgtl&ole-^$Z@",
+      "id": "91dac31d-700f-4789-8a3f-a9cf315c745f"
+    },
+    {
+      "username": "user5",
+      "password": "123",
+      "usernameLower": "user5",
+      "authKey": "undefinedq-LU#bZuOM-x)fpa*HTixgrUBuxhgtnijAS-G!b$qokFpK+cJ($",
+      "id": "3c3fe007-0c9a-4215-9424-1ad99ca6d096"
+    },
+    {
+      "username": "user6",
+      "password": "123",
+      "usernameLower": "user6",
+      "authKey": "undefinede#gfIQEUD_Z@zC%G(_=+HExCRn=ATaFb&EiVH#YJ$pdQdWjWOdP",
+      "id": "11e54df3-3d13-43b3-aba9-ee0375f9f246"
+    },
+    {
+      "username": "new12",
+      "password": "123",
+      "usernameLower": "new12",
+      "authKey": "undefinediZ!MV@q^ab^xFS$!_$(ssb+YIaQH^Quq#lafS$D^IUHo^XXyciC",
+      "id": "97c21252-1636-4608-8f9a-3b536df40614"
+    },
+    {
+      "username": "eho",
+      "password": "eho",
+      "usernameLower": "eho",
+      "authKey": "undefinedq^PoF@iVH+o&Cs+C@dhiN%SC**yH@CsvM&)M-q#B_(v-szL#GMP",
+      "id": "dcebde91-4a7c-44d2-93fa-65b4dbc456ce"
+    },
+    {
+      "username": "hello",
+      "password": "123",
+      "usernameLower": "hello",
+      "authKey": "undefinedktiguQ@tAoXs)M&#KV*uFRcXFqei^!JgAT#lU#_*$wVbWVijbku",
+      "id": "545425a5-9a02-44ff-a6bf-68f5a8f21ad4",
+      "todos": [
+        {
+          "id": 27882,
+          "text": "qwe",
+          "state": true,
+          "category": "Home"
+        },
+        {
+          "id": 365117,
+          "text": "NEW TODO",
+          "state": false,
+          "category": "Home"
+        }
+      ]
+    },
+    {
+      "username": "ziki",
+      "password": "123",
+      "usernameLower": "ziki",
+      "authKey": "undefined&@RKWg*CFvk#a_*&WKu@llPLtTJwAK^nVp$^jApTMO(se@^O@Rb",
+      "id": "050ed91b-e4b8-439f-898e-07192476e2e3"
+    }
+  ]
+}

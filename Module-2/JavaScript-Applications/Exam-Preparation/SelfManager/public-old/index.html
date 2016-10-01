@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Self Manager</title>
+	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="./bower_components/toastr/toastr.css">
+	</script>
+</head>
+
+<body>
+
+	<div id="root" class="container">
+		<header>
+			<div class="row">
+				<h1 class="page-header col-md-9">Self Manager</h1>
+				<div class="col-md-3">
+					<a href="#/register">Register or Login</a>
+				</div>
+			</div>
+
+			<nav class="navbar navbar-default">
+				<ul class="nav navbar-nav">
+					<li><a href="#/home">Home</a></li>
+					<li><a href="#/todo">Todo</a></li>
+					<li><a href="#/events">Events</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Container is used for the controllers-->
+		<div id="container"></div>
+	</div>
+
+	<!-- Libs -->
+	<script src="./bower_components/jquery/dist/jquery.js"></script>
+	<script src="./bower_components/navigo/lib/navigo.js"></script>
+	<script src="./bower_components/handlebars/handlebars.js"></script>
+	<script src="./bower_components/toastr/toastr.js"></script>
+
+
+	<!--Before app: controllers, because of data.all() in todoController;
+	<script src="./js/data.js"></script>
+	<script src="./js/requester.js"></script>-->
+
+	<!-- App: Controllers -->
+	<script src="js/controllers/homeController.js"></script>
+	<script src="js/controllers/userController.js"></script>
+	<script src="js/controllers/todoController.js"></script>
+
+	<!-- App: setup -->
+	<script src="./js/templates.js"></script>
+
+	<script src="./js/data.js"></script>
+	<script src="./js/requester.js"></script>
+
+	<!-- App: Start -->
+	<script src="./js/app.js"></script>
+
+</body>
+
+</html>
