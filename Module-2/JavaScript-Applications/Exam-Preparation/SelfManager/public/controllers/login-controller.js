@@ -56,7 +56,21 @@ const loginController = (() => {
 			});
 	}
 
+	function logout() {
+		return userService.logout()
+			.then(() => {
+				toastr.success('logged out');
+			})
+			.then(() => {
+				window.location = '#/home';
+			})
+			.catch(() => {
+				toastr.error('error');
+			});
+	}
+
 	return {
-		login
+		login,
+		logout
 	};
 })();

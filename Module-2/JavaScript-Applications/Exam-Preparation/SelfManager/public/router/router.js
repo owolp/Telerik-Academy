@@ -5,21 +5,32 @@ var router = (function () {
 		navigo.resolve();
 	}
 
-	navigo
-		.on(() => {
-			navigo.navigate('/home');
-		});
+	navigo.on(() => {
+		navigo.navigate('/home');
+	});
 
-	navigo
-		.on('/home', homeController.main);
+	navigo.on('/home', () => {
+		homeController.main();
+	});
 
-	navigo
-		.on('/login', loginController.login);
+	navigo.on('/login', () => {
+		loginController.login();
+	});
 
-	navigo
-		.notFound(() => {
-			navigo.navigate('/home');
-		});
+
+	navigo.on('/logout', () => {
+		loginController.logout();
+	});
+
+	// navigo.on('/home', homeController.main);
+
+	// navigo.on('/login', loginController.login);
+
+	// navigo.on('/logout', loginController.logout);
+
+	navigo.notFound(() => {
+		navigo.navigate('/home');
+	});
 
 	return {
 		start
