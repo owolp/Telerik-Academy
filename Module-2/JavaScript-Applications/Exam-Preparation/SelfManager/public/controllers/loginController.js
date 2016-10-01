@@ -1,4 +1,4 @@
-var loginController = function () {
+const loginController = (() => {
 
 	function login() {
 		templates.load('login')
@@ -17,7 +17,6 @@ var loginController = function () {
 						})
 				});
 
-				// attach button events
 				$('#btn-register').on('click', function () {
 					let user = {
 						username: $('#tb-username').val(),
@@ -29,12 +28,9 @@ var loginController = function () {
 						})
 				});
 			});
-
-		// attach button events
-
 	}
 
 	return {
 		login
 	};
-}();
+})();

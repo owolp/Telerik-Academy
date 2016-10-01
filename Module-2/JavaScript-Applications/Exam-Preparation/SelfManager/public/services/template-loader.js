@@ -1,4 +1,4 @@
-var templates = function () {
+const templates = (() => {
 
 	function load(name) {
 		var promise = new Promise(function (resolve, reject) {
@@ -15,4 +15,4 @@ var templates = function () {
 	return {
 		load
 	};
-}();
+})();
