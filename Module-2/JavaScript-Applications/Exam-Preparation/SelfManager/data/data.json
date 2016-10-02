@@ -59,25 +59,134 @@
       ]
     },
     {
+      "username": "Cuki",
+      "passHash": "6edbb5c948d25789eccdfb37b70ff7f728f49786",
+      "usernameLower": "cuki",
+      "authKey": "undefinedLcy$^v^zXyoxyXQ_BbAJIRYwi%KiGGlD^ry+-N@AIwpP%EhOAUK",
+      "id": "f2c8726a-773e-403c-ad76-37dad93c9a8c"
+    },
+    {
+      "username": "Cuki2",
+      "passHash": "dfacf7f490d8e38e7895caad02e3693236216f51",
+      "usernameLower": "cuki2",
+      "authKey": "undefinedTZvCUbyZH(!=m-+)$fcAjzD)NPiWfGt(r!MHSzrCPAb(nGfp%*!",
+      "id": "1987f231-b978-49de-a5eb-d3f57f1f6fa6"
+    },
+    {
+      "username": "Cuki3",
+      "passHash": "05e18f169bb85da8722deb800fa8e3898c809146",
+      "usernameLower": "cuki3",
+      "authKey": "undefined&a*=xajP_XX&NIPuGIJIgcTfFWlZ&#BdA*zD*@TUUvNc^TmOfw(",
+      "id": "22402c86-f18e-4689-9fc3-237205fad856"
+    },
+    {
       "username": "username",
       "password": "123",
       "usernameLower": "username",
-      "authKey": "undefined$bmx=a)OOFxXC*oE^AEbhjnsf#=t=MVOozWyytXfY(rr&RCWR!l",
-      "id": "0b583e8a-0d95-4973-a091-953da5727158"
+      "authKey": "undefinedDfUYFJRUKILv$GHTrdC-ugC!Nz)jlpbQD^_Sw@@AqHfE$QZ*AEP",
+      "id": "aa1aca58-40ed-433d-9b2f-a273532a1043",
+      "events": [
+        {
+          "id": 449037,
+          "title": "Test",
+          "category": "Work",
+          "description": "",
+          "date": "2015-09-08T23:00:00.000Z",
+          "creatorId": "d69707b4-d06d-42ac-bc10-1dde5aaafcf7",
+          "users": [
+            "d69707b4-d06d-42ac-bc10-1dde5aaafcf7",
+            "d69707b4-d06d-42ac-bc10-1dde5aaafcf7"
+          ]
+        },
+        {
+          "id": 449037,
+          "title": "Test",
+          "category": "Work",
+          "description": "",
+          "date": "2015-09-08T23:00:00.000Z",
+          "creatorId": "d69707b4-d06d-42ac-bc10-1dde5aaafcf7",
+          "users": [
+            "d69707b4-d06d-42ac-bc10-1dde5aaafcf7",
+            "d69707b4-d06d-42ac-bc10-1dde5aaafcf7"
+          ]
+        },
+        {
+          "id": 792579,
+          "title": "Test",
+          "category": "Free time",
+          "description": "",
+          "date": "2015-09-17T23:00:00.000Z",
+          "creatorId": "d69707b4-d06d-42ac-bc10-1dde5aaafcf7",
+          "users": [
+            "d69707b4-d06d-42ac-bc10-1dde5aaafcf7"
+          ]
+        }
+      ],
+      "todos": [
+        {
+          "id": 27882,
+          "text": "qwe",
+          "state": true,
+          "category": "Home"
+        },
+        {
+          "id": 365117,
+          "text": "NEW TODO",
+          "state": false,
+          "category": "Home"
+        },
+        {
+          "id": 522456,
+          "text": "sdfsd",
+          "state": false,
+          "category": "sdf"
+        },
+        {
+          "id": 539671,
+          "text": "asdsad",
+          "state": false,
+          "category": "asdsad"
+        },
+        {
+          "id": 576797,
+          "text": "hello",
+          "state": false,
+          "category": "hello"
+        },
+        {
+          "id": 613319,
+          "text": "asds",
+          "state": false,
+          "category": "sadsad"
+        },
+        {
+          "id": 646330,
+          "text": "sasd",
+          "state": false,
+          "category": "asd"
+        },
+        {
+          "id": 678257,
+          "text": "asd",
+          "state": false,
+          "category": "asd"
+        }
+      ]
     },
     {
       "username": "username1",
       "password": "123",
       "usernameLower": "username1",
-      "authKey": "undefinedZ*fn#PAQIgsuf=pErwKvm!Lp=P=OCv*YIin*RbBdJjLM_*vGPwt",
-      "id": "762bb5b4-3980-406a-a906-c2512bef8875"
-    },
-    {
-      "username": "helloworld",
-      "password": "123",
-      "usernameLower": "helloworld",
-      "authKey": "undefinedDZ+CnLiEnVk@PWE*k)$hF^HrM^#Q!YBBM=oi^QN&)MiLMBAAm%e",
-      "id": "21f5e595-df71-4dc0-8beb-0d182bf1b950"
+      "authKey": "undefinedTrkNxYFwF_P)eN#!FaqXfH(wjDnkRsuBJ$=opeGrnLSOm%dhzhf",
+      "id": "7e72e178-0039-4c0b-93e8-464a0954b491",
+      "todos": [
+        {
+          "id": 877537,
+          "text": "first",
+          "state": false,
+          "category": "works"
+        }
+      ]
     }
   ]
 }

@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Self Manager</title>
+	<title>Exam Title</title>
 
 	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="./bower_components/toastr/toastr.css">
@@ -11,10 +11,11 @@
 </head>
 
 <body>
+
 	<div id="root" class="container">
 		<header>
 			<div class="row">
-				<h1 class="page-header col-md-9">Self Manager</h1>
+				<h1 class="page-header col-md-9">Title</h1>
 				<div class="col-md-3">
 					<a href="#/login" class="btn btn-success">Register or Login</a>
 					<a href="#/logout" class="btn btn-warning">Logout</a>
@@ -23,9 +24,9 @@
 
 			<nav class="navbar navbar-default">
 				<ul class="nav navbar-nav">
-					<li><a href="#/home">Home</a></li>
-					<li><a href="#/todos">Todo</a></li>
-					<li><a href="#/events">Events</a></li>
+					<li><a href="#/Home">Home</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -34,6 +35,7 @@
 		<div id="container"></div>
 	</div>
 
+	<!--Bower components-->
 	<script src="./bower_components/jquery/dist/jquery.js"></script>
 	<script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="./bower_components/crypto-js/crypto-js.js"></script>
@@ -42,20 +44,24 @@
 	<script src="./bower_components/navigo/lib/navigo.js"></script>
 	<script src="./bower_components/toastr/toastr.js"></script>
 
-	<script src="./controllers/home-controller.js"></script>
-	<script src="./controllers/login-controller.js"></script>
-	<script src="./controllers/todos-controller.js"></script>
+	<!--Controllers-->
+	<script src="./controllers/loginController.js"></script>
+	<script src="./controllers/homeController.js"></script>
 
-	<script src="./router/router.js"></script>
-	<script src="./services/template-loader.js"></script>
-	<script src="./services/user-service.js"></script>
-	<script src="./services/todo-service.js"></script>
+	<!--App Libs-->
+	<script src="./routing/router.js"></script>
 	<script src="./requests/requester.js"></script>
+
+	<!--Utils-->
+	<script src="./utils/validator.js"></script>
+	<script src="./utils/templateLoader.js"></script>
+
+	<!--Libs-->
+	<script src="./services/user.js"></script>
 
 	<script>
 		router.start();
 	</script>
-
 </body>
 
 </html>

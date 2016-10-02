@@ -1,7 +1,7 @@
 const userService = (() => {
 	const URLS = {
 		REGISTER: 'api/users',
-		LOGIN: 'api/users/auth'
+		LOGIN: 'api/auth'
 	};
 
 	function login(user) {
@@ -11,7 +11,6 @@ const userService = (() => {
 				let stringifiedUser = JSON.stringify(user);
 				localStorage.setItem('loggedUser', stringifiedUser);
 				localStorage.setItem('isLogged', 'loggedUser');
-				// localStorage.setItem('authenticationKey', user.authKey);
 
 				let username = user.username;
 

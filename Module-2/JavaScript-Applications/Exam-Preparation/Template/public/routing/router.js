@@ -22,14 +22,6 @@ var router = (function () {
 		loginController.logout();
 	});
 
-	navigo.on('/todos', () => {
-		todoController.all();
-	});
-
-	navigo.on('/todos/add', () => {
-		todoController.add();
-	});
-
 	navigo.notFound(() => {
 		navigo.navigate('/home');
 	});

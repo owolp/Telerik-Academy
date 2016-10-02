@@ -1,0 +1,6 @@
+{
+  "globalDependencies": {
+    "handlebars": "registry:dt/handlebars#4.0.5+20160804082238",
+    "jquery": "registry:dt/jquery#1.10.0+20160929162922"
+  }
+}
