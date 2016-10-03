@@ -46,6 +46,9 @@ const loginController = (() => {
 				function login(user) {
 					userService.login(user)
 						.then(() => {
+							$(document.body).addClass("logged-in");
+						})
+						.then(() => {
 							toastr.success(`${user.username} successfully logged.`);
 						})
 						.then(() => {
@@ -60,6 +63,9 @@ const loginController = (() => {
 
 	function logout() {
 		return userService.logout()
+			.then(() => {
+				$(document.body).removeClass("logged-in");
+			})
 			.then(() => {
 				toastr.success('Successfully logged out.');
 			})

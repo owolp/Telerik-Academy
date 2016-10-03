@@ -33,7 +33,7 @@ var categoriesController = require('./controllers/categories-controller')(db);
 app.get('/api/categories', categoriesController.get);
 
 
-var port = 3000;
+var port = 7000;
 app.listen(port, function() {
   console.log('Server is running at http://localhost:' + port);
 });
