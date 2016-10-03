@@ -1,2 +1,17 @@
-<h1>Welcome to the JavaScript Apps Exam</h1>
-<p>This is template for home</p>
+<h1>JS APPs Exam</h1>
+<ul class="list list-cookies">
+	{{#each this}}
+	<li data-id="{{id}}">
+		<h3>{{text}}</h3>
+		<img src="{{img}}" height="250px"/>
+
+		<div>
+			<a href="#/home/like/{{this.id}}" class="hidden-when-not-logged-in btn btn-success col-md-2 col-md-offset-3">Like ({{this.likes}})</a>
+			<a href="#/home/dislike/{{this.id}}" class="hidden-when-not-logged-in btn btn-danger col-md-2">Dislike ({{this.dislikes}})</a>
+			<a href="#/home?category={{this.category}}" class="hidden-when-not-logged-in btn btn-primary col-md-2">Category: {{this.category}}</a>
+		</div>
+
+		<br />
+	</li>
+	{{/each}}
+</ul>

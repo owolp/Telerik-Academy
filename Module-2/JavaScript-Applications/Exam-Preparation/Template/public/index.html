@@ -7,18 +7,19 @@
 
 	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="./bower_components/toastr/toastr.css">
+	<link rel="stylesheet" href="./css/style.css">
 
 </head>
 
-<body>
+<body id="page">
 
 	<div id="root" class="container">
 		<header>
 			<div class="row">
 				<h1 class="page-header col-md-9">Title</h1>
 				<div class="col-md-3">
-					<a href="#/login" class="btn btn-success">Register or Login</a>
-					<a href="#/logout" class="btn btn-warning">Logout</a>
+					<a href="#/login" class="btn btn-success visible-when-not-logged-in">Register or Login</a>
+					<a href="#/logout" class="btn btn-warning hidden-when-not-logged-in">Logout</a>
 				</div>
 			</div>
 
