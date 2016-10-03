@@ -26,6 +26,11 @@ var router = (function () {
 		cookieController.main();
 	});
 
+	navigo.on('/add-cookie', () => {
+		cookieController.add();
+	});
+
+
 	navigo.on('/home/:type/:id', (params) => {
 		const cookie = {
 			type: params.type,

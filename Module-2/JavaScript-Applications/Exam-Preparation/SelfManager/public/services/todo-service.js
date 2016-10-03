@@ -34,9 +34,6 @@ const todoService = (() => {
 		}
 
 		return requester.postJSON(URLS.ADD, item, headers);
-			// .then((response) => {
-			// 	return response.result;
-			// });
 	}
 
 	return {

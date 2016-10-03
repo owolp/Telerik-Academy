@@ -1,7 +1,7 @@
 const cookiesService = (() => {
 	const URLS = {
-		ALL: 'api/cookies',
-		MY: 'api/my-cookie'
+		ALL: '/api/cookies',
+		MY: '/api/my-cookie'
 	};
 
 	function all() {
@@ -23,8 +23,25 @@ const cookiesService = (() => {
 		return requester.get(URLS.MY, headers);
 	}
 
+	function add(item) {
+		let headers = {};
+		let loggedUser = userService.isLogged();
+
+		if (loggedUser) {
+			let user = userService.load();
+			headers = {
+				'x-auth-key': user.authKey
+			};
+		} else {
+			console.log('Not logged in');
+		}
+
+		return requester.postJSON(URLS.ALL, item, headers);
+	}
+
 	return {
 		all,
-		myCookie
+		myCookie,
+		add
 	}
 })();

@@ -1,8 +1,8 @@
 const userService = (() => {
 	const URLS = {
-		REGISTER: 'api/users',
-		LOGIN: 'api/auth',
-		LIKE: 'api/cookies/'
+		REGISTER: '/api/users',
+		LOGIN: '/api/auth',
+		LIKE: '/api/cookies/'
 	};
 
 	function login(user) {
@@ -12,6 +12,8 @@ const userService = (() => {
 				let stringifiedUser = JSON.stringify(user);
 				localStorage.setItem('loggedUser', stringifiedUser);
 				localStorage.setItem('isLogged', 'loggedUser');
+				localStorage.setItem("username", respUser.result.username);
+				localStorage.setItem("authKey", respUser.result.authKey);
 
 				let username = user.username;
 
@@ -67,6 +69,10 @@ const userService = (() => {
 		};
 
 		return requester.putJSON(url, json, headers);
+	}
+
+	function encode(username, password) {
+		return sha1(username + password)
 	}
 
 	return {

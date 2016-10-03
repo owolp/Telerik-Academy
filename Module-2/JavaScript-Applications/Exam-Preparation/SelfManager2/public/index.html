@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<!--CSS Libs-->
+	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="./bower_components/toastr/toastr.css">
+	<!--<link rel="stylesheet" href="../bower_components/mocha/mocha.css" />-->
+
+	<!--Personal CSS-->
+	<link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body id="page">
+
+	<!--Mocha display-->
+	<!--<div id="mocha"></div>-->
+
+	<!--Main HTML Page-->
+	<header id="header">
+		<h1>Self Manager</h1>
+		<nav id="main-nav" class="nav-navbar">
+			<ul class="nav nav-tabs">
+				<li class="home active">
+					<a href="#/home">Home</a>
+				</li>
+				<li class="hidden-when-not-logged-in">
+					<a href="#/cookie-add">Add cookie</a>
+				</li>
+				<li class="visible-when-not-logged-in">
+					<a href="#/login">Login</a>
+				</li>
+				<li class="hidden-when-not-logged-in">
+					<a class="btn-nav-logout" href="#/logout">Logout</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Container used for the controllers-->
+	<div id="container"></div>
+
+	<!--Bower components-->
+	<!--.. for tests-->
+	<script src="./bower_components/jquery/dist/jquery.js"></script>
+	<script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="./bower_components/handlebars/handlebars.js"></script>
+	<script src="./bower_components/navigo/lib/navigo.js"></script>
+	<script src="./bower_components/toastr/toastr.js"></script>
+
+	<!--Controllers-->
+	<!--.. for tests-->
+	<script src="./controllers/home-controller.js"></script>
+	<script src="./controllers/user-controller.js"></script>
+
+	<!--App Libs-->
+	<!--.. for tests-->
+	<script src="./routings/navigo-router.js"></script>
+	<script src="./requests/json-requester.js"></script>
+
+	<!--Utils-->
+	<!--.. for tests-->
+	<script src="./utils/validator.js"></script>
+	<script src="./utils/template-loader.js"></script>
+
+	<!--Libs-->
+	<!--.. for tests-->
+	<script src="./services/user-service.js"></script>
+
+	<script>
+		router.start();
+	</script>
+
+	<!--Tests-->
+	<!--<script src="../bower_components/mocha/mocha.js"></script>
+	<script src="../bower_components/chai/chai.js"></script>
+	<script src="./sinon-1.17.6.js"></script>
+	<script src="./tests.js"></script>-->
+
+</body>
+
+</html>

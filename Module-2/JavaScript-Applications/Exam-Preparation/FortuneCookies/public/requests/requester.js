@@ -1,8 +1,11 @@
 const requester = (() => {
+
+    let pathUrl = 'http://localhost:4000';
+
     function get(url, headers = {}) {
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: url,
+                url: pathUrl + url,
                 method: 'GET',
                 headers: headers,
                 contentType: 'application/json'
@@ -15,7 +18,7 @@ const requester = (() => {
     function putJSON(url, json, headers = {}) {
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: url,
+                url: pathUrl + url,
                 method: 'PUT',
                 headers: headers,
                 contentType: 'application/json',
@@ -29,7 +32,7 @@ const requester = (() => {
     function postJSON(url, json, headers = {}) {
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: url,
+                url: pathUrl + url,
                 method: 'POST',
                 headers: headers,
                 contentType: 'application/json',
