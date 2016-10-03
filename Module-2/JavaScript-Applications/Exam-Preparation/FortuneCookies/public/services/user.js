@@ -1,7 +1,8 @@
 const userService = (() => {
 	const URLS = {
 		REGISTER: 'api/users',
-		LOGIN: 'api/auth'
+		LOGIN: 'api/auth',
+		LIKE: 'api/cookies/'
 	};
 
 	function login(user) {
@@ -49,11 +50,31 @@ const userService = (() => {
 		return user;
 	}
 
+	function like(cookie) {
+		let headers = {};
+		let loggedUser = isLogged();
+
+		if (loggedUser) {
+			let user = load();
+			headers = {
+				'x-auth-key': user.authKey
+			};
+		}
+
+		const url = URLS.LIKE + cookie.id;
+		const json = {
+			type: cookie.type
+		};
+
+		return requester.putJSON(url, json, headers);
+	}
+
 	return {
 		login,
 		register,
 		logout,
 		isLogged,
-		load
+		load,
+		like
 	}
 })();

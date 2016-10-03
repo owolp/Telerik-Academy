@@ -30,7 +30,7 @@ const loginController = (() => {
 					if (error) {
 						return Promise.reject(error.message);
 					}
-				
+
 					return userService.register(user)
 						.then(() => {
 							toastr.success(`${user.username} successfully registered.`);
@@ -71,8 +71,25 @@ const loginController = (() => {
 			});
 	}
 
+	function like(cookie) {
+		var status = cookie.type;
+		return userService.like(cookie)
+			.then((data) => {
+				if (status === 'like') {
+					toastr.success(`You have liked ${data.result.text}`);
+				} else {
+					toastr.success(`You have unliked ${data.result.text}`);
+				}
+
+			})
+			.catch((error) => {
+				toastr.error('Login first');
+			});
+	}
+
 	return {
 		login,
-		logout
+		logout,
+		like
 	};
 })();

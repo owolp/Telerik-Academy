@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Exam Title</title>
+	<title>Fortune Cookie</title>
 
 	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="./bower_components/toastr/toastr.css">
@@ -15,7 +15,7 @@
 	<div id="root" class="container">
 		<header>
 			<div class="row">
-				<h1 class="page-header col-md-9">Title</h1>
+				<h1 class="page-header col-md-9">Fortune Cookie</h1>
 				<div class="col-md-3">
 					<a href="#/login" class="btn btn-success">Register or Login</a>
 					<a href="#/logout" class="btn btn-warning">Logout</a>
@@ -24,9 +24,8 @@
 
 			<nav class="navbar navbar-default">
 				<ul class="nav navbar-nav">
-					<li><a href="#/Home">Home</a></li>
-					<li><a href="#">Link 2</a></li>
-					<li><a href="#">Link 3</a></li>
+					<li><a href="#/home">Home</a></li>
+					<li><a href="#/my-cookie">My Cookie</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -47,6 +46,7 @@
 	<!--Controllers-->
 	<script src="./controllers/loginController.js"></script>
 	<script src="./controllers/homeController.js"></script>
+	<script src="./controllers/cookieController.js"></script>
 
 	<!--App Libs-->
 	<script src="./routing/router.js"></script>
@@ -58,6 +58,7 @@
 
 	<!--Libs-->
 	<script src="./services/user.js"></script>
+	<script src="./services/cookie.js"></script>
 
 	<script>
 		router.start();
