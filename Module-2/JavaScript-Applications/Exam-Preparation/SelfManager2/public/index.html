@@ -29,7 +29,7 @@
 					<a href="#/home">Home</a>
 				</li>
 				<li class="hidden-when-not-logged-in">
-					<a href="#/cookie-add">Add cookie</a>
+					<a href="#/todos">Todos</a>
 				</li>
 				<li class="visible-when-not-logged-in">
 					<a href="#/login">Login</a>
@@ -51,11 +51,13 @@
 	<script src="./bower_components/handlebars/handlebars.js"></script>
 	<script src="./bower_components/navigo/lib/navigo.js"></script>
 	<script src="./bower_components/toastr/toastr.js"></script>
+	<script src="./bower_components/crypto-js/crypto-js.js"></script>
 
 	<!--Controllers-->
 	<!--.. for tests-->
 	<script src="./controllers/home-controller.js"></script>
 	<script src="./controllers/user-controller.js"></script>
+	<script src="./controllers/todos-controller.js"></script>
 
 	<!--App Libs-->
 	<!--.. for tests-->
@@ -70,6 +72,7 @@
 	<!--Libs-->
 	<!--.. for tests-->
 	<script src="./services/user-service.js"></script>
+	<script src="./services/todos-service.js"></script>
 
 	<script>
 		router.start();

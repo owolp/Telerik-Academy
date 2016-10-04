@@ -19,9 +19,12 @@ const userController = (() => {
 					})
 					.then(() => {
 						$('#btn-login').on('click', function () {
+							let $username = $('#tb-username').val();
+							let $password =  $('#tb-password').val();
+							let passHash = CryptoJS.SHA1($password).toString();
 							let user = {
-								username: $('#tb-username').val(),
-								passHash: $('#tb-password').val()
+								username: $username,
+								passHash: passHash
 							};
 
 							userService.login(user)
@@ -40,9 +43,12 @@ const userController = (() => {
 						});
 
 						$('#btn-register').on('click', function () {
+							let $username = $('#tb-username').val();
+							let $password =  $('#tb-password').val();
+							let passHash = CryptoJS.SHA1($password).toString();
 							let user = {
-								username: $('#tb-username').val(),
-								passHash: $('#tb-password').val()
+								username: $username,
+								passHash: passHash
 							};
 
 							let error = validator.validateString(user.username, USERNAME_MIN_LENGTH, USERNAME_MAX_LENGTH, USERNAME_CHARS);

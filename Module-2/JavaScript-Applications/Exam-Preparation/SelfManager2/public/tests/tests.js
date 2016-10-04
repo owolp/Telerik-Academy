@@ -216,29 +216,29 @@ describe('Tests', function () {
 		});
 	});
 
-	// describe('Get cookies tests', function () {
-	// 	const result = {
-	// 		result: []
-	// 	};
+	describe('Get todos tests', function () {
+		const result = {
+			result: []
+		};
 
-	// 	beforeEach(function () {
-	// 		sinon.stub(requester, 'get')
-	// 			.returns(new Promise((resolve, reject) => {
-	// 				resolve(result);
-	// 			}));
-	// 	});
-	// 	afterEach(function () {
-	// 		requester.get.restore();
-	// 	});
+		beforeEach(function () {
+			sinon.stub(requester, 'getJSON')
+				.returns(new Promise((resolve, reject) => {
+					resolve(result);
+				}));
+		});
+		afterEach(function () {
+			requester.getJSON.restore();
+		});
 
-	// 	it('expect cookiesService.all() to return correct result', function (done) {
-	// 		cookiesService.all()
-	// 			.then(obj => {
-	// 				expect(obj).to.eql(result)
-	// 			})
-	// 			.then(done, done);
-	// 	});
-	// });
+		it('expect todosService.all() to return correct result', function (done) {
+			todosService.all()
+				.then(obj => {
+					expect(obj).to.eql(result)
+				})
+				.then(done, done);
+		});
+	});
 
 	// describe('Add cookie tests', function () {
 	// 	let cookiesDB = [];

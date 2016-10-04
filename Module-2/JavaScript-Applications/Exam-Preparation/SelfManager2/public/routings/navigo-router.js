@@ -19,6 +19,10 @@ var router = (function () {
 		userController.logout();
 	});
 
+	router.on('/todos', () => {
+		todosController.load();
+	});
+
 	// router.on('/home/:type/:id', (params) => {
 	// 	const cookie = {
 	// 		type: params.type,
