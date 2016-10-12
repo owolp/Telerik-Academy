@@ -240,44 +240,44 @@ describe('Tests', function () {
 	// 	});
 	// });
 
-	// describe('Add cookie tests', function () {
-	// 	let cookiesDB = [];
+	describe('Add cookie tests', function () {
+		let cookiesDB = [];
 
-	// 	beforeEach(function () {
-	// 		sinon.stub(requester, 'postJSON', (route, cookie, options) => {
-	// 			return new Promise((resolve, reject) => {
-	// 				cookiesDB.push(cookie);
-	// 				resolve(cookie);
-	// 			});
-	// 		});
-	// 		sinon.stub(requester, 'putJSON')
-	// 			.returns(new Promise((resolve, reject) => {
-	// 				resolve({
-	// 					result: {
-	// 						username: user.username,
-	// 						authKey: AUTH_KEY
-	// 					}
-	// 				});
-	// 			}));
-	// 		localStorage.clear();
-	// 		cookiesDB = [];
-	// 	});
-	// 	afterEach(function () {
-	// 		requester.postJSON.restore();
-	// 		requester.putJSON.restore();
-	// 		localStorage.clear();
-	// 	});
+		beforeEach(function () {
+			sinon.stub(requester, 'postJSON', (route, cookie, options) => {
+				return new Promise((resolve, reject) => {
+					cookiesDB.push(cookie);
+					resolve(cookie);
+				});
+			});
+			sinon.stub(requester, 'putJSON')
+				.returns(new Promise((resolve, reject) => {
+					resolve({
+						result: {
+							username: user.username,
+							authKey: AUTH_KEY
+						}
+					});
+				}));
+			localStorage.clear();
+			cookiesDB = [];
+		});
+		afterEach(function () {
+			requester.postJSON.restore();
+			requester.putJSON.restore();
+			localStorage.clear();
+		});
 
-	// 	it('expect postJSON to be called for cookie', function (done) {
-	// 		userService.login(user)
-	// 			.then(() => {
-	// 				return cookiesService.add(cookie);
-	// 			})
-	// 			.then(() => {
-	// 				expect(requester.postJSON.calledOnce).to.be.true;
-	// 			})
-	// 			.then(done, done);
-	// 	});
+		it('expect postJSON to be called for cookie', function (done) {
+			userService.login(user)
+				.then(() => {
+					return cookiesService.add(cookie);
+				})
+				.then(() => {
+					expect(requester.postJSON.calledOnce).to.be.true;
+				})
+				.then(done, done);
+		});
 	// 	it('expect postJSON to be called with correct route', function (done) {
 	// 		userService.login(user)
 	// 			.then(() => {

@@ -1,0 +1,17 @@
+﻿Bottleneck description: --------------------
+#1: throwing exceptions to control program flow in BrumBrum ( now start )
+#2: Engine Write method 
+    - splits, then joins
+    - pointless loop 
+    - Thread.Sleep
+
+
+
+Bug reports: --------------------
+Format: #Bug number - Class name - Bug description
+Example: #1 - PartnerBankingService - The variable "money" at line 36 overflows when you try to add more than 2.1 billion dollars.
+--------
+#1 - CreateStudentCommand does not implement ICommand interface ( engine can only filters through available classes implementing the interface first, then by name)
+#2 - Incorrect output on student without marks. According to 01.output.txt , output should be "This student has no marks.", it 's an empty string instead.
+#3 - Incorrect parameters in TeacherAddMarkCommand - Execute(), studentId and teacherId are parsed correctly but used in an incorrect order.
+#4 - Engine only takes "End" as a stop command ( not END or end )
