@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<catalogue xmlns:cat="http://url1.com">
+<catalog xmlns:cat="http://url1.com">
   <album>
-    <name>Album 1<name>
-    <artist>Artist 1<artist>
-    <year>2001<year>
-    <producer>Producer 1<producer>
-    <price>1<price>
+    <name>Album 1</name>
+    <artist>Artist 1</artist>
+    <year>2001</year>
+    <producer>Producer 1</producer>
+    <price>1</price>
     <songs>
       <cat.song>
         <cat.title>Song 1</cat.title>
@@ -19,14 +19,14 @@
         <cat.title>Song 3</cat.title>
         <cat.duration>3</cat.duration>
       </cat.song>
-    <songs>
+    </songs>
+  </album>
   <album>
-  <album>
-    <name>Album 2<name>
-    <artist>Artist 2<artist>
-    <year>2002<year>
-    <producer>Producer 2<producer>
-    <price>2<price>
+    <name>Album 2</name>
+    <artist>Artist 2</artist>
+    <year>2002</year>
+    <producer>Producer 2</producer>
+    <price>2</price>
     <songs>
       <cat.song>
         <cat.title>Song 10</cat.title>
@@ -40,35 +40,14 @@
         <cat.title>Song 30</cat.title>
         <cat.duration>30</cat.duration>
       </cat.song>
-    <songs>
+    </songs>
+  </album>
   <album>
-  <album>
-    <name>Album 3<name>
-    <artist>Artist 3<artist>
-    <year>2003<year>
-    <producer>Producer 3<producer>
-    <price>3<price>
-    <songs>
-      <cat.song>
-        <cat.title>Song 100</cat.title>
-        <cat.duration>100</cat.duration>
-      </cat.song>
-      <cat.song>
-        <cat.title>Song 200</cat.title>
-        <cat.duration>200</cat.duration>
-      </cat.song>
-      <cat.song>
-        <cat.title>Song 300</cat.title>
-        <cat.duration>300</cat.duration>
-      </cat.song>
-    <songs>
-  <album>
-  <album>
-    <name>Album 4<name>
-    <artist>Artist 3<artist>
-    <year>2003<year>
-    <producer>Producer 3<producer>
-    <price>3<price>
+    <name>Album 3</name>
+    <artist>Artist 3</artist>
+    <year>2003</year>
+    <producer>Producer 3</producer>
+    <price>3</price>
     <songs>
       <cat.song>
         <cat.title>Song 100</cat.title>
@@ -82,6 +61,27 @@
         <cat.title>Song 300</cat.title>
         <cat.duration>300</cat.duration>
       </cat.song>
-    <songs>
+    </songs>
+  </album>
   <album>
-<catalogue>
+    <name>Album 4</name>
+    <artist>Artist 3</artist>
+    <year>2003</year>
+    <producer>Producer 3</producer>
+    <price>3</price>
+    <songs>
+      <cat.song>
+        <cat.title>Song 100</cat.title>
+        <cat.duration>100</cat.duration>
+      </cat.song>
+      <cat.song>
+        <cat.title>Song 200</cat.title>
+        <cat.duration>200</cat.duration>
+      </cat.song>
+      <cat.song>
+        <cat.title>Song 300</cat.title>
+        <cat.duration>300</cat.duration>
+      </cat.song>
+    </songs>
+  </album>
+</catalog>

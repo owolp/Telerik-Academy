@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<catalogue xmlns:cat="http://url1.com">
+<catalog xmlns:cat="http://url1.com">
   <album>
     <name>Album 1<name>
     <artist>Artist 1<artist>
@@ -84,4 +84,4 @@
       </cat.song>
     <songs>
   <album>
-<catalogue>
+<catalog>

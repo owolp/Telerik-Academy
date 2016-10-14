@@ -3,7 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{F04E5AA1-A906-420A-8501-CB0C06DD3870}"
+	ProjectSection(SolutionItems) = preProject
+		catalogue.xml = catalogue.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ExtractUsingDom", "02.ExtractUsingDom\02.ExtractUsingDom.csproj", "{DE0BF71E-2191-4C88-AF92-2B252DB167EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.ExtractUsingXPath", "03.ExtractUsingXPath\03.ExtractUsingXPath.csproj", "{B9E44922-8650-41B2-9DDE-525627365061}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE0BF71E-2191-4C88-AF92-2B252DB167EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE0BF71E-2191-4C88-AF92-2B252DB167EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE0BF71E-2191-4C88-AF92-2B252DB167EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE0BF71E-2191-4C88-AF92-2B252DB167EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9E44922-8650-41B2-9DDE-525627365061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9E44922-8650-41B2-9DDE-525627365061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9E44922-8650-41B2-9DDE-525627365061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9E44922-8650-41B2-9DDE-525627365061}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
