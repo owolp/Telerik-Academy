@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cat:catalogue xmlns:cat="http://url1.com">
+  <cat:album>
+    <cat:name>Album 1</cat:name>
+    <cat:artist>Artist 1</cat:artist>
+    <cat:year>2001</cat:year>
+    <cat:producer>Producer 1</cat:producer>
+    <cat:price>1</cat:price>
+    <cat:songs>
+      <cat.song>
+        <cat.title>Song 1</cat.title>
+        <cat.duration>1</cat.duration>
+      </cat.song>
+      <cat.song>
+        <cat.title>Song 2</cat.title>
+        <cat.duration>2</cat.duration>
+      </cat.song>
+      <cat.song>
+        <cat.title>Song 3</cat.title>
+        <cat.duration>3</cat.duration>
+      </cat.song>
+    </cat:songs>
+  </cat:album>
+  <cat:album>
+    <cat:name>Album 2</cat:name>
+    <cat:artist>Artist 2</cat:artist>
+    <cat:year>2002</cat:year>
+    <cat:producer>Producer 2</cat:producer>
+    <cat:price>2</cat:price>
+    <cat:songs>
+      <cat.song>
+        <cat.title>Song 10</cat.title>
+        <cat.duration>10</cat.duration>
+      </cat.song>
+      <cat.song>
+        <cat.title>Song 20</cat.title>
+        <cat.duration>20</cat.duration>
+      </cat.song>
+      <cat.song>
+        <cat.title>Song 30</cat.title>
+        <cat.duration>30</cat.duration>
+      </cat.song>
+    </cat:songs>
+  </cat:album>
+  <cat:album>
+    <cat:name>Album 3</cat:name>
+    <cat:artist>Artist 3</cat:artist>
+    <cat:year>2003</cat:year>
+    <cat:producer>Producer 3</cat:producer>
+    <cat:price>3</cat:price>
+    <cat:songs>
+      <cat.song>
+        <cat.title>Song 100</cat.title>
+        <cat.duration>100</cat.duration>
+      </cat.song>
+      <cat.song>
+        <cat.title>Song 200</cat.title>
+        <cat.duration>200</cat.duration>
+      </cat.song>
+      <cat.song>
+        <cat.title>Song 300</cat.title>
+        <cat.duration>300</cat.duration>
+      </cat.song>
+    </cat:songs>
+  </cat:album>
+</cat:catalogue>
