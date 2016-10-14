@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<students:students 
+	xmlns:students="http://url1.com">
+	<students:student>
+		<students:name>John Smith</students:name>
+		<students:sex>Male</students:sex>
+		<students:dob>01.01.1990</students:dob>
+		<students:phone>+359 888 888888</students:phone>
+		<students:email>jsmith@email.com</students:email>
+		<students:course>IT</students:course>
+		<students:speciality>IT</students:speciality>
+		<students:fn>100000000</students:fn>
+		<students:exams>
+			<students:exam>
+				<students:name>C# Basics</students:name>
+				<students:tutor>Peter Parker</students:tutor>
+				<students:score>350</students:score>
+			</students:exam>
+			<students:exam>
+				<students:name>C# Advanced</students:name>
+				<students:tutor>Peter Parker</students:tutor>
+				<students:score>350</students:score>
+			</students:exam>
+			<students:exam>
+				<students:name>C# OOP</students:name>
+				<students:tutor>Peter Parker</students:tutor>
+				<students:score>350</students:score>
+			</students:exam>
+		</students:exams>
+	</students:student>
+	<students:student>
+		<students:name>John Doe</students:name>
+		<students:sex>Male</students:sex>
+		<students:dob>01.01.1990</students:dob>
+		<students:phone>+359 888 888888</students:phone>
+		<students:email>jdoe@email.com</students:email>
+		<students:course>IT</students:course>
+		<students:speciality>IT</students:speciality>
+		<students:fn>100000000</students:fn>
+		<students:exams>
+			<students:exam>
+				<students:name>C# Basics</students:name>
+				<students:tutor>Peter Parker</students:tutor>
+				<students:score>350</students:score>
+			</students:exam>
+			<students:exam>
+				<students:name>C# Advanced</students:name>
+				<students:tutor>Peter Parker</students:tutor>
+				<students:score>350</students:score>
+			</students:exam>
+			<students:exam>
+				<students:name>C# OOP</students:name>
+				<students:tutor>Peter Parker</students:tutor>
+				<students:score>350</students:score>
+			</students:exam>
+		</students:exams>
+	</students:student>
+</students:students>
