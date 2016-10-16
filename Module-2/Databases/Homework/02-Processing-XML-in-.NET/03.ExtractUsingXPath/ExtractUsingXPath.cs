@@ -8,7 +8,7 @@
 
     public class ExtractUsingXPath
     {
-        private const string documentLocation = "../../catalog.xml";
+        private const string DocumentLocation = "../../catalog.xml";
 
         public static void Main()
         {
@@ -24,7 +24,7 @@
         private static XmlElement LoadDocument()
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load(documentLocation);
+            doc.Load(DocumentLocation);
             XmlElement rootNode = doc.DocumentElement;
 
             return rootNode;

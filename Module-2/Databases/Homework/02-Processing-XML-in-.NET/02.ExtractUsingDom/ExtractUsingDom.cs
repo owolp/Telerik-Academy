@@ -7,7 +7,7 @@
 
     public class ExtractUsingDom
     {
-        private const string documentLocation = "../../catalog.xml";
+        private const string DocumentLocation = "../../catalog.xml";
 
         public static void Main()
         {
@@ -22,7 +22,7 @@
         private static XmlElement LoadDocument()
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load(documentLocation);
+            doc.Load(DocumentLocation);
             XmlElement rootNode = doc.DocumentElement;
 
             return rootNode;
@@ -45,10 +45,10 @@
         {
             var result = new Dictionary<string, int>();
 
-            var albums = rootNode.GetElementsByTagName("cat:album");
+            var albums = rootNode.GetElementsByTagName("album");
             foreach (XmlNode album in albums)
             {
-                var artist = album["cat:artist"].InnerText;
+                var artist = album["artist"].InnerText;
                 if (!result.ContainsKey(artist))
                 {
                     result[artist] = 0;
@@ -64,10 +64,10 @@
         {
             var result = new HashSet<string>();
 
-            var albums = rootNode.GetElementsByTagName("cat:album");
+            var albums = rootNode.GetElementsByTagName("album");
             foreach (XmlNode album in albums)
             {
-                result.Add(album["cat:artist"].InnerText);
+                result.Add(album["artist"].InnerText);
             }
 
             return result;

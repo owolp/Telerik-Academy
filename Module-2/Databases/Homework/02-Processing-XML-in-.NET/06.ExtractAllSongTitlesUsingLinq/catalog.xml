@@ -26,7 +26,7 @@
     <artist>Artist 2</artist>
     <year>2002</year>
     <producer>Producer 2</producer>
-    <price>2</price>
+    <price>200</price>
     <songs>
       <song>
         <title>Song 10</title>
@@ -68,7 +68,7 @@
     <artist>Artist 3</artist>
     <year>2003</year>
     <producer>Producer 3</producer>
-    <price>3</price>
+    <price>300</price>
     <songs>
       <song>
         <title>Song 100</title>

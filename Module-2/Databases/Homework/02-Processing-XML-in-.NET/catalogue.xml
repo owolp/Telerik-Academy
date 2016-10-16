@@ -7,18 +7,18 @@
     <producer>Producer 1<producer>
     <price>1<price>
     <songs>
-      <cat.song>
-        <cat.title>Song 1</cat.title>
-        <cat.duration>1</cat.duration>
-      </cat.song>
-      <cat.song>
-        <cat.title>Song 2</cat.title>
-        <cat.duration>2</cat.duration>
-      </cat.song>
-      <cat.song>
-        <cat.title>Song 3</cat.title>
-        <cat.duration>3</cat.duration>
-      </cat.song>
+      <song>
+        <title>Song 1</title>
+        <duration>1</duration>
+      </song>
+      <song>
+        <title>Song 2</title>
+        <duration>2</duration>
+      </song>
+      <song>
+        <title>Song 3</title>
+        <duration>3</duration>
+      </song>
     <songs>
   <album>
   <album>
@@ -28,18 +28,18 @@
     <producer>Producer 2<producer>
     <price>2<price>
     <songs>
-      <cat.song>
-        <cat.title>Song 10</cat.title>
-        <cat.duration>10</cat.duration>
-      </cat.song>
-      <cat.song>
-        <cat.title>Song 20</cat.title>
-        <cat.duration>20</cat.duration>
-      </cat.song>
-      <cat.song>
-        <cat.title>Song 30</cat.title>
-        <cat.duration>30</cat.duration>
-      </cat.song>
+      <song>
+        <title>Song 10</title>
+        <duration>10</duration>
+      </song>
+      <song>
+        <title>Song 20</title>
+        <duration>20</duration>
+      </song>
+      <song>
+        <title>Song 30</title>
+        <duration>30</duration>
+      </song>
     <songs>
   <album>
   <album>
@@ -49,18 +49,18 @@
     <producer>Producer 3<producer>
     <price>3<price>
     <songs>
-      <cat.song>
-        <cat.title>Song 100</cat.title>
-        <cat.duration>100</cat.duration>
-      </cat.song>
-      <cat.song>
-        <cat.title>Song 200</cat.title>
-        <cat.duration>200</cat.duration>
-      </cat.song>
-      <cat.song>
-        <cat.title>Song 300</cat.title>
-        <cat.duration>300</cat.duration>
-      </cat.song>
+      <song>
+        <title>Song 100</title>
+        <duration>100</duration>
+      </song>
+      <song>
+        <title>Song 200</title>
+        <duration>200</duration>
+      </song>
+      <song>
+        <title>Song 300</title>
+        <duration>300</duration>
+      </song>
     <songs>
   <album>
   <album>
@@ -70,18 +70,18 @@
     <producer>Producer 3<producer>
     <price>3<price>
     <songs>
-      <cat.song>
-        <cat.title>Song 100</cat.title>
-        <cat.duration>100</cat.duration>
-      </cat.song>
-      <cat.song>
-        <cat.title>Song 200</cat.title>
-        <cat.duration>200</cat.duration>
-      </cat.song>
-      <cat.song>
-        <cat.title>Song 300</cat.title>
-        <cat.duration>300</cat.duration>
-      </cat.song>
+      <song>
+        <title>Song 100</title>
+        <duration>100</duration>
+      </song>
+      <song>
+        <title>Song 200</title>
+        <duration>200</duration>
+      </song>
+      <song>
+        <title>Song 300</title>
+        <duration>300</duration>
+      </song>
     <songs>
   <album>
 <catalogue>
