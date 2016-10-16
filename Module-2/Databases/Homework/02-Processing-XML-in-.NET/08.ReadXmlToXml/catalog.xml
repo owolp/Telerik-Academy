@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catalog xmlns:cat="http://url1.com">
+  <album>
+    <name>Album 1</name>
+    <artist>Artist 1</artist>
+    <year>2001</year>
+    <producer>Producer 1</producer>
+    <price>1</price>
+    <songs>
+      <song>
+        <title>Song 1</title>
+        <duration>1</duration>
+      </song>
+      <song>
+        <title>Song 2</title>
+        <duration>2</duration>
+      </song>
+      <song>
+        <title>Song 3</title>
+        <duration>3</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Album 2</name>
+    <artist>Artist 2</artist>
+    <year>2002</year>
+    <producer>Producer 2</producer>
+    <price>200</price>
+    <songs>
+      <song>
+        <title>Song 10</title>
+        <duration>10</duration>
+      </song>
+      <song>
+        <title>Song 20</title>
+        <duration>20</duration>
+      </song>
+      <song>
+        <title>Song 30</title>
+        <duration>30</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Album 3</name>
+    <artist>Artist 3</artist>
+    <year>2003</year>
+    <producer>Producer 3</producer>
+    <price>3</price>
+    <songs>
+      <song>
+        <title>Song 100</title>
+        <duration>100</duration>
+      </song>
+      <song>
+        <title>Song 200</title>
+        <duration>200</duration>
+      </song>
+      <song>
+        <title>Song 300</title>
+        <duration>300</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Album 4</name>
+    <artist>Artist 3</artist>
+    <year>2003</year>
+    <producer>Producer 3</producer>
+    <price>300</price>
+    <songs>
+      <song>
+        <title>Song 100</title>
+        <duration>100</duration>
+      </song>
+      <song>
+        <title>Song 200</title>
+        <duration>200</duration>
+      </song>
+      <song>
+        <title>Song 300</title>
+        <duration>300</duration>
+      </song>
+    </songs>
+  </album>
+</catalog>

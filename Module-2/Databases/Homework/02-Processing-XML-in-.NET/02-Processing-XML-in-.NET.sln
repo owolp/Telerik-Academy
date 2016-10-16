@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.ExtractAllSongTitles", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.ExtractAllSongTitlesUsingLinq", "06.ExtractAllSongTitlesUsingLinq\06.ExtractAllSongTitlesUsingLinq.csproj", "{8468C380-3A25-4034-A10B-846A44DC2EC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.CreateXmlDocumentFromTextFile", "07.CreateXmlDocumentFromTextFile\07.CreateXmlDocumentFromTextFile.csproj", "{C8E4ED9B-DC1C-4211-A677-AAA777BF716C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.ReadXmlToXml", "08.ReadXmlToXml\08.ReadXmlToXml.csproj", "{86CCEAC9-4E43-4509-930D-D8E237ED23B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,14 @@ Global
 		{8468C380-3A25-4034-A10B-846A44DC2EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8468C380-3A25-4034-A10B-846A44DC2EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8468C380-3A25-4034-A10B-846A44DC2EC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8E4ED9B-DC1C-4211-A677-AAA777BF716C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E4ED9B-DC1C-4211-A677-AAA777BF716C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E4ED9B-DC1C-4211-A677-AAA777BF716C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E4ED9B-DC1C-4211-A677-AAA777BF716C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86CCEAC9-4E43-4509-930D-D8E237ED23B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86CCEAC9-4E43-4509-930D-D8E237ED23B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86CCEAC9-4E43-4509-930D-D8E237ED23B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86CCEAC9-4E43-4509-930D-D8E237ED23B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
