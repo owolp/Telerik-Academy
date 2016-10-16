@@ -20,7 +20,7 @@
 
         private static void GenerateAlbumXmlFile(IDictionary<string, string> albums)
         {
-            const string fileName = AlbumXml;
+            var fileName = AlbumXml;
             var encoding = Encoding.GetEncoding("utf-8");
             using (var writer = new XmlTextWriter(fileName, encoding))
             {
