@@ -49,7 +49,21 @@
 ![](./images/restoreNw3.jpg)
 ![](./images/restoreNw4.jpg)
 
-1.	Download and install MySQL Community Server  + MySQL Workbench + the sample databases.
-1.	Export the MySQL sample database "`world`" as SQL script.
-1.	Modify the script and execute it to restore the database world as "`worldNew`".
-1.	Connect through the MySQL console client and list the first 20 tons from the database "`worldNew`".
+---
+
+## 8. Download and install MySQL Community Server  + MySQL Workbench + the sample databases.
+![](./images/mySql1.jpg)
+![](./images/mySql2.jpg)
+
+--
+
+## 9. Export the MySQL sample database "`world`" as SQL script.
+
+![](./images/mySql3.jpg)
+
+---
+
+## 10. Modify the script and execute it to restore the database world as "`worldNew`"
+
+![](./images/mySql4.jpg)
+![](./images/mySql5.jpg)
