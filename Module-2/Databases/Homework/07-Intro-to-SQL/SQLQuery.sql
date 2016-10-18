@@ -201,13 +201,54 @@ SELECT
 	m.FirstName + ' ' + m.LastName AS [ManagerFullName]
 FROM Employees e
 INNER JOIN Addresses a
-ON e.AddressID = a.AddressID
+	ON e.AddressID = a.AddressID
 INNER JOIN Employees m
-ON e.ManagerID = m.EmployeeID
+	ON e.ManagerID = m.EmployeeID
 ORDER BY EmployeeFullName
 
 -- ====================================================================================================
+
+-- 22. Write a SQL query to find all departments and all town names as a single list. Use UNION.
+SELECT
+	d.Name AS [Departments and Towns]
+FROM Departments d
+UNION
+SELECT
+	t.Name AS [Departments and Towns]
+FROM Towns t
+
 -- ====================================================================================================
+
+-- 23. Write a SQL query to find all the employees and the manager for each of them along with the employees that do not have manager.
+-- Use right outer join. Rewrite the query to use left outer join.
+
+SELECT
+	e.FirstName + ' ' + e.LastName AS [EmployeeFullName],
+	m.LastName AS [Manager]
+FROM Employees e
+RIGHT OUTER JOIN Employees m
+	ON e.ManagerID = m.EmployeeID
 -- ====================================================================================================
+
+SELECT
+	e.FirstName + ' ' + e.LastName AS [EmployeeFullName],
+	m.LastName AS [Manager]
+FROM Employees e
+LEFT OUTER JOIN Employees m
+	ON e.ManagerID = m.EmployeeID
 -- ====================================================================================================
+
+-- 24. Write a SQL query to find the names of all employees from the departments "Sales" and "Finance" whose hire year is between 1995 and 2005.
+SELECT
+	e.FirstName,
+	e.LastName,
+	d.Name,
+	e.HireDate
+FROM Employees e
+INNER JOIN Departments d
+	ON e.DepartmentID = d.DepartmentID
+WHERE d.Name = 'Sales'
+OR d.Name = 'Finance'
+AND e.HireDate BETWEEN '1995-01-01 00:00:00' AND '2005-01-01 00:00:00'
+
 -- ====================================================================================================
