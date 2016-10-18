@@ -51,7 +51,27 @@ FROM Employees e
 WHERE e.DepartmentID = '1'
 
 -- ====================================================================================================
+
+-- 5. Write a SQL query to find the average salary in the "Sales" department.
+
+SELECT
+	ROUND(AVG(e.Salary), 2) AS [AverageSalary]
+FROM Employees e
+INNER JOIN Departments d
+	ON e.DepartmentID = d.DepartmentID
+WHERE d.Name = 'Sales'
+
 -- ====================================================================================================
+
+-- 6. Write a SQL query to find the number of employees in the "Sales" department.
+
+SELECT
+	COUNT(*) AS [EmployeesCount]
+FROM Employees e
+INNER JOIN Departments d
+ON e.DepartmentID = d.DepartmentID
+WHERE d.Name = 'Sales'
+
 -- ====================================================================================================
 -- ====================================================================================================
 -- ====================================================================================================
