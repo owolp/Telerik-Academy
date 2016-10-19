@@ -170,11 +170,52 @@ ORDER BY e.LastName
 
 -- 14. Write a SQL query to display the current date and time in the following format "day.month.year hour:minutes:seconds:milliseconds".
 
-SELECT FORMAT(GETDATE(), 'dd.MM.yyyy HH:mm:ss:fff')
+SELECT
+	FORMAT(GETDATE(), 'dd.MM.yyyy HH:mm:ss:fff')
 
 -- ====================================================================================================
+
+-- 15. Write a SQL statement to create a table Users. Users should have username, password, full name and last login time. 
+
+CREATE TABLE dbo.Users (
+	Id INT IDENTITY,
+	Username NVARCHAR(50) NOT NULL,
+	Password NVARCHAR(50) NOT NULL,
+	Fullname NVARCHAR(50) NOT NULL,
+	LastLogin SMALLDATETIME NOT NULL,
+	CONSTRAINT PK_Users_Id PRIMARY KEY (Id)
+)
+GO
+
 -- ====================================================================================================
+
+-- 16. Write a SQL statement to create a view that displays the users from the Users table that have been in the system today. 
+
+CREATE VIEW [LoggedUsersForTheDay]
+AS
+SELECT
+	u.Fullname,
+	u.LastLogin
+FROM Users u
+WHERE u.LastLogin BETWEEN '2016-10-19 00:00:00' AND '2016-10-19 23:59:59'
+
+--
+
+SELECT
+	*
+FROM LoggedUsersForTheDay luftd
+
 -- ====================================================================================================
+
+-- 17. Write a SQL statement to create a table Groups. Groups should have unique name (use unique constraint). 
+
+CREATE TABLE dbo.Groups (
+	Id INT IDENTITY,
+	Name NVARCHAR(50) NOT NULL UNIQUE,
+	CONSTRAINT PK_Groups_Id PRIMARY KEY (Id)
+)
+GO
+
 -- ====================================================================================================
 -- ====================================================================================================
 -- ====================================================================================================
