@@ -175,12 +175,17 @@ SELECT
 
 -- ====================================================================================================
 
--- 15. Write a SQL statement to create a table Users. Users should have username, password, full name and last login time. 
+-- 15. Write a SQL statement to create a table Users. Users should have username, password, full name and last login time.
+-- Choose appropriate data types for the table fields. Define a primary key column with a primary key constraint.
+-- Define the primary key column as identity to facilitate inserting records.
+-- Define unique constraint to avoid repeating usernames.
+-- Define a check constraint to ensure the password is at least 5 characters long.
+
 
 CREATE TABLE dbo.Users (
 	Id INT IDENTITY,
-	Username NVARCHAR(50) NOT NULL,
-	Password NVARCHAR(50) NOT NULL,
+	Username NVARCHAR(50) NOT NULL UNIQUE,
+	Password NVARCHAR(50) NOT NULL CHECK (LEN(Password) > 5),
 	Fullname NVARCHAR(50) NOT NULL,
 	LastLogin SMALLDATETIME NOT NULL,
 	CONSTRAINT PK_Users_Id PRIMARY KEY (Id)
@@ -208,6 +213,7 @@ FROM LoggedUsersForTheDay luftd
 -- ====================================================================================================
 
 -- 17. Write a SQL statement to create a table Groups. Groups should have unique name (use unique constraint). 
+-- Define primary key and identity column.
 
 CREATE TABLE dbo.Groups (
 	Id INT IDENTITY,
@@ -217,7 +223,124 @@ CREATE TABLE dbo.Groups (
 GO
 
 -- ====================================================================================================
+
+-- 18. Write a SQL statement to add a column GroupID to the table Users.
+-- Fill some data in this new column and as well in the `Groups table.
+-- Write a SQL statement to add a foreign key constraint between tables Users and Groups tables.
+
+ALTER TABLE dbo.Users
+ADD GroupId INT NOT NULL
+GO
+
+ALTER TABLE dbo.Users
+ADD CONSTRAINT FK_Users_Groups
+FOREIGN KEY (GroupId)
+REFERENCES Groups (Id)
+GO
+
 -- ====================================================================================================
+
+-- 19. Write SQL statements to insert several records in the Users and Groups tables.
+
+INSERT INTO Groups
+	VALUES ('Group1'),
+	('Group2'),
+	('Group3'),
+	('Group4'),
+	('Group5')
+GO
+
+INSERT INTO Users
+	VALUES ('username1', 'password1', 'fullname1', '2016-10-20 01:00:00', '1'),
+	('username2', 'password2', 'fullname2', '2016-10-20 02:00:00', '2'),
+	('username3', 'password3', 'fullname3', '2016-10-20 03:00:00', '3'),
+	('username4', 'password4', 'fullname4', '2016-10-20 04:00:00', '4'),
+	('username5', 'password5', 'fullname5', '2016-10-20 05:00:00', '5')
+GO
+
+-- ====================================================================================================
+
+-- 20. Write SQL statements to update some of the records in the Users and Groups tables.
+
+UPDATE Users
+SET	Username = 'usernameUpdate',
+	Password = 'passwordUpdate',
+	Fullname = 'fullnameUpdate',
+	LastLogin = GETDATE(),
+	GroupId = '1'
+WHERE Id = 3
+GO
+
+UPDATE Groups
+SET Name = 'groupUpdate'
+WHERE Id = 1
+GO
+
+-- ====================================================================================================
+
+-- 21. Write SQL statements to delete some of the records from the Users and Groups tables.
+
+DELETE Users
+WHERE Username LIKE '%update%'
+GO
+
+-- ====================================================================================================
+
+-- 22. Write SQL statements to insert in the Users table the names of all employees from the Employees table.
+-- Combine the first and last names as a full name.
+-- For username use the first letter of the first name + the last name (in lowercase).
+-- Use the same for the password, and NULL for last login time.
+
+
+CREATE TABLE dbo.Employees (
+	Id INT IDENTITY,
+	FirstName NVARCHAR(50) NOT NULL,
+	LastName NVARCHAR(50) NOT NULL,
+	CONSTRAINT PK_Employees_Id PRIMARY KEY (Id)
+)
+GO
+
+INSERT INTO Users (Username, Fullname, Password)
+		(SELECT
+			LOWER(CONCAT(FirstName, LastName)),
+			CONCAT(FirstName, ' ', LastName),
+			LOWER(CONCAT(FirstName, LastName))
+		FROM Employees)
+GO
+-- ====================================================================================================
+
+-- 23. Write a SQL statement that changes the password to NULL for all users that have not been in the system since 10.03.2010.
+
+ALTER TABLE Users
+ALTER COLUMN Password NVARCHAR(50) NULL
+GO
+
+UPDATE Users
+SET Password = NULL
+WHERE DATEDIFF(DAY, LastLogin, '2010-10-10 00:00:00') < 0
+GO
+
+-- ====================================================================================================
+
+-- 24. Write a SQL statement that deletes all users without passwords (NULL password).
+
+DELETE Users
+WHERE Password IS NULL
+
+-- ====================================================================================================
+
+-- 25. Write a SQL query to display the average employee salary by department and job title.
+SELECT
+	d.Name AS [DepartmentName],
+	e.JobTitle AS [JobTitle],
+	ROUND(AVG(e.Salary), 2) AS [AverageSalaryByDepartment]
+FROM	Departments d,
+		Employees e
+WHERE e.DepartmentID = d.DepartmentID
+GROUP BY	d.Name,
+			e.JobTitle
+ORDER BY AverageSalaryByDepartment
+
 -- ====================================================================================================
 -- ====================================================================================================
 -- ====================================================================================================
