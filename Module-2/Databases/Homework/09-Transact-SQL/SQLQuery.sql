@@ -38,7 +38,7 @@ GO
 CREATE PROCEDURE dbo.usp_PersonFullName
 AS
 	SELECT
-	CONCAT(p.FirstName, ' ', p.LastName) AS [FullName]
+		CONCAT(p.FirstName, ' ', p.LastName) AS [FullName]
 	FROM Persons p
 GO
 
@@ -48,20 +48,38 @@ GO
 
 -- 2. Create a stored procedure that accepts a number as a parameter and returns all persons who have more money in their accounts than the supplied number.
 
-CREATE PROCEDURE dbo.usp_CheckPersonsBalance(@balance MONEY)
+CREATE PROCEDURE dbo.usp_CheckPersonsBalance (@balance MONEY)
 AS
 	SELECT
-	CONCAT(p.FirstName, ' ', p.LastName) AS [FullName],
-	a.Balance
+		CONCAT(p.FirstName, ' ', p.LastName) AS [FullName],
+		a.Balance
 	FROM Persons p
 	INNER JOIN Accounts a
-	ON p.Id = a.PersonId
+		ON p.Id = a.PersonId
 	WHERE a.Balance > @balance
 GO
 
-EXEC usp_CheckPersonsBalance 3000
+-- EXEC usp_CheckPersonsBalance 3000
 
 -- ====================================================================================================
+
+-- 3. Create a function that accepts as parameters – sum, yearly interest rate and number of months.
+--    It should calculate and return the new sum.
+--    Write a SELECT to test whether the function works as expected.
+
+CREATE FUNCTION ufn_CalculateInterestRate (@sum MONEY, @interestRate FLOAT, @numberOfMonths INT)
+RETURNS MONEY
+AS
+BEGIN
+	RETURN @sum * (1 + @interestRate / 12) * @numberOfMonths
+END
+GO
+
+SELECT
+	a.Balance,
+	ROUND(dbo.ufn_CalculateInterestRate(a.Balance, 0.6, 6), 2) AS [AdditionalMoney]
+FROM Accounts a
+
 -- ====================================================================================================
 -- ====================================================================================================
 -- ====================================================================================================
