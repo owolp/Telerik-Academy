@@ -112,6 +112,30 @@ GO
 EXEC dbo.usp_FindPersonInterestRateForOneMonth	2, 0.5
 
 -- ====================================================================================================
+
+--5. Add two more stored procedures WithdrawMoney(AccountId, money) and DepositMoney(AccountId, money) that operate in transactions.
+
+CREATE PROCEDURE dbo.usp_WithdrawMoney (@accountId INT, @moneyToWithdraw MONEY)
+AS
+	BEGIN TRANSACTION
+	UPDATE Accounts
+	SET Balance -= @moneyToWithdraw
+	WHERE Id = @accountId
+	COMMIT TRANSACTION
+GO
+
+EXEC dbo.usp_WithdrawMoney 1, 2000
+
+CREATE PROCEDURE dbo.usp_DepositMoney (@accountId INT, @moneyToDeposit MONEY)
+AS
+	BEGIN TRANSACTION
+	UPDATE Accounts
+	SET Balance += @moneyToDeposit
+	WHERE Id = @accountId;
+	COMMIT TRANSACTION
+GO
+
+EXEC dbo.usp_DepositMoney 1, 1000
 -- ====================================================================================================
 -- ====================================================================================================
 -- ====================================================================================================
