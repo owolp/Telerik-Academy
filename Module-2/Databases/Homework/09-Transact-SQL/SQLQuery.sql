@@ -35,18 +35,31 @@ INSERT INTO Accounts (PersonId, Balance)
 	(5, 5000)
 GO
 
-CREATE PROCEDURE dbo.PersonFullName
+CREATE PROCEDURE dbo.usp_PersonFullName
 AS
 	SELECT
 	CONCAT(p.FirstName, ' ', p.LastName) AS [FullName]
 	FROM Persons p
 GO
 
+-- EXEC usp_PersonFullName
+
 -- ====================================================================================================
 
 -- 2. Create a stored procedure that accepts a number as a parameter and returns all persons who have more money in their accounts than the supplied number.
 
+CREATE PROCEDURE dbo.usp_CheckPersonsBalance(@balance MONEY)
+AS
+	SELECT
+	CONCAT(p.FirstName, ' ', p.LastName) AS [FullName],
+	a.Balance
+	FROM Persons p
+	INNER JOIN Accounts a
+	ON p.Id = a.PersonId
+	WHERE a.Balance > @balance
+GO
 
+EXEC usp_CheckPersonsBalance 3000
 
 -- ====================================================================================================
 -- ====================================================================================================
