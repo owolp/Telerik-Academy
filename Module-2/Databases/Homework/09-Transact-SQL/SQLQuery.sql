@@ -109,7 +109,7 @@ AS
 	WHERE a.Id = @accountId
 GO
 
-EXEC dbo.usp_FindPersonInterestRateForOneMonth	2, 0.5
+-- EXEC dbo.usp_FindPersonInterestRateForOneMonth	2, 0.5
 
 -- ====================================================================================================
 
@@ -135,10 +135,30 @@ AS
 	COMMIT TRANSACTION
 GO
 
-EXEC dbo.usp_DepositMoney 1, 1000
+-- EXEC dbo.usp_DepositMoney 1, 1000
+
 -- ====================================================================================================
--- ====================================================================================================
--- ====================================================================================================
--- ====================================================================================================
--- ====================================================================================================
+
+-- 6. Create another table – Logs(LogID, AccountID, OldSum, NewSum).
+--    Add a trigger to the Accounts table that enters a new entry into the Logs table every time the sum on an account changes.
+
+CREATE TABLE dbo.Logs (
+	Id INT IDENTITY PRIMARY KEY,
+	AccountId INT NOT NULL FOREIGN KEY REFERENCES Accounts (Id),
+	OldSum MONEY NOT NULL,
+	NewSum MONEY NOT NULL,
+)
+GO
+
+CREATE TRIGGER dbo.trg_LogChanges
+	ON dbo.Accounts
+	FOR UPDATE
+AS 
+    INSERT INTO Logs(AccountId, OldSum, NewSum)
+    SELECT d.PersonID, d.Balance, ins.Balance
+    FROM DELETED d, INSERTED ins
+GO
+
+-- EXEC dbo.usp_DepositMoney 1, 1000
+
 -- ====================================================================================================
