@@ -67,7 +67,7 @@ GO
 --    It should calculate and return the new sum.
 --    Write a SELECT to test whether the function works as expected.
 
-CREATE FUNCTION ufn_CalculateInterestRate (@sum MONEY, @interestRate FLOAT, @numberOfMonths INT)
+CREATE FUNCTION dbo.udf_CalculateInterestRate (@sum MONEY, @interestRate FLOAT, @numberOfMonths INT)
 RETURNS MONEY
 AS
 BEGIN
@@ -77,10 +77,40 @@ GO
 
 SELECT
 	a.Balance,
-	ROUND(dbo.ufn_CalculateInterestRate(a.Balance, 0.6, 6), 2) AS [AdditionalMoney]
+	ROUND(dbo.udf_CalculateInterestRate(a.Balance, 0.6, 6), 2) AS [AdditionalMoney]
 FROM Accounts a
 
 -- ====================================================================================================
+
+-- 4. Create a stored procedure that uses the function from the previous example to give an interest to a person's account for one month.
+--    It should take the AccountId and the interest rate as parameters.
+
+CREATE PROCEDURE dbo.usp_FindPersonInterestRateForOneMonth (@accountId INT, @interesetRate FLOAT)
+AS
+	DECLARE @sum MONEY
+	SELECT
+		@sum = a.Balance
+	FROM Accounts a
+	WHERE a.Id = @accountId
+
+	DECLARE @newSum MONEY
+
+	SELECT
+		@newSum = dbo.udf_CalculateInterestRate(@sum, @interesetRate, 1)
+
+	SELECT
+		p.FirstName,
+		p.LastName,
+		a.Balance,
+		ROUND((@newSum), 2) AS [AdditonalMoney]
+	FROM Persons p
+	INNER JOIN Accounts a
+		ON p.Id = a.PersonId
+	WHERE a.Id = @accountId
+GO
+
+EXEC dbo.usp_FindPersonInterestRateForOneMonth	2, 0.5
+
 -- ====================================================================================================
 -- ====================================================================================================
 -- ====================================================================================================
