@@ -13,8 +13,8 @@
             using (sqlConnection)
             {
                 SqlCommand command = new SqlCommand(
-                    "SELECT p.ProductName AS [Product], " + 
-                    "c.CategoryName AS [Category] FROM Products p " + 
+                    "SELECT p.ProductName AS [Product], " +
+                    "c.CategoryName AS [Category] FROM Products p " +
                     "JOIN Categories c ON p.CategoryID = c.CategoryID",
                     sqlConnection);
                 SqlDataReader reader = command.ExecuteReader();
