@@ -342,9 +342,67 @@ GROUP BY	d.Name,
 ORDER BY AverageSalaryByDepartment
 
 -- ====================================================================================================
+
+-- 26. Write a SQL query to display the minimal employee salary by department and job title along with
+-- the name of some of the employees that take it.
+
+SELECT
+	MIN(CONCAT(e.FirstName, ' ', e.LastName)) AS [EmployeeName],
+	e.JobTitle,
+	d.Name AS [DepartmentName],
+	ROUND(MIN(e.Salary), 2) AS [MinSalary]
+FROM Employees e
+INNER JOIN Departments d
+	ON e.DepartmentID = d.DepartmentID
+GROUP BY	d.Name,
+			e.JobTitle,
+			e.Salary
+ORDER BY MinSalary
+GO
+
 -- ====================================================================================================
+
+-- 27. Write a SQL query to display the town where maximal number of employees work.
+
+SELECT TOP 1
+	t.Name,
+	COUNT(e.EmployeeID) AS [EmployeesCount]
+FROM Employees e
+INNER JOIN Addresses a
+	ON e.AddressID = a.AddressID
+INNER JOIN Towns t
+	ON a.TownID = t.TownID
+GROUP BY t.Name
+ORDER BY EmployeesCount DESC
+GO
+
 -- ====================================================================================================
+
+-- 28. Write a SQL query to display the number of managers from each town.
+
+SELECT
+	t.Name,
+	COUNT(e.EmployeeID) AS [NumberOfManagers]
+FROM Employees e
+INNER JOIN Addresses a
+	ON e.AddressID = a.AddressID
+INNER JOIN Towns t
+	ON a.TownID = t.TownID
+INNER JOIN Employees m
+	ON e.ManagerID = m.EmployeeID
+WHERE e.ManagerID = m.EmployeeID
+GROUP BY t.Name
+ORDER BY NumberOfManagers DESC
+
 -- ====================================================================================================
+
+-- 29. Write a SQL to create table WorkHours to store work reports for each employee (employee id, date, task, hours, comments).
+-- Don't forget to define identity, primary key and appropriate foreign key.
+-- Issue few SQL statements to insert, update and delete of some data in the table.
+-- Define a table WorkHoursLogs to track all changes in the WorkHours table with triggers.
+-- For each change keep the old record data, the new record data and the command (insert / update / delete).
+
+
 -- ====================================================================================================
 -- ====================================================================================================
 -- ====================================================================================================
