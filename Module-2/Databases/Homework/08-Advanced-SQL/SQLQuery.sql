@@ -129,7 +129,7 @@ SELECT
 	m.FirstName + ' ' + m.LastName AS [ManagerName]
 FROM	Employees e,
 		Employees m
-WHERE e.ManagerID = m.EmployeeID
+WHERE e.ManagerID = m.EmployeeId
 GROUP BY	m.FirstName,
 			m.LastName
 HAVING COUNT(*) = 5
@@ -143,7 +143,7 @@ SELECT
 	ISNULL(m.FirstName + ' ' + m.LastName, 'no manager') AS [ManagerFullName]
 FROM Employees e
 LEFT OUTER JOIN Employees m
-	ON e.ManagerID = m.EmployeeID
+	ON e.ManagerID = m.EmployeeId
 
 -- Managers without direct reports
 
@@ -152,7 +152,7 @@ SELECT
 	ISNULL(e.FirstName + ' ' + e.LastName, 'no reports') AS [EmployeeFullName]
 FROM Employees m
 LEFT OUTER JOIN Employees e
-	ON e.ManagerID = m.EmployeeID
+	ON e.ManagerID = m.EmployeeId
 ORDER BY M.FirstName
 
 -- ====================================================================================================
@@ -366,7 +366,7 @@ GO
 
 SELECT TOP 1
 	t.Name,
-	COUNT(e.EmployeeID) AS [EmployeesCount]
+	COUNT(e.EmployeeId) AS [EmployeesCount]
 FROM Employees e
 INNER JOIN Addresses a
 	ON e.AddressID = a.AddressID
@@ -382,15 +382,15 @@ GO
 
 SELECT
 	t.Name,
-	COUNT(e.EmployeeID) AS [NumberOfManagers]
+	COUNT(e.EmployeeId) AS [NumberOfManagers]
 FROM Employees e
 INNER JOIN Addresses a
 	ON e.AddressID = a.AddressID
 INNER JOIN Towns t
 	ON a.TownID = t.TownID
 INNER JOIN Employees m
-	ON e.ManagerID = m.EmployeeID
-WHERE e.ManagerID = m.EmployeeID
+	ON e.ManagerID = m.EmployeeId
+WHERE e.ManagerID = m.EmployeeId
 GROUP BY t.Name
 ORDER BY NumberOfManagers DESC
 
@@ -402,7 +402,151 @@ ORDER BY NumberOfManagers DESC
 -- Define a table WorkHoursLogs to track all changes in the WorkHours table with triggers.
 -- For each change keep the old record data, the new record data and the command (insert / update / delete).
 
+-- Create table WorkHours
+CREATE TABLE WorkHours (
+	Id INT IDENTITY,
+	EmployeeId INT NOT NULL,
+	Date SMALLDATETIME NOT NULL,
+	Task NVARCHAR(50) NOT NULL,
+	Hours INT NOT NULL,
+	Comments NVARCHAR(50),
+	CONSTRAINT PK_Id PRIMARY KEY (Id),
+	CONSTRAINT FK_Employees_WorkHours
+	FOREIGN KEY (EmployeeId)
+	REFERENCES Employees (EmployeeId)
+)
+GO
+
+-- Insert
+INSERT INTO WorkHours
+	VALUES (1, GETDATE(), 'task1', 1, 'task1Comment'),
+	(2, GETDATE(), 'task1', 2, 'task2Comment'),
+	(3, GETDATE(), 'task1', 3, 'task3Comment')
+GO
+
+-- Update
+UPDATE WorkHours
+SET Comments = 'update comment'
+WHERE Hours >= 2
+GO
+
+--- DELETE
+DELETE FROM WorkHours
+WHERE EmployeeId = 1
+GO
+
+-- Create table WorkHoursLogs
+CREATE TABLE WorkHoursLogs (
+	Id INT,
+	EmployeeId INT NOT NULL,
+	Date SMALLDATETIME NOT NULL,
+	Task NVARCHAR(50) NOT NULL,
+	Hours INT NOT NULL,
+	Comments NVARCHAR(50),
+	Action NVARCHAR(50) NOT NULL,
+	CONSTRAINT FK_Employees_WorkHoursLogs
+	FOREIGN KEY (EmployeeId)
+	REFERENCES Employees (EmployeeId),
+	CONSTRAINT [CC_WorkHoursLogs] CHECK (Action IN ('Insert', 'Delete', 'DeleteUpdate', 'InsertUpdate'))
+)
+GO
+
+CREATE TRIGGER trg_WorkHours_Insert
+ON WorkHours
+FOR INSERT
+AS
+	INSERT INTO WorkHoursLogs (EmployeeId, Date, Task, Hours, Comments, Action)
+			SELECT
+				EmployeeId,
+				Date,
+				Task,
+				Hours,
+				Comments,
+				'INSERT'
+			FROM INSERTED
+GO
+
+CREATE TRIGGER trg_WorkHours_Delete
+ON WorkHours
+FOR DELETE
+AS
+	INSERT INTO WorkHoursLogs (EmployeeId, Date, Task, Hours, Comments, Action)
+			SELECT
+				EmployeeId,
+				Date,
+				Task,
+				Hours,
+				Comments,
+				'DELETE'
+			FROM DELETED
+GO
+
+CREATE TRIGGER trg_WorkHours_Update
+ON WorkHours
+FOR UPDATE
+AS
+	INSERT INTO WorkHoursLogs (EmployeeId, Date, Task, Hours, Comments, Action)
+			SELECT
+				EmployeeId,
+				Date,
+				Task,
+				Hours,
+				Comments,
+				'UPDATE'
+			FROM INSERTED
+GO
+
+INSERT INTO WorkHours
+	VALUES (2, GETDATE(), 'task3', 4, NULL)
+GO
+
+DELETE FROM WorkHours
+WHERE Hours = 4
+GO
 
 -- ====================================================================================================
+
+-- 30. Start a database transaction, delete all employees from the 'Sales' department along with all dependent records from the pother tables.
+-- At the end rollback the transaction.
+
+BEGIN TRAN
+
+ALTER TABLE Departments
+DROP CONSTRAINT FK_Departments_Employees
+GO
+
+DELETE FROM Employees
+SELECT
+	d.Name
+FROM Employees e
+JOIN Departments d
+	ON e.DepartmentID = d.DepartmentID
+WHERE d.Name = 'Sales'
+GROUP BY d.Name
+
+ROLLBACK TRAN
+
 -- ====================================================================================================
+
+-- 31. Start a database transaction and drop the table EmployeesProjects.
+
+BEGIN TRAN
+DROP TABLE EmployeesPRojects
+ROLLBACK TRAN
+
 -- ====================================================================================================
+
+-- 32. Find how to use temporary tables in SQL Server. 
+
+BEGIN TRAN
+SELECT
+	* INTO #TempEmployeesProjects
+FROM EmployeesPRojects
+
+DROP TABLE EmployeesPRojects
+
+SELECT
+	* INTO EmployeesPRojects
+FROM #TempEmployeesProjects
+
+ROLLBACK TRAN
