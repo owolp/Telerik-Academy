@@ -17,7 +17,7 @@
 | September | 2 | [High Quality Code Part 2](https://telerikacademy.com/Courses/Courses/Details/349) | [GitHub](https://github.com/TelerikAcademy/High-Quality-Code-Part-2) \ [About](http://academy.telerik.com/student-courses/programming/high-quality-code-part-2/about) | [GitHub](./Module-2/HQC-Part-2/Homework) | N/A |
 | September | 2 | [JavaScript Applications](https://telerikacademy.com/Courses/Courses/Details/350) | [GitHub](https://github.com/TelerikAcademy/JavaScript-Applications) \ [About](http://academy.telerik.com/student-courses/web-design-and-ui/javascript-applications/about) | [GitHub](./Module-2/JavaScript-Applications/Homework) | [GitHub](./Module-2/JavaScript-Applications/Exam-Preparation) |
 | October | 2 | [Databases](https://telerikacademy.com/Courses/Courses/Details/388) | [GitHub](https://github.com/TelerikAcademy/Databases) \ [About](http://academy.telerik.com/student-courses/software-technologies/databases/about) | [GitHub](./Module-2/Databases/Homework) | GitHub |
-| October | 2 | [Design Patterns](https://telerikacademy.com/Courses/Courses/Details/389) | [GitHub](https://github.com/TelerikAcademy/Design-Patterns) \ About | [GitHub](./Module-2/Design-Patters/Homework) | GitHub |
+| October | 2 | [Design Patterns](https://telerikacademy.com/Courses/Courses/Details/389) | [GitHub](https://github.com/TelerikAcademy/Design-Patterns) \ About | [GitHub](./Module-2/Design-Patterns/Homework) | GitHub |
 
 ---
 
