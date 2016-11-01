@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWindData", "NorthWindData\NorthWindData.csproj", "{63C9F149-EE00-4FD5-B3BE-8EE5043AA63D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWindApp", "NorthWindApp\NorthWindApp.csproj", "{5293630C-A307-4811-982B-4A0406FBD913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWindDataModels", "NorthWindDataModels\NorthWindDataModels.csproj", "{C9C6A8D7-7BAA-4B5F-9E1F-7CB6E99F4C03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63C9F149-EE00-4FD5-B3BE-8EE5043AA63D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C9F149-EE00-4FD5-B3BE-8EE5043AA63D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C9F149-EE00-4FD5-B3BE-8EE5043AA63D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C9F149-EE00-4FD5-B3BE-8EE5043AA63D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5293630C-A307-4811-982B-4A0406FBD913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5293630C-A307-4811-982B-4A0406FBD913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5293630C-A307-4811-982B-4A0406FBD913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5293630C-A307-4811-982B-4A0406FBD913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9C6A8D7-7BAA-4B5F-9E1F-7CB6E99F4C03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C6A8D7-7BAA-4B5F-9E1F-7CB6E99F4C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C6A8D7-7BAA-4B5F-9E1F-7CB6E99F4C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C6A8D7-7BAA-4B5F-9E1F-7CB6E99F4C03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
