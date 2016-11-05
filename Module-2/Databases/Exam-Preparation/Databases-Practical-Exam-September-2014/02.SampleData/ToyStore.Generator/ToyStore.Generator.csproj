@@ -51,7 +51,6 @@
   <ItemGroup>
     <Compile Include="Abstract\DataGenerator.cs" />
     <Compile Include="Contracts\IDataGenerator.cs" />
-    <Compile Include="Contracts\ILogger.cs" />
     <Compile Include="Contracts\IRandomGenerator.cs" />
     <Compile Include="Generators\AgeRangeGenerator.cs" />
     <Compile Include="Generators\CategoryGenerator.cs" />
