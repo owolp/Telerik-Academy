@@ -1,22 +1,30 @@
 ﻿namespace Dealership.Handlers
 {
-    using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using Engine;
 
     public class ShowVehiclesHandler : BaseHandler
     {
+        private const string ShowVehiclesCommand = "ShowVehicles";
+        private const string NoSuchUser = "There is no user with username {0}!";
+
         protected override bool CanHandle(ICommand command)
         {
-            throw new NotImplementedException();
+            return command.Name == ShowVehiclesCommand;
         }
 
         protected override string Handle(ICommand command, IEngine engine)
         {
-            throw new NotImplementedException();
+            var username = command.Parameters[0];
+
+            var user = engine.Users.FirstOrDefault(u => u.Username.ToLower() == username.ToLower());
+
+            if (user == null)
+            {
+                return string.Format(NoSuchUser, username);
+            }
+
+            return user.PrintVehicles();
         }
     }
 }

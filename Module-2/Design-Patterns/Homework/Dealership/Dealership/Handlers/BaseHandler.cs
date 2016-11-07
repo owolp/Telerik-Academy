@@ -42,5 +42,13 @@
         protected abstract bool CanHandle(ICommand command);
 
         protected abstract string Handle(ICommand command, IEngine engine);
+
+        protected void ValidateRange(int? value, int min, int max, string message)
+        {
+            if (value < min || value >= max)
+            {
+                throw new ArgumentException(message);
+            }
+        }
     }
 }
