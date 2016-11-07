@@ -290,3 +290,4 @@ fabric.properties
 
 # JavaScript config file
 jsconfig.json
+.markdownlint.json
