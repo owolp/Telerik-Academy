@@ -12,6 +12,8 @@ namespace Dealership.Engine
     public sealed class DealershipEngine : IEngine
     {
         // Commands constants
+
+        // TODO: Remove command
         private const string InvalidCommand = "Invalid command!";
 
         private const string UserAlreadyExist = "User {0} already exist. Choose a different username!";
@@ -73,6 +75,7 @@ namespace Dealership.Engine
             var commandResult = new List<string>();
             this.PrintReports(commandResult);
         }
+
 
 
         private IList<ICommand> ReadCommands()
@@ -204,6 +207,14 @@ namespace Dealership.Engine
                     return string.Format(InvalidCommand, command.Name);
             }
         }
+
+
+
+
+
+
+
+
 
         private string RegisterUser(string username, string firstName, string lastName, string password, Role role)
         {
@@ -359,5 +370,29 @@ namespace Dealership.Engine
                 throw new ArgumentException(message);
             }
         }
+
+
+
+
+
+
+
+
+
+
+        public IUser LoggedUser
+        {
+            get { return this.loggedUser; }
+            set { this.loggedUser = value; }
+        }
+
+        public ICollection<IUser> Users
+        {
+            get { return this.users; }
+        }
+
+
+
+
     }
 }
