@@ -60,10 +60,12 @@
     <Compile Include="Engine\ICommand.cs" />
     <Compile Include="Engine\IEngine.cs" />
     <Compile Include="Factories\DealershipFactory.cs" />
+    <Compile Include="Factories\HandlerFactory.cs" />
     <Compile Include="Factories\IDealershipFactory.cs" />
     <Compile Include="Handlers\AddVehicleHandler.cs" />
     <Compile Include="Handlers\BaseHandler.cs" />
-    <Compile Include="Handlers\Contracts\IBaseHandler.cs" />
+    <Compile Include="Handlers\Contracts\ICommandHandler.cs" />
+    <Compile Include="Handlers\Contracts\IHandlerFactory.cs" />
     <Compile Include="Handlers\LoginHandler.cs" />
     <Compile Include="Handlers\LogoutHandler.cs" />
     <Compile Include="Handlers\RegisterUserHandler.cs" />

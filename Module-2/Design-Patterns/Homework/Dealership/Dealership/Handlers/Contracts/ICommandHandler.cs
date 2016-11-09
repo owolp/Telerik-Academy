@@ -2,7 +2,7 @@
 {
     using Engine;
 
-    public interface IBaseHandler
+    public interface ICommandHandler
     {
         void SetSuccessor(BaseHandler successor);
 

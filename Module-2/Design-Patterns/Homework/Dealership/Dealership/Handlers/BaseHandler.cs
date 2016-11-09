@@ -8,7 +8,7 @@
     using Contracts;
     using Engine;
 
-    public abstract class BaseHandler : IBaseHandler
+    public abstract class BaseHandler : ICommandHandler
     {
         private const string InvalidCommand = "Invalid command!";
 
