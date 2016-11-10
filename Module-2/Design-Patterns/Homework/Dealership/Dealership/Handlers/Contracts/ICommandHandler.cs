@@ -4,7 +4,7 @@
 
     public interface ICommandHandler
     {
-        void SetSuccessor(BaseHandler successor);
+        void SetSuccessor(ICommandHandler successor);
 
         string HandleRequest(ICommand command, IEngine engine);
     }

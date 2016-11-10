@@ -1,6 +1,7 @@
 ﻿namespace Dealership.Handlers
 {
     using System.Text;
+    using Base;
     using Common.Enums;
     using Engine;
 

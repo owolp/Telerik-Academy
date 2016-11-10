@@ -1,4 +1,5 @@
 ﻿using Dealership.Contracts;
+using Dealership.Engine;
 
 namespace Dealership.Factories
 {
@@ -7,6 +8,8 @@ namespace Dealership.Factories
         IUser CreateUser(string username, string firstName, string lastName, string password, string role);
 
         IComment CreateComment(string content);
+
+        ICommand CreateCommand(string input);
 
         IVehicle CreateCar(string make, string model, decimal price, int seats);
 

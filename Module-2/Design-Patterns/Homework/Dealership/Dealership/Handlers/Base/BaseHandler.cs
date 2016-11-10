@@ -1,4 +1,4 @@
-﻿namespace Dealership.Handlers
+﻿namespace Dealership.Handlers.Base
 {
     using System;
     using System.Collections.Generic;
@@ -12,9 +12,9 @@
     {
         private const string InvalidCommand = "Invalid command!";
 
-        private BaseHandler nextHandler { get; set; }
+        private ICommandHandler nextHandler { get; set; }
 
-        public void SetSuccessor(BaseHandler successor)
+        public void SetSuccessor(ICommandHandler successor)
         {
             this.nextHandler = successor;
         }

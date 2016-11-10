@@ -1,5 +1,6 @@
 ﻿namespace Dealership.Handlers
 {
+    using Base;
     using Engine;
 
     public class RemoveVehicleHandler : BaseHandler

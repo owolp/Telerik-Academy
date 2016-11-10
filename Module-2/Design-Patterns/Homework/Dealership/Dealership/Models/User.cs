@@ -21,15 +21,14 @@ namespace Dealership.Models
         private readonly string username;
         private readonly string password;
 
-        public User(string username, string firstName, string lastName, string password, Role role)
+        public User(string username, string firstName, string lastName, string password, string role)
         {
             this.username = username;
             this.firstName = firstName;
             this.lastName = lastName;
             this.password = password;
-            this.Role = role;
             this.Vehicles = new List<IVehicle>();
-
+            this.Role = (Role) Enum.Parse(typeof(Role), role);
             this.ValidateFields();
         }
 

@@ -1,6 +1,7 @@
 ﻿namespace Dealership.Handlers
 {
     using System.Linq;
+    using Base;
     using Engine;
 
     public class LoginHandler : BaseHandler
