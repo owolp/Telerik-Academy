@@ -1,14 +1,12 @@
-﻿using Dealership.Engine;
-using System;
-using System.IO;
-using Dealership.Handlers.Contracts;
-using Dealership.Factories;
-using Ninject;
-using System.Reflection;
-
-namespace Dealership
+﻿namespace Cosmetics
 {
-    public class Startup
+    using Cosmetics.Engine;
+    using Ninject;
+    using System.Reflection;
+    using Contracts;
+    using System;
+
+    public class CosmeticsProgram
     {
         public static void Main()
         {
