@@ -45,16 +45,16 @@
 
             if (user == null)
             {
-                return string.Format(AddCommentHandler.NoSuchUser, author);
+                return string.Format(NoSuchUser, author);
             }
 
-            ValidateRange(vehicleIndex, 0, user.Vehicles.Count, AddCommentHandler.VehicleDoesNotExist);
+            ValidateRange(vehicleIndex, 0, user.Vehicles.Count, VehicleDoesNotExist);
 
             var vehicle = user.Vehicles[vehicleIndex];
 
             engine.LoggedUser.AddComment(comment, vehicle);
 
-            return string.Format(AddCommentHandler.CommentAddedSuccessfully, engine.LoggedUser.Username);
+            return string.Format(CommentAddedSuccessfully, engine.LoggedUser.Username);
         }
     }
 }
