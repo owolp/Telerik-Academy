@@ -1,0 +1,39 @@
+{
+  "firstName": "Xxkztrtssjqpz",
+  "middleName": "Baysw",
+  "lastName": "Exwzzrndtwyy",
+  "insuranceNumber": "MBEMnhEiin",
+  "age": 114,
+  "contactDetails": {
+    "phoneNumber": "359 889 555 666",
+    "emailAddress": "someone@progress.com",
+    "roomNumber": 889
+  },
+  "itemsForSale": [
+    {
+      "itemName": "Tizjtisndhyhkh",
+      "itemPrice": 98,
+      "giveAwayStatus": "For Sale"
+    },
+    {
+      "itemName": "Jtkqonutxmdmffb",
+      "itemPrice": 812,
+      "giveAwayStatus": "For Sale"
+    },
+    {
+      "itemName": "Vlvdwh",
+      "itemPrice": 195,
+      "giveAwayStatus": "For Sale"
+    },
+    {
+      "itemName": "Eyixdrjmdvaqhr",
+      "itemPrice": 658,
+      "giveAwayStatus": "For Sale"
+    }
+  ],
+  "itemsReceived": [
+    {
+      "name": "Tgugpc"
+    }
+  ]
+}

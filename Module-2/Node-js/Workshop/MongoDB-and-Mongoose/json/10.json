@@ -1,0 +1,34 @@
+{
+  "firstName": "Bhztttcljzdpqx",
+  "middleName": "Usvsvzthvpibdvv",
+  "lastName": "Ogkrjeevw",
+  "insuranceNumber": "Obns8FUhcN",
+  "age": 66,
+  "contactDetails": {
+    "phoneNumber": "359 888 444 555",
+    "emailAddress": "email@address.co",
+    "roomNumber": 350
+  },
+  "itemsForSale": [
+    {
+      "itemName": "Jlsiqfsm",
+      "itemPrice": 359,
+      "giveAwayStatus": "For Sale"
+    },
+    {
+      "itemName": "Jrkjee",
+      "itemPrice": 352,
+      "giveAwayStatus": "For Sale"
+    },
+    {
+      "itemName": "Lpxoh",
+      "itemPrice": 25,
+      "giveAwayStatus": "For Sale"
+    }
+  ],
+  "itemsReceived": [
+    {
+      "name": "Ijplzmcvi"
+    }
+  ]
+}

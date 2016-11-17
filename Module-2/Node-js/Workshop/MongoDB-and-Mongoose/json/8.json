@@ -1,0 +1,58 @@
+{
+  "firstName": "Klwpcskgcdbls",
+  "middleName": "Nqpymhzlizujq",
+  "lastName": "Dcuhyssiqwtx",
+  "insuranceNumber": "iLV48ctQAX",
+  "age": 38,
+  "contactDetails": {
+    "phoneNumber": "359 889 555 666",
+    "emailAddress": "less@random.mail",
+    "roomNumber": 696
+  },
+  "itemsForSale": [
+    {
+      "itemName": "Ilmftjcbkjfcmo",
+      "itemPrice": 121,
+      "giveAwayStatus": "For Sale"
+    },
+    {
+      "itemName": "Qsuqrtvcnfkswki",
+      "itemPrice": 131,
+      "giveAwayStatus": "For Sale"
+    },
+    {
+      "itemName": "Svuojjgjkl",
+      "itemPrice": 114,
+      "giveAwayStatus": "For Sale"
+    }
+  ],
+  "itemsReceived": [
+    {
+      "name": "Qsqdezfqnmleoy"
+    },
+    {
+      "name": "Pkxdjifhr"
+    },
+    {
+      "name": "Kwzkqgprhxfd"
+    },
+    {
+      "name": "Hgvotoqimoze"
+    },
+    {
+      "name": "Vfsctksdoskse"
+    },
+    {
+      "name": "Ldysobtcjv"
+    },
+    {
+      "name": "Mbpoijmianvj"
+    },
+    {
+      "name": "Auhjzm"
+    },
+    {
+      "name": "Gylydi"
+    }
+  ]
+}
