@@ -1,0 +1,14 @@
+USE PetStore
+
+SELECT
+	s.Name,
+	COUNT(*) AS [TotalProducts]
+FROM Species s
+INNER JOIN ProductsSpecies ps
+	ON s.Id = ps.SpeciesId
+INNER JOIN Products p
+	ON ps.ProductId = p.Id
+GROUP BY s.Name
+ORDER BY TotalProducts
+
+GO

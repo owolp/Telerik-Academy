@@ -1,0 +1,11 @@
+USE PetStore
+
+SELECT TOP 5
+	p.Price,
+	p.Breed,
+	p.BirthTime AS [BirthYear]
+FROM Pets p
+WHERE p.BirthTime >= CONVERT(SMALLDATETIME, '2012-01-01')
+ORDER BY p.Price DESC
+
+GO
