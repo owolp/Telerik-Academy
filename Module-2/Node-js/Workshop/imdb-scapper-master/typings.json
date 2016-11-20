@@ -1,0 +1,13 @@
+{
+  "globalDependencies": {
+    "express": "registry:dt/express#4.0.0+20160708185218",
+    "express-serve-static-core": "registry:dt/express-serve-static-core#4.0.0+20161012061536",
+    "jquery": "registry:dt/jquery#1.10.0+20160929162922",
+    "jsdom": "registry:dt/jsdom#2.0.0+20160906180921",
+    "lodash": "registry:dt/lodash#4.14.0+20161110215204",
+    "mongoose": "registry:dt/mongoose#4.5.9+20161010180758",
+    "node": "registry:dt/node#6.0.0+20161110151007",
+    "request": "registry:dt/request#0.0.0+20161116202412",
+    "serve-static": "registry:dt/serve-static#0.0.0+20160606155157"
+  }
+}
