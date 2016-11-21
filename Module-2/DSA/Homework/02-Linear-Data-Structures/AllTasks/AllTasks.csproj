@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32399584-CA87-4824-A84A-1B48CDC34234}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AllTasks</RootNamespace>
+    <AssemblyName>AllTasks</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="StartUp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Task01\Task01.csproj">
+      <Project>{35D8E4A4-5461-4E8F-8AA9-E35389DF92D8}</Project>
+      <Name>Task01</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task02\Task02.csproj">
+      <Project>{99761458-c27c-4522-a7e9-d2ad6d7df7f1}</Project>
+      <Name>Task02</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task03\Task03.csproj">
+      <Project>{80C41BB9-7B02-4D37-AACB-1C296E252056}</Project>
+      <Name>Task03</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task04\Task04.csproj">
+      <Project>{3FEDB9EF-C61A-4454-95E8-4333901772D7}</Project>
+      <Name>Task04</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task05\Task05.csproj">
+      <Project>{BC375909-D5D2-479F-8589-C0F6D86EB5D4}</Project>
+      <Name>Task05</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task06\Task06.csproj">
+      <Project>{FCDFB13C-30BC-49F9-9313-E996B2046376}</Project>
+      <Name>Task06</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task07\Task07.csproj">
+      <Project>{A35DC3BF-35DB-4B30-8B92-FD15B0EC8516}</Project>
+      <Name>Task07</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task08\Task08.csproj">
+      <Project>{468A575C-ACEC-4B08-ACF9-B6E16C7F9D04}</Project>
+      <Name>Task08</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task09\Task09.csproj">
+      <Project>{04E57C84-3DDE-43D6-8C1B-BCE785DCB053}</Project>
+      <Name>Task09</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task11\Task11.csproj">
+      <Project>{42BE748C-0E68-4BB0-A18B-3D7296763546}</Project>
+      <Name>Task11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task12\Task12.csproj">
+      <Project>{9BF64E4D-558B-413C-B441-A2AF241C30E6}</Project>
+      <Name>Task12</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task13\Task13.csproj">
+      <Project>{749F0AF5-4168-4EB1-B8E6-8CA90EFB5027}</Project>
+      <Name>Task13</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
