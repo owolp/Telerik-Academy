@@ -26,7 +26,7 @@ namespace Task08
                 if (isTrue)
                 {
                     Console.WriteLine($"The number {uniqueNumber.Value} occurs {uniqueNumber.Count} times");
-                }      
+                }
             }
         }
     }

@@ -71,7 +71,7 @@ namespace Task12
             }
 
             stackArray = new T[newArray.Length];
- 
+
             Array.Copy(newArray, stackArray, newArray.Length);
         }
     }

@@ -1,26 +1,21 @@
 ﻿namespace AllTasks
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Task03;
     using Task01;
     using Task02;
+    using Task03;
     using Task04;
     using Task05;
     using Task06;
     using Task07;
     using Task08;
-    using Task09;
     using Task11;
     using Task12;
     using Task13;
 
     public class StartUp
     {
-        static void Main()
+        private static void Main()
         {
             string task01 = @"Task 01 - Write a program that reads from the console a sequence of positive integer numbers.
 
