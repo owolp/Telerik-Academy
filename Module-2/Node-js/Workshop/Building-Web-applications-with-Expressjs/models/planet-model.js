@@ -21,5 +21,5 @@ PlanetSchema.statics.getPlanet = (planet) => {
 	});
 };
 mongoose.model("Planet", PlanetSchema);
-PlanetSchema = mongoose.model("Planet");
+Planet = mongoose.model("Planet");
 module.exports = mongoose.model("Planet");

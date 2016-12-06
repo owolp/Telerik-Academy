@@ -21,5 +21,5 @@ PowerSchema.statics.getPower = (power) => {
 	});
 };
 mongoose.model("Power", PowerSchema);
-PowerSchema = mongoose.model("Power");
+Power = mongoose.model("Power");
 module.exports = mongoose.model("Power");

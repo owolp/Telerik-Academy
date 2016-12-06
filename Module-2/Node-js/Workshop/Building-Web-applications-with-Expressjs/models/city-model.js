@@ -21,7 +21,7 @@ CitySchema.statics.getCity = (city) => {
 	});
 };
 mongoose.model("City", CitySchema);
-CitySchema = mongoose.model("City");
+City = mongoose.model("City");
 module.exports = mongoose.model("City");
 
 // Each city has a name and country- Create

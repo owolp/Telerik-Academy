@@ -28,7 +28,7 @@ CountrySchema.statics.getCountry = (country) => {
 	});
 };
 mongoose.model("Country", CountrySchema);
-CountrySchema = mongoose.model("Country");
+Country = mongoose.model("Country");
 module.exports = mongoose.model("Country");
 
 // Each country has a "planet":
